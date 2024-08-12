@@ -8,6 +8,7 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
 import net.saifa.quackems_the_end_update_mod.Quackems_The_End_Update;
+import net.saifa.quackems_the_end_update_mod.block.ModBlocks;
 
 public class ModCreativeModTabs {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS =
@@ -19,6 +20,9 @@ public class ModCreativeModTabs {
                     .title(Component.translatable("creativetab.quackems_tab"))
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(ModItems.AMORITE.get());
+
+                        output.accept(ModBlocks.AMORITE_ORE.get());
+                        output.accept(ModBlocks.AMORITE_BLOCK.get());
                     })
                     .build());
 
