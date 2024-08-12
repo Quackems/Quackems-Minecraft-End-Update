@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "ISS",
+    "FSF",
+    "DIG"
+  ],
+  "key": {
+    "D": {
+      "item": "minecraft:diamond"
+    },
+    "G": {
+      "item": "minecraft:gold_ingot"
+    },
+    "I": {
+      "item": "minecraft:iron_ingot"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    },
+    "F": {
+      "item": "minecraft:flint"
+    }
+  },
+  "result": {
+    "item": "quackems_the_end_update_mod:metal_detector",
+    "count": 1
+  }
+}

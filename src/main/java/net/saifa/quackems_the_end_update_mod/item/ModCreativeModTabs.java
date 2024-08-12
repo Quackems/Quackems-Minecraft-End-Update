@@ -20,6 +20,8 @@ public class ModCreativeModTabs {
                     .title(Component.translatable("creativetab.quackems_tab"))
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(ModItems.AMORITE.get());
+                        output.accept(ModItems.METAL_DETECTOR.get());
+                        output.accept(ModItems.AMORITE_DETECTOR.get());
 
                         output.accept(ModBlocks.AMORITE_ORE.get());
                         output.accept(ModBlocks.AMORITE_BLOCK.get());

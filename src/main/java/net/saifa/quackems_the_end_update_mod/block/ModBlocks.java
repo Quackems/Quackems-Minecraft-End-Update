@@ -28,6 +28,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> AMORITE_BLOCK = registerBlock("amorite_block",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).strength(4f).requiresCorrectToolForDrops()));
 
+
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block){
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
         registerBlockItem(name, toReturn);
