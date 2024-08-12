@@ -2,9 +2,9 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "pattern": [
-    "DSS",
+    "ISS",
     "FSF",
-    "AAG"
+    "DIG"
   ],
   "key": {
     "D": {
@@ -13,8 +13,8 @@
     "G": {
       "item": "minecraft:gold_ingot"
     },
-    "A": {
-      "item": "quackems_the_end_update_mod:amorite"
+    "I": {
+      "item": "minecraft:iron_ingot"
     },
     "S": {
       "item": "minecraft:stick"
