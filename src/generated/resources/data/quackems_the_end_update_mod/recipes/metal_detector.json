@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "quackems_the_end_update_mod:amorite"
+    },
+    "D": {
+      "item": "minecraft:diamond"
+    },
+    "F": {
+      "item": "minecraft:flint"
+    },
+    "G": {
+      "item": "minecraft:gold_ingot"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    "DSS",
+    "DSF",
+    "AAG"
+  ],
+  "result": {
+    "item": "quackems_the_end_update_mod:metal_detector"
+  },
+  "show_notification": true
+}

@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_amorite": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "quackems_the_end_update_mod:amorite"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "quackems_the_end_update_mod:amorite_detector"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_amorite",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "quackems_the_end_update_mod:amorite_detector"
+    ]
+  },
+  "sends_telemetry_event": false
+}

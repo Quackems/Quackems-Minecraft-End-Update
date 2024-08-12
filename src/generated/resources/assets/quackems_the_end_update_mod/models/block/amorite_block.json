@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "quackems_the_end_update_mod:block/amorite_block"
+  }
+}

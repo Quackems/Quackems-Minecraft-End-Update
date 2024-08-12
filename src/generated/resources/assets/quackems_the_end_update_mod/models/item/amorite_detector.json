@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "quackems_the_end_update_mod:item/amorite_detector"
+  }
+}
