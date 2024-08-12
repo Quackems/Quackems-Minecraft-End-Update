@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "quackems_the_end_update_mod:amorite_block"
+    }
+  ],
+  "result": {
+    "item": "quackems_the_end_update_mod:amorite",
+    "count": 9
+  }
+}
