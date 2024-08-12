@@ -28,6 +28,8 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
         this.tag(BlockTags.NEEDS_DIAMOND_TOOL)
                 .add(ModBlocks.AMORITE_BLOCK.get());
 
+        this.tag(Tags.Blocks.NEEDS_NETHERITE_TOOL )
+                .add(ModBlocks.AMORITE_BLOCK.get());
 
     }
 }
