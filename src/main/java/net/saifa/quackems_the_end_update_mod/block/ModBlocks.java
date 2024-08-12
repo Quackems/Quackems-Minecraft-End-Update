@@ -23,10 +23,10 @@ public class ModBlocks {
             DeferredRegister.create(ForgeRegistries.BLOCKS, Quackems_The_End_Update.MOD_ID);
 
     public static final RegistryObject<Block> AMORITE_ORE = registerBlock("amorite_ore",
-            () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.END_STONE).strength(6f).requiresCorrectToolForDrops(), UniformInt.of(9,15)));
+            () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.END_STONE).strength(6.5f).requiresCorrectToolForDrops(), UniformInt.of(9,15)));
 
     public static final RegistryObject<Block> AMORITE_BLOCK = registerBlock("amorite_block",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).strength(4f).requiresCorrectToolForDrops()));
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).strength(5f).requiresCorrectToolForDrops()));
 
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block){

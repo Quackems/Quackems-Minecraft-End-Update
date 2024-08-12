@@ -19,17 +19,26 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
     }
 
     @Override
-    protected void addTags(HolderLookup.Provider provider) {
+    protected void addTags(HolderLookup.Provider pProvider) {
         this.tag(ModTags.Blocks.METAL_DETECTOR_VALUABLES)
                 .add(ModBlocks.AMORITE_ORE.get()).addTag(Tags.Blocks.ORES);
+
+        this.tag(BlockTags.MINEABLE_WITH_PICKAXE)
+                .add(ModBlocks.AMORITE_BLOCK.get(),
+                        ModBlocks.AMORITE_ORE.get());
+
+
 
         this.tag(BlockTags.NEEDS_IRON_TOOL);
 
         this.tag(BlockTags.NEEDS_DIAMOND_TOOL)
                 .add(ModBlocks.AMORITE_BLOCK.get());
 
-        this.tag(Tags.Blocks.NEEDS_NETHERITE_TOOL )
-                .add(ModBlocks.AMORITE_BLOCK.get());
+        this.tag(BlockTags.NEEDS_STONE_TOOL);
+
+        this.tag(Tags.Blocks.NEEDS_NETHERITE_TOOL)
+                .add(ModBlocks.AMORITE_ORE.get());
+
 
     }
 }
