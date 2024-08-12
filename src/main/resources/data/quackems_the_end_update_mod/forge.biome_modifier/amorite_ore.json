@@ -1,6 +1,6 @@
 {
   "type": "forge:add_features",
-  "features": "quackems_the_end_update_mod:end_amorite_ore",
+  "features": "quackems_the_end_update_mod:amorite_ore",
   "biomes": "#minecraft:is_end",
   "step": "underground_ores"
 }
