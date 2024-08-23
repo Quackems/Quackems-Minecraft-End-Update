@@ -28,6 +28,13 @@ public class ModBlocks {
     public static final RegistryObject<Block> AMORITE_BLOCK = registerBlock("amorite_block",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).strength(5f).requiresCorrectToolForDrops()));
 
+    public static final RegistryObject<Block> OVERWORLD_XP_ORE = registerBlock("overworld_xp_ore",
+            () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.STONE).strength(2f).requiresCorrectToolForDrops(), UniformInt.of(15,30)));
+
+    public static final RegistryObject<Block> NETHER_XP_ORE = registerBlock("nether_xp_ore",
+            () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.NETHERRACK).strength(1f).requiresCorrectToolForDrops(), UniformInt.of(25,45)));
+
+
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block){
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

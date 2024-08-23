@@ -25,6 +25,8 @@ public class ModCreativeModTabs {
 
                         output.accept(ModBlocks.AMORITE_ORE.get());
                         output.accept(ModBlocks.AMORITE_BLOCK.get());
+                        output.accept(ModBlocks.OVERWORLD_XP_ORE.get());
+                        output.accept(ModBlocks.NETHER_XP_ORE.get());
                     })
                     .build());
 

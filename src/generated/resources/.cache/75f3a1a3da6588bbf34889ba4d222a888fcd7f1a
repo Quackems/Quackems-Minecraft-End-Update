@@ -1,7 +1,7 @@
-// 1.20.1	2024-08-12T17:30:10.9661951	Tags for minecraft:block mod id quackems_the_end_update_mod
+// 1.20.1	2024-08-23T20:15:23.642864	Tags for minecraft:block mod id quackems_the_end_update_mod
 9cc24fccad6fe29e651f12413d09948e3db79e3a data/forge/tags/blocks/needs_netherite_tool.json
-5171a90e42c84fc681cd809b007e5ff3f0491e00 data/minecraft/tags/blocks/mineable/pickaxe.json
-f02d6e7e4a7ce0a2db5cae06705a01152c6bfeee data/minecraft/tags/blocks/needs_diamond_tool.json
-35133e95f1c8fdd7a1c21afcc231fc0bffefb9a8 data/minecraft/tags/blocks/needs_iron_tool.json
+a9b2dd102cb290254bc3147285568d894edc9a21 data/minecraft/tags/blocks/mineable/pickaxe.json
+27c0dce46e6c8a2ff839e5d8b760c3735e080034 data/minecraft/tags/blocks/needs_diamond_tool.json
+ef7a1c13f8fff9c3126eeb3d2cac4bde5169eb28 data/minecraft/tags/blocks/needs_iron_tool.json
 35133e95f1c8fdd7a1c21afcc231fc0bffefb9a8 data/minecraft/tags/blocks/needs_stone_tool.json
-2f1fb33a831642614997ae2cd954566c5052da9c data/quackems_the_end_update_mod/tags/blocks/metal_detector_valuables.json
+4e7196da775abed9b138a63556bab93709bb4fd7 data/quackems_the_end_update_mod/tags/blocks/metal_detector_valuables.json

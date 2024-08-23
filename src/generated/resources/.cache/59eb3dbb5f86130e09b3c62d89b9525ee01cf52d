@@ -1,3 +1,5 @@
-// 1.20.1	2024-08-12T17:09:43.2320564	Loot Tables
+// 1.20.1	2024-08-23T20:17:25.546711	Loot Tables
 37014783fc9516e8e9b2cda9e31f6b31bb6cd361 data/quackems_the_end_update_mod/loot_tables/blocks/amorite_block.json
-abd1f2b4ae534350cb3115f61a4f92215a917aed data/quackems_the_end_update_mod/loot_tables/blocks/amorite_ore.json
+53b255b88d4bfd3f54a31eae9da24eaef37fe7ae data/quackems_the_end_update_mod/loot_tables/blocks/amorite_ore.json
+70887d6fb82393879d4ed336eee86e698f91e916 data/quackems_the_end_update_mod/loot_tables/blocks/nether_xp_ore.json
+9ae3836ac3e28205224caa2dd2e396301c6abe62 data/quackems_the_end_update_mod/loot_tables/blocks/overworld_xp_ore.json

@@ -6,6 +6,7 @@ import net.minecraft.tags.BlockTags;
 import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.data.BlockTagsProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
+import net.minecraftforge.fml.common.Mod;
 import net.saifa.quackems_the_end_update_mod.Quackems_The_End_Update;
 import net.saifa.quackems_the_end_update_mod.block.ModBlocks;
 import net.saifa.quackems_the_end_update_mod.util.ModTags;
@@ -21,18 +22,21 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
     @Override
     protected void addTags(HolderLookup.Provider pProvider) {
         this.tag(ModTags.Blocks.METAL_DETECTOR_VALUABLES)
-                .add(ModBlocks.AMORITE_ORE.get()).addTag(Tags.Blocks.ORES);
+                .add(ModBlocks.AMORITE_ORE.get()).add(ModBlocks.OVERWORLD_XP_ORE.get()).add(ModBlocks.NETHER_XP_ORE.get()).addTag(Tags.Blocks.ORES);
 
         this.tag(BlockTags.MINEABLE_WITH_PICKAXE)
                 .add(ModBlocks.AMORITE_BLOCK.get(),
-                        ModBlocks.AMORITE_ORE.get());
+                        ModBlocks.AMORITE_ORE.get(),
+                        ModBlocks.OVERWORLD_XP_ORE.get(),
+                        ModBlocks.NETHER_XP_ORE.get());
 
 
 
-        this.tag(BlockTags.NEEDS_IRON_TOOL);
+        this.tag(BlockTags.NEEDS_IRON_TOOL)
+                .add(ModBlocks.OVERWORLD_XP_ORE.get());
 
         this.tag(BlockTags.NEEDS_DIAMOND_TOOL)
-                .add(ModBlocks.AMORITE_BLOCK.get());
+                .add(ModBlocks.AMORITE_BLOCK.get()).add(ModBlocks.NETHER_XP_ORE.get());
 
         this.tag(BlockTags.NEEDS_STONE_TOOL);
 
