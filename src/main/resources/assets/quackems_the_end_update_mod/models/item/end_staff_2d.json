@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "quackems_the_end_update_mod:item/end_staff"
+  }
+}

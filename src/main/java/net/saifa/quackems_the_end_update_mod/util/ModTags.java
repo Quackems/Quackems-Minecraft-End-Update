@@ -13,6 +13,8 @@ public class ModTags {
     public static class Blocks {
         public static final TagKey<Block> METAL_DETECTOR_VALUABLES = tag("metal_detector_valuables");
 
+        public static final TagKey<Block> NEEDS_AMORITE_TOOL = tag("needs_amorite_tool");
+
 
         private static TagKey<Block> tag(String name) {
             return BlockTags.create(new ResourceLocation(Quackems_The_End_Update.MOD_ID, name));

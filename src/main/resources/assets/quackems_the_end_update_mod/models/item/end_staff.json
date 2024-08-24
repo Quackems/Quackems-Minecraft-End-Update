@@ -1,0 +1,19 @@
+
+{
+  "parent": "minecraft:item/handheld",
+  "loader": "forge:separate_transforms",
+  "base": {
+    "parent": "quackems_the_end_update_mod:item/end_staff_3d"
+  },
+  "perspectives": {
+    "gui": {
+      "parent": "quackems_the_end_update_mod:item/end_staff_2d"
+    },
+    "ground": {
+      "parent": "quackems_the_end_update_mod:item/end_staff_2d"
+    },
+    "fixed": {
+      "parent": "quackems_the_end_update_mod:item/end_staff_2d"
+    }
+  }
+}

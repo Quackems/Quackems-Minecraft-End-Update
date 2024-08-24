@@ -32,18 +32,40 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                         ModBlocks.END_PRISMARINE_BRICK.get(),
                         ModBlocks.ENDSTONE_STRETCHER.get());
 
+        this.tag(BlockTags.MINEABLE_WITH_AXE)
+                .add(ModBlocks.END_PLANKS.get());
+
+
 
 
         this.tag(BlockTags.NEEDS_IRON_TOOL)
                 .add(ModBlocks.OVERWORLD_XP_ORE.get()).add(ModBlocks.ENDSTONE_STRETCHER.get()).add(ModBlocks.END_PRISMARINE_BRICK.get());
 
         this.tag(BlockTags.NEEDS_DIAMOND_TOOL)
-                .add(ModBlocks.AMORITE_BLOCK.get());
+                .add(ModBlocks.AMORITE_BLOCK.get()).add(ModBlocks.END_PLANKS.get());
 
         this.tag(BlockTags.NEEDS_STONE_TOOL);
 
         this.tag(Tags.Blocks.NEEDS_NETHERITE_TOOL)
                 .add(ModBlocks.AMORITE_ORE.get());
+
+
+        this.tag(ModTags.Blocks.NEEDS_AMORITE_TOOL);
+
+
+
+
+
+
+
+        this.tag(BlockTags.FENCES)
+                .add(ModBlocks.END_FENCE.get());
+
+        this.tag(BlockTags.FENCE_GATES)
+                .add(ModBlocks.END_FENCE_GATE.get());
+
+        this.tag(BlockTags.WALLS)
+                .add(ModBlocks.END_WALL.get());
 
 
     }

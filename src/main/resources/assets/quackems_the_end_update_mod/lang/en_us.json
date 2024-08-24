@@ -9,10 +9,56 @@
 
   "item.quackems_the_end_update_mod.end_coal": "End Coal",
 
+  "item.quackems_the_end_update_mod.end_staff": "End Staff",
+
+  "item.quackems_the_end_update_mod.amorite_sword": "Amorite Sword",
+
+  "item.quackems_the_end_update_mod.amorite_axe": "Amorite Axe",
+
+  "item.quackems_the_end_update_mod.amorite_pickaxe": "Amorite Pickaxe",
+
+  "item.quackems_the_end_update_mod.amorite_shovel": "Amorite Shovel",
+
+  "item.quackems_the_end_update_mod.amorite_hoe": "Amorite Hoe",
+
+
+  "item.quackems_the_end_update_mod.amorite_helmet": "Amorite Helmet",
+
+  "item.quackems_the_end_update_mod.amorite_chestplate": "Amorite Chestplate",
+
+  "item.quackems_the_end_update_mod.amorite_leggings": "Amorite Leggings",
+
+  "item.quackems_the_end_update_mod.amorite_boots": "Amorite Boots",
+
+
+
+
 
   "tooltip.quackems_the_end_update_mod.metal_detector.tooltip": "Find your hidden ores underground!",
 
   "tooltip.quackems_the_end_update_mod.amorite_detector.tooltip": "Find Amorite underground!",
+
+
+
+  "block.quackems_the_end_update_mod.end_stairs": "End Stairs",
+
+  "block.quackems_the_end_update_mod.end_slab": "End Slab",
+
+  "block.quackems_the_end_update_mod.end_button": "End Button",
+
+  "block.quackems_the_end_update_mod.end_pressure_plate": "End Pressure Plate",
+
+  "block.quackems_the_end_update_mod.end_fence": "End Fence",
+
+  "block.quackems_the_end_update_mod.end_fence_gate": "End Fence Gate",
+
+  "block.quackems_the_end_update_mod.end_wall": "End Wall",
+
+  "block.quackems_the_end_update_mod.end_door": "End Door",
+
+  "block.quackems_the_end_update_mod.end_trapdoor": "End Trapdoor",
+
+
 
 
 
@@ -29,6 +75,11 @@
   "block.quackems_the_end_update_mod.end_prismarine_brick": "End Prismarine Brick",
 
   "block.quackems_the_end_update_mod.endstone_stretcher": "EndStone Stretcher",
+
+  "block.quackems_the_end_update_mod.end_planks": "End Planks",
+
+  "block.quackems_the_end_update_mod.end_veneer": "End Veneer",
+
 
 
 

@@ -86,6 +86,11 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                         of(Blocks.END_STONE).build()))
                 .save(consumer);
 
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(Blocks.END_STONE), RecipeCategory.MISC, ModBlocks.END_VENEER.get())
+                .unlockedBy("has_end_stone", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(Blocks.END_STONE).build()))
+                .save(consumer);
+
 
 
 

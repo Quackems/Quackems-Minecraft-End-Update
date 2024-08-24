@@ -34,6 +34,7 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.OVERWORLD_XP_ORE.get());
         this.dropSelf(ModBlocks.END_PRISMARINE_BRICK.get());
         this.dropSelf(ModBlocks.ENDSTONE_STRETCHER.get());
+        this.dropSelf(ModBlocks.END_PLANKS.get());
 
         this.add(ModBlocks.AMORITE_ORE.get(),
                 block -> createCopperLikeOreDrops(ModBlocks.AMORITE_ORE.get(), ModItems.AMORITE.get()));
@@ -45,6 +46,21 @@ public class ModBlockLootTables extends BlockLootSubProvider {
                 block -> createOreDrop(ModBlocks.NETHER_XP_ORE.get(), Items.NETHERRACK));
 
 
+        this.dropSelf(ModBlocks.END_STAIRS.get());
+        this.dropSelf(ModBlocks.END_BUTTON.get());
+        this.dropSelf(ModBlocks.END_PRESSURE_PLATE.get());
+        this.dropSelf(ModBlocks.END_TRAPDOOR.get());
+        this.dropSelf(ModBlocks.END_FENCE.get());
+        this.dropSelf(ModBlocks.END_FENCE_GATE.get());
+        this.dropSelf(ModBlocks.END_WALL.get());
+        this.dropSelf(ModBlocks.END_VENEER.get());
+
+
+        this.add(ModBlocks.END_SLAB.get(),
+        block -> createSlabItemTable(ModBlocks.END_SLAB.get()));
+
+        this.add(ModBlocks.END_DOOR.get(),
+        block -> createDoorTable(ModBlocks.END_DOOR.get()));
 
     }
 
