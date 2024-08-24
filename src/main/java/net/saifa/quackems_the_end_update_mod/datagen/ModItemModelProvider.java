@@ -6,6 +6,7 @@ import net.minecraft.world.item.Item;
 import net.minecraftforge.client.model.generators.ItemModelBuilder;
 import net.minecraftforge.client.model.generators.ItemModelProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
+import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.RegistryObject;
 import net.saifa.quackems_the_end_update_mod.Quackems_The_End_Update;
 import net.saifa.quackems_the_end_update_mod.item.ModItems;
@@ -21,6 +22,8 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.AMORITE);
         simpleItem(ModItems.METAL_DETECTOR);
         simpleItem(ModItems.AMORITE_DETECTOR);
+        simpleItem(ModItems.END_APPLE);
+        simpleItem(ModItems.END_COAL);
     }
 
     private ItemModelBuilder simpleItem(RegistryObject<Item> item) {

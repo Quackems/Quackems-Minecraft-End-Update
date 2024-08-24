@@ -7,6 +7,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.saifa.quackems_the_end_update_mod.Quackems_The_End_Update;
 import net.saifa.quackems_the_end_update_mod.item.custom.AmoriteDetectorItem;
+import net.saifa.quackems_the_end_update_mod.item.custom.FuelItem;
 import net.saifa.quackems_the_end_update_mod.item.custom.MetalDetectorItem;
 
 public class ModItems {
@@ -20,6 +21,12 @@ public class ModItems {
 
     public static final RegistryObject<Item> AMORITE_DETECTOR = ITEMS.register("amorite_detector",
             () -> new AmoriteDetectorItem(new Item.Properties().durability(95)));
+
+    public static final RegistryObject<Item> END_APPLE = ITEMS.register("end_apple",
+            () -> new Item(new Item.Properties().food(ModFoods.END_APPLE)));
+
+    public static final RegistryObject<Item> END_COAL = ITEMS.register("end_coal",
+            () -> new FuelItem(new Item.Properties(), 16000));
 
     public static void register(IEventBus eventBus){
         ITEMS.register(eventBus);

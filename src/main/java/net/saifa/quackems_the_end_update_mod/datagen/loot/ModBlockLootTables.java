@@ -15,6 +15,7 @@ import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
 import net.minecraft.world.level.storage.loot.predicates.LootItemBlockStatePropertyCondition;
 import net.minecraft.world.level.storage.loot.predicates.LootItemCondition;
 import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
+import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.RegistryObject;
 import net.saifa.quackems_the_end_update_mod.block.ModBlocks;
 import net.saifa.quackems_the_end_update_mod.item.ModItems;
@@ -31,6 +32,8 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.AMORITE_BLOCK.get());
         this.dropSelf(ModBlocks.AMORITE_ORE.get());
         this.dropSelf(ModBlocks.OVERWORLD_XP_ORE.get());
+        this.dropSelf(ModBlocks.END_PRISMARINE_BRICK.get());
+        this.dropSelf(ModBlocks.ENDSTONE_STRETCHER.get());
 
         this.add(ModBlocks.AMORITE_ORE.get(),
                 block -> createCopperLikeOreDrops(ModBlocks.AMORITE_ORE.get(), ModItems.AMORITE.get()));

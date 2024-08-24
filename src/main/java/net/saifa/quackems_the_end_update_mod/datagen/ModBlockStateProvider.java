@@ -21,6 +21,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.AMORITE_ORE);
         blockWithItem(ModBlocks.OVERWORLD_XP_ORE);
         blockWithItem(ModBlocks.NETHER_XP_ORE);
+        blockWithItem(ModBlocks.END_PRISMARINE_BRICK);
+        blockWithItem(ModBlocks.ENDSTONE_STRETCHER);
     }
     private void blockWithItem(RegistryObject<Block> blockRegistryObject) {
         simpleBlockWithItem(blockRegistryObject.get(), cubeAll(blockRegistryObject.get()));

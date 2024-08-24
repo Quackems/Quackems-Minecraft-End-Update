@@ -28,15 +28,17 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 .add(ModBlocks.AMORITE_BLOCK.get(),
                         ModBlocks.AMORITE_ORE.get(),
                         ModBlocks.OVERWORLD_XP_ORE.get(),
-                        ModBlocks.NETHER_XP_ORE.get());
+                        ModBlocks.NETHER_XP_ORE.get(),
+                        ModBlocks.END_PRISMARINE_BRICK.get(),
+                        ModBlocks.ENDSTONE_STRETCHER.get());
 
 
 
         this.tag(BlockTags.NEEDS_IRON_TOOL)
-                .add(ModBlocks.OVERWORLD_XP_ORE.get());
+                .add(ModBlocks.OVERWORLD_XP_ORE.get()).add(ModBlocks.ENDSTONE_STRETCHER.get()).add(ModBlocks.END_PRISMARINE_BRICK.get());
 
         this.tag(BlockTags.NEEDS_DIAMOND_TOOL)
-                .add(ModBlocks.AMORITE_BLOCK.get()).add(ModBlocks.NETHER_XP_ORE.get());
+                .add(ModBlocks.AMORITE_BLOCK.get());
 
         this.tag(BlockTags.NEEDS_STONE_TOOL);
 

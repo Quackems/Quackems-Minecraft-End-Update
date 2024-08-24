@@ -1,9 +1,16 @@
 package net.saifa.quackems_the_end_update_mod.datagen;
 
+import net.minecraft.advancements.critereon.ItemPredicate;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.item.crafting.SingleItemRecipe;
+import net.minecraft.world.item.crafting.StonecutterRecipe;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.StonecutterBlock;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
 import net.saifa.quackems_the_end_update_mod.block.ModBlocks;
 import net.saifa.quackems_the_end_update_mod.item.ModItems;
@@ -20,6 +27,9 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
     @Override
     protected void buildRecipes(Consumer<FinishedRecipe> consumer) {
+
+
+
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.AMORITE_BLOCK.get())
                 .pattern("AAA")
                 .pattern("AAA")
@@ -62,6 +72,22 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .requires(ModBlocks.AMORITE_BLOCK.get())
                 .unlockedBy(getHasName(ModBlocks.AMORITE_BLOCK.get()), has(ModBlocks.AMORITE_BLOCK.get()))
                 .save(consumer);
+
+
+
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(Blocks.END_STONE), RecipeCategory.MISC, ModBlocks.END_PRISMARINE_BRICK.get())
+                .unlockedBy("has_end_stone", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(Blocks.END_STONE).build()))
+                .save(consumer);
+
+
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(Blocks.END_STONE), RecipeCategory.MISC, ModBlocks.ENDSTONE_STRETCHER.get())
+                .unlockedBy("has_end_stone", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(Blocks.END_STONE).build()))
+                .save(consumer);
+
+
+
 
     }
 }

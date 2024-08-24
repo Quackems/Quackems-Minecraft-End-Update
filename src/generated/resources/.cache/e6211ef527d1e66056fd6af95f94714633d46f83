@@ -1,4 +1,6 @@
-// 1.20.1	2024-08-12T17:09:43.2280528	Item Models: quackems_the_end_update_mod
+// 1.20.1	2024-08-24T09:49:39.4767901	Item Models: quackems_the_end_update_mod
 7db0fe1a19642d2cb68c4a20d1321f9084f00c2d assets/quackems_the_end_update_mod/models/item/amorite.json
 7bac7120ec0e8cd94d970ebec3d9578197aad4dc assets/quackems_the_end_update_mod/models/item/amorite_detector.json
+f46a7168ec746fe1943d79442abeca0ca55a53e2 assets/quackems_the_end_update_mod/models/item/end_apple.json
+fea6722a013301133c1d7197890a2f59d165d8ed assets/quackems_the_end_update_mod/models/item/end_coal.json
 b1f98ba7c140a3b70989d31a7e3d60e5a1a6a903 assets/quackems_the_end_update_mod/models/item/metal_detector.json

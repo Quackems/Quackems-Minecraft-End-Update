@@ -5,6 +5,17 @@
 
   "item.quackems_the_end_update_mod.amorite_detector": "Amorite Detector",
 
+  "item.quackems_the_end_update_mod.end_apple": "End Apple",
+
+  "item.quackems_the_end_update_mod.end_coal": "End Coal",
+
+
+  "tooltip.quackems_the_end_update_mod.metal_detector.tooltip": "Find your hidden ores underground!",
+
+  "tooltip.quackems_the_end_update_mod.amorite_detector.tooltip": "Find Amorite underground!",
+
+
+
 
 
   "block.quackems_the_end_update_mod.amorite_ore": "Amorite Ore",
@@ -14,6 +25,11 @@
   "block.quackems_the_end_update_mod.overworld_xp_ore": "Stone XP Ore",
 
   "block.quackems_the_end_update_mod.nether_xp_ore": "Netherrack XP Ore",
+
+  "block.quackems_the_end_update_mod.end_prismarine_brick": "End Prismarine Brick",
+
+  "block.quackems_the_end_update_mod.endstone_stretcher": "EndStone Stretcher",
+
 
 
 

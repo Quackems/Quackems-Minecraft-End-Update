@@ -22,11 +22,17 @@ public class ModCreativeModTabs {
                         output.accept(ModItems.AMORITE.get());
                         output.accept(ModItems.METAL_DETECTOR.get());
                         output.accept(ModItems.AMORITE_DETECTOR.get());
+                        output.accept(ModItems.END_APPLE.get());
+                        output.accept(ModItems.END_COAL.get());
+
+
 
                         output.accept(ModBlocks.AMORITE_ORE.get());
                         output.accept(ModBlocks.AMORITE_BLOCK.get());
                         output.accept(ModBlocks.OVERWORLD_XP_ORE.get());
                         output.accept(ModBlocks.NETHER_XP_ORE.get());
+                        output.accept(ModBlocks.END_PRISMARINE_BRICK.get());
+                        output.accept(ModBlocks.ENDSTONE_STRETCHER.get());
                     })
                     .build());
 

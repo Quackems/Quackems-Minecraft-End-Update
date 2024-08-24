@@ -34,6 +34,12 @@ public class ModBlocks {
     public static final RegistryObject<Block> NETHER_XP_ORE = registerBlock("nether_xp_ore",
             () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.NETHERRACK).strength(1f).requiresCorrectToolForDrops(), UniformInt.of(25,45)));
 
+    public static final RegistryObject<Block> END_PRISMARINE_BRICK = registerBlock("end_prismarine_brick",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.END_STONE_BRICKS).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> ENDSTONE_STRETCHER = registerBlock("endstone_stretcher",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.END_STONE_BRICKS).requiresCorrectToolForDrops()));
+
 
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block){
