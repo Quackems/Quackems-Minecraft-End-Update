@@ -30,19 +30,58 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                         ModBlocks.OVERWORLD_XP_ORE.get(),
                         ModBlocks.NETHER_XP_ORE.get(),
                         ModBlocks.END_PRISMARINE_BRICK.get(),
-                        ModBlocks.ENDSTONE_STRETCHER.get());
+                        ModBlocks.ENDSTONE_STRETCHER.get(),
+                        ModBlocks.END_PRISMARINE_SLAB.get(),
+                        ModBlocks.END_PRISMARINE_WALL.get(),
+                        ModBlocks.END_PRISMARINE_STAIRS.get(),
+                        ModBlocks.ENDSTONE_STRETCHER_SLAB.get(),
+                        ModBlocks.ENDSTONE_STRETCHER_WALL.get(),
+                        ModBlocks.ENDSTONE_STRETCHER_STAIRS.get());
 
         this.tag(BlockTags.MINEABLE_WITH_AXE)
-                .add(ModBlocks.END_PLANKS.get());
+                .add(ModBlocks.END_STAIRS.get())
+                .add(ModBlocks.END_SLAB.get())
+                .add(ModBlocks.END_WALL.get())
+                .add(ModBlocks.END_PRESSURE_PLATE.get())
+                .add(ModBlocks.END_FENCE.get())
+                .add(ModBlocks.END_FENCE_GATE.get())
+                .add(ModBlocks.END_DOOR.get())
+                .add(ModBlocks.END_TRAPDOOR.get())
+                .add(ModBlocks.END_BUTTON.get())
+                .add(ModBlocks.END_OAK_LOG.get())
+                .add(ModBlocks.END_WOOD.get())
+                .add(ModBlocks.STRIPPED_END_OAK_LOG.get())
+                .add(ModBlocks.STRIPPED_END_WOOD.get());
 
 
 
 
         this.tag(BlockTags.NEEDS_IRON_TOOL)
-                .add(ModBlocks.OVERWORLD_XP_ORE.get()).add(ModBlocks.ENDSTONE_STRETCHER.get()).add(ModBlocks.END_PRISMARINE_BRICK.get());
+                .add(ModBlocks.OVERWORLD_XP_ORE.get())
+                .add(ModBlocks.ENDSTONE_STRETCHER.get())
+                .add(ModBlocks.END_PRISMARINE_BRICK.get());
 
         this.tag(BlockTags.NEEDS_DIAMOND_TOOL)
-                .add(ModBlocks.AMORITE_BLOCK.get()).add(ModBlocks.END_PLANKS.get());
+                .add(ModBlocks.AMORITE_BLOCK.get())
+                .add(ModBlocks.END_STAIRS.get())
+                .add(ModBlocks.END_SLAB.get())
+                .add(ModBlocks.END_WALL.get())
+                .add(ModBlocks.END_PRESSURE_PLATE.get())
+                .add(ModBlocks.END_FENCE.get())
+                .add(ModBlocks.END_FENCE_GATE.get())
+                .add(ModBlocks.END_DOOR.get())
+                .add(ModBlocks.END_TRAPDOOR.get())
+                .add(ModBlocks.END_BUTTON.get())
+                .add(ModBlocks.END_PRISMARINE_STAIRS.get())
+                .add(ModBlocks.END_PRISMARINE_WALL.get())
+                .add(ModBlocks.END_PRISMARINE_SLAB.get())
+                .add(ModBlocks.ENDSTONE_STRETCHER_STAIRS.get())
+                .add(ModBlocks.ENDSTONE_STRETCHER_WALL.get())
+                .add(ModBlocks.ENDSTONE_STRETCHER_SLAB.get())
+                .add(ModBlocks.END_OAK_LOG.get())
+                .add(ModBlocks.END_WOOD.get())
+                .add(ModBlocks.STRIPPED_END_OAK_LOG.get())
+                .add(ModBlocks.STRIPPED_END_WOOD.get());
 
         this.tag(BlockTags.NEEDS_STONE_TOOL);
 
@@ -65,7 +104,21 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 .add(ModBlocks.END_FENCE_GATE.get());
 
         this.tag(BlockTags.WALLS)
-                .add(ModBlocks.END_WALL.get());
+                .add(ModBlocks.END_WALL.get())
+                .add(ModBlocks.END_PRISMARINE_WALL.get())
+                .add(ModBlocks.ENDSTONE_STRETCHER_WALL.get());
+
+
+        this.tag(BlockTags.LOGS_THAT_BURN)
+                .add(ModBlocks.END_OAK_LOG.get())
+                .add(ModBlocks.END_WOOD.get())
+                .add(ModBlocks.STRIPPED_END_OAK_LOG.get())
+                .add(ModBlocks.STRIPPED_END_WOOD.get());
+
+
+        this.tag(BlockTags.PLANKS)
+                .add(ModBlocks.END_PLANKS.get());
+
 
 
     }

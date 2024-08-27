@@ -9,6 +9,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.armortrim.TrimMaterial;
 import net.minecraft.world.item.armortrim.TrimMaterials;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.client.model.generators.ItemModelBuilder;
 import net.minecraftforge.client.model.generators.ItemModelProvider;
 import net.minecraftforge.client.model.generators.ModelFile;
@@ -53,14 +54,25 @@ public class ModItemModelProvider extends ItemModelProvider {
 
         simpleBlockItem(ModBlocks.END_DOOR);
 
-        fenceItem(ModBlocks.END_FENCE, ModBlocks.END_PLANKS);
-        buttonItem(ModBlocks.END_BUTTON, ModBlocks.END_PLANKS);
-        wallItem(ModBlocks.END_WALL, ModBlocks.END_PLANKS);
+        fenceItem(ModBlocks.END_FENCE, ModBlocks.AMORITE_BLOCK);//TODO:FIX THIS
+        buttonItem(ModBlocks.END_BUTTON, ModBlocks.AMORITE_BLOCK);
+        wallItem(ModBlocks.END_WALL, ModBlocks.AMORITE_BLOCK);
+
+        wallItem(ModBlocks.END_PRISMARINE_WALL, ModBlocks.END_PRISMARINE_BRICK);
+
+        wallItem(ModBlocks.ENDSTONE_STRETCHER_WALL, ModBlocks.ENDSTONE_STRETCHER);
 
         evenSimplerBlockItem(ModBlocks.END_STAIRS);
         evenSimplerBlockItem(ModBlocks.END_SLAB);
         evenSimplerBlockItem(ModBlocks.END_PRESSURE_PLATE);
         evenSimplerBlockItem(ModBlocks.END_FENCE_GATE);
+
+
+        evenSimplerBlockItem(ModBlocks.END_PRISMARINE_STAIRS);
+        evenSimplerBlockItem(ModBlocks.END_PRISMARINE_SLAB);
+
+        evenSimplerBlockItem(ModBlocks.ENDSTONE_STRETCHER_STAIRS);
+        evenSimplerBlockItem(ModBlocks.ENDSTONE_STRETCHER_SLAB);
 
         trapdoorItem(ModBlocks.END_TRAPDOOR);
 

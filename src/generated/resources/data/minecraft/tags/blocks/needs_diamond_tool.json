@@ -1,6 +1,24 @@
 {
   "values": [
     "quackems_the_end_update_mod:amorite_block",
-    "quackems_the_end_update_mod:end_planks"
+    "quackems_the_end_update_mod:end_stairs",
+    "quackems_the_end_update_mod:end_slab",
+    "quackems_the_end_update_mod:end_wall",
+    "quackems_the_end_update_mod:end_pressure_plate",
+    "quackems_the_end_update_mod:end_fence",
+    "quackems_the_end_update_mod:end_fence_gate",
+    "quackems_the_end_update_mod:end_door",
+    "quackems_the_end_update_mod:end_trapdoor",
+    "quackems_the_end_update_mod:end_button",
+    "quackems_the_end_update_mod:end_prismarine_stairs",
+    "quackems_the_end_update_mod:end_prismarine_wall",
+    "quackems_the_end_update_mod:end_prismarine_slab",
+    "quackems_the_end_update_mod:endstone_stretcher_stairs",
+    "quackems_the_end_update_mod:endstone_stretcher_wall",
+    "quackems_the_end_update_mod:endstone_stretcher_slab",
+    "quackems_the_end_update_mod:end_oak_log",
+    "quackems_the_end_update_mod:end_wood",
+    "quackems_the_end_update_mod:stripped_end_oak_log",
+    "quackems_the_end_update_mod:stripped_end_wood"
   ]
 }

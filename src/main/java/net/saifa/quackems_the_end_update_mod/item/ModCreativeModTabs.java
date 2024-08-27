@@ -44,7 +44,6 @@ public class ModCreativeModTabs {
                         output.accept(ModBlocks.NETHER_XP_ORE.get());
                         output.accept(ModBlocks.END_PRISMARINE_BRICK.get());
                         output.accept(ModBlocks.ENDSTONE_STRETCHER.get());
-                        output.accept(ModBlocks.END_PLANKS.get());
                         output.accept(ModBlocks.END_VENEER.get());
 
 
@@ -57,6 +56,24 @@ public class ModCreativeModTabs {
                         output.accept(ModBlocks.END_WALL.get());
                         output.accept(ModBlocks.END_DOOR.get());
                         output.accept(ModBlocks.END_TRAPDOOR.get());
+
+                        output.accept(ModBlocks.END_PRISMARINE_SLAB.get());
+                        output.accept(ModBlocks.END_PRISMARINE_WALL.get());
+                        output.accept(ModBlocks.END_PRISMARINE_STAIRS.get());
+
+                        output.accept(ModBlocks.ENDSTONE_STRETCHER_SLAB.get());
+                        output.accept(ModBlocks.ENDSTONE_STRETCHER_WALL.get());
+                        output.accept(ModBlocks.ENDSTONE_STRETCHER_STAIRS.get());
+
+
+                        output.accept(ModBlocks.END_OAK_LOG.get());
+                        output.accept(ModBlocks.END_WOOD.get());
+                        output.accept(ModBlocks.STRIPPED_END_OAK_LOG.get());
+                        output.accept(ModBlocks.STRIPPED_END_WOOD.get());
+                        output.accept(ModBlocks.END_LEAVES.get());
+                        output.accept(ModBlocks.END_PLANKS.get());
+
+
                     })
                     .build());
 

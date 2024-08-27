@@ -58,6 +58,34 @@
 
   "block.quackems_the_end_update_mod.end_trapdoor": "End Trapdoor",
 
+  "block.quackems_the_end_update_mod.end_oak_log": "End Log",
+
+  "block.quackems_the_end_update_mod.end_wood": "End Wood",
+
+  "block.quackems_the_end_update_mod.stripped_end_oak_log": "Stripped End Log",
+
+  "block.quackems_the_end_update_mod.stripped_end_wood": "Stripped End Wood",
+
+  "block.quackems_the_end_update_mod.end_leaves": "End Leaves",
+
+  "block.quackems_the_end_update_mod.end_planks": "End Planks",
+
+
+
+  "block.quackems_the_end_update_mod.end_prismarine_stairs": "End Prismarine Stairs",
+
+  "block.quackems_the_end_update_mod.end_prismarine_slab": "End Prismarine Slab",
+
+  "block.quackems_the_end_update_mod.end_prismarine_wall": "End Prismarine Wall",
+
+
+  "block.quackems_the_end_update_mod.endstone_stretcher_stairs": "Endstone Stretcher Stairs",
+
+  "block.quackems_the_end_update_mod.endstone_stretcher_slab": "Endstone Stretcher Slab",
+
+  "block.quackems_the_end_update_mod.endstone_stretcher_wall": "Endstone Stretcher Wall",
+
+
 
 
 
@@ -75,8 +103,6 @@
   "block.quackems_the_end_update_mod.end_prismarine_brick": "End Prismarine Brick",
 
   "block.quackems_the_end_update_mod.endstone_stretcher": "EndStone Stretcher",
-
-  "block.quackems_the_end_update_mod.end_planks": "End Planks",
 
   "block.quackems_the_end_update_mod.end_veneer": "End Veneer",
 

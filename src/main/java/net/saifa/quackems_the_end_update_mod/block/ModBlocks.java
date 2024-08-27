@@ -1,18 +1,23 @@
 package net.saifa.quackems_the_end_update_mod.block;
 
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.saifa.quackems_the_end_update_mod.Quackems_The_End_Update;
+import net.saifa.quackems_the_end_update_mod.block.custom.ModFlammableRotatedPillarBlock;
 import net.saifa.quackems_the_end_update_mod.item.ModItems;
 import org.apache.commons.compress.compressors.lz77support.LZ77Compressor;
 
@@ -27,6 +32,25 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> AMORITE_BLOCK = registerBlock("amorite_block",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).strength(5f).requiresCorrectToolForDrops()));
+
+
+    public static final RegistryObject<Block> END_PLANKS = registerBlock("end_planks",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)) {
+                @Override
+                public boolean isFlammable(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return true;
+                }
+
+                @Override
+                public int getFlammability(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return 20;
+                }
+
+                @Override
+                public int getFireSpreadSpeed(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return 5;
+                }
+            });
 
     public static final RegistryObject<Block> END_VENEER = registerBlock("end_veneer",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.END_STONE).requiresCorrectToolForDrops()));
@@ -44,12 +68,11 @@ public class ModBlocks {
     public static final RegistryObject<Block> ENDSTONE_STRETCHER = registerBlock("endstone_stretcher",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.END_STONE_BRICKS).requiresCorrectToolForDrops()));
 
-    public static final RegistryObject<Block> END_PLANKS = registerBlock("end_planks",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).strength(3f).requiresCorrectToolForDrops()));
+
 
     public static final RegistryObject<Block> END_STAIRS = registerBlock("end_stairs",
-            () -> new StairBlock(() -> ModBlocks.END_PLANKS.get().defaultBlockState(),
-                    BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).strength(3f).requiresCorrectToolForDrops()));
+            () -> new StairBlock(() -> Blocks.OAK_PLANKS.defaultBlockState(),  //TODO:FIX THE STUPID PLANKS
+                    BlockBehaviour.Properties.copy(Blocks.OAK_STAIRS).strength(3f).requiresCorrectToolForDrops()));
 
     public static final RegistryObject<Block> END_SLAB = registerBlock("end_slab",
             () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).strength(3f).requiresCorrectToolForDrops()));
@@ -80,6 +103,60 @@ public class ModBlocks {
     public static final RegistryObject<Block> END_TRAPDOOR = registerBlock("end_trapdoor",
             () -> new TrapDoorBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).noOcclusion().strength(3f).requiresCorrectToolForDrops(),
                     BlockSetType.OAK));
+
+    public static final RegistryObject<Block> END_PRISMARINE_STAIRS = registerBlock("end_prismarine_stairs",
+            () -> new StairBlock(() -> ModBlocks.END_PRISMARINE_BRICK.get().defaultBlockState(),
+                    BlockBehaviour.Properties.copy(Blocks.END_STONE).strength(3f).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> END_PRISMARINE_SLAB = registerBlock("end_prismarine_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.END_STONE).strength(3f).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> END_PRISMARINE_WALL = registerBlock("end_prismarine_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.END_STONE).strength(3f).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> ENDSTONE_STRETCHER_STAIRS = registerBlock("endstone_stretcher_stairs",
+            () -> new StairBlock(() -> ModBlocks.ENDSTONE_STRETCHER.get().defaultBlockState(),
+                    BlockBehaviour.Properties.copy(Blocks.END_STONE).strength(3f).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> ENDSTONE_STRETCHER_SLAB = registerBlock("endstone_stretcher_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.END_STONE).strength(3f).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> ENDSTONE_STRETCHER_WALL = registerBlock("endstone_stretcher_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.END_STONE).strength(3f).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> END_OAK_LOG = registerBlock("end_oak_log",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG).requiresCorrectToolForDrops().strength(4.5f)));
+
+    public static final RegistryObject<Block> END_WOOD = registerBlock("end_wood",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WOOD).requiresCorrectToolForDrops().strength(4.5f)));
+
+    public static final RegistryObject<Block> STRIPPED_END_OAK_LOG = registerBlock("stripped_end_oak_log",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_LOG).requiresCorrectToolForDrops().strength(4.5f)));
+
+    public static final RegistryObject<Block> STRIPPED_END_WOOD = registerBlock("stripped_end_wood",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_WOOD).requiresCorrectToolForDrops().strength(4.5f)));
+
+
+
+
+
+    public static final RegistryObject<Block> END_LEAVES = registerBlock("end_leaves",
+            () -> new LeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)){
+                @Override
+                public boolean isFlammable(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return true;
+                }
+
+                @Override
+                public int getFlammability(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return 60;
+                }
+
+                @Override
+                public int getFireSpreadSpeed(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return 30;
+                }
+            });
 
 
 

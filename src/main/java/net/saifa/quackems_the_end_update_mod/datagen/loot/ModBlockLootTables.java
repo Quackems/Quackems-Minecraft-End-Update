@@ -34,7 +34,14 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.OVERWORLD_XP_ORE.get());
         this.dropSelf(ModBlocks.END_PRISMARINE_BRICK.get());
         this.dropSelf(ModBlocks.ENDSTONE_STRETCHER.get());
+        this.dropSelf(ModBlocks.END_OAK_LOG.get());
+        this.dropSelf(ModBlocks.END_WOOD.get());
+        this.dropSelf(ModBlocks.STRIPPED_END_OAK_LOG.get());
+        this.dropSelf(ModBlocks.STRIPPED_END_WOOD.get());
         this.dropSelf(ModBlocks.END_PLANKS.get());
+
+        this.add(ModBlocks.END_LEAVES.get(), block ->
+                createLeavesDrops(block, ModBlocks.AMORITE_BLOCK.get(), NORMAL_LEAVES_SAPLING_CHANCES)); // TODO: CHANGE TO SAPLING!
 
         this.add(ModBlocks.AMORITE_ORE.get(),
                 block -> createCopperLikeOreDrops(ModBlocks.AMORITE_ORE.get(), ModItems.AMORITE.get()));
@@ -55,12 +62,26 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.END_WALL.get());
         this.dropSelf(ModBlocks.END_VENEER.get());
 
+        this.dropSelf(ModBlocks.END_PRISMARINE_STAIRS.get());
+        this.dropSelf(ModBlocks.END_PRISMARINE_WALL.get());
+
+        this.dropSelf(ModBlocks.ENDSTONE_STRETCHER_STAIRS.get());
+        this.dropSelf(ModBlocks.ENDSTONE_STRETCHER_WALL.get());
+
 
         this.add(ModBlocks.END_SLAB.get(),
         block -> createSlabItemTable(ModBlocks.END_SLAB.get()));
 
+        this.add(ModBlocks.END_PRISMARINE_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.END_PRISMARINE_SLAB.get()));
+
+        this.add(ModBlocks.ENDSTONE_STRETCHER_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.ENDSTONE_STRETCHER_SLAB.get()));
+
+
         this.add(ModBlocks.END_DOOR.get(),
         block -> createDoorTable(ModBlocks.END_DOOR.get()));
+
 
     }
 

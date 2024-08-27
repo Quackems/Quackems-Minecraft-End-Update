@@ -7,6 +7,7 @@ import net.minecraft.tags.ItemTags;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.saifa.quackems_the_end_update_mod.Quackems_The_End_Update;
+import net.saifa.quackems_the_end_update_mod.block.ModBlocks;
 import net.saifa.quackems_the_end_update_mod.item.ModItems;
 import org.jetbrains.annotations.Nullable;
 
@@ -25,5 +26,24 @@ public class ModItemTagGenerator extends ItemTagsProvider {
                         ModItems.AMORITE_CHESTPLATE.get(),
                         ModItems.AMORITE_LEGGINGS.get(),
                         ModItems.AMORITE_BOOTS.get());
+
+
+
+
+        this.tag(ItemTags.LOGS_THAT_BURN)
+                .add(ModBlocks.END_OAK_LOG.get().asItem())
+                .add(ModBlocks.END_WOOD.get().asItem())
+                .add(ModBlocks.STRIPPED_END_OAK_LOG.get().asItem())
+                .add(ModBlocks.STRIPPED_END_WOOD.get().asItem());
+
+        this.tag(ItemTags.PLANKS)
+                .add(ModBlocks.END_PLANKS.get().asItem());
+
+
     }
+
+
+
+
+
 }

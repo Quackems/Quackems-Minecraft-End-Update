@@ -1,2 +1,4 @@
-// 1.20.1	2024-08-24T17:22:22.5405485	Tags for minecraft:item mod id quackems_the_end_update_mod
+// 1.20.1	2024-08-27T10:56:03.9868952	Tags for minecraft:item mod id quackems_the_end_update_mod
+ef75819e5df92a776768d7b718b44c4cb0acb495 data/minecraft/tags/items/logs_that_burn.json
+98066530cd592b241e575eeb62afc931925475c4 data/minecraft/tags/items/planks.json
 84360b4ab3f355fb2120733d3f9cb16d3ded243e data/minecraft/tags/items/trimmable_armor.json
