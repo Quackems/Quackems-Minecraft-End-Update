@@ -19,6 +19,7 @@ import net.saifa.quackems_the_end_update_mod.block.ModBlocks;
 import net.saifa.quackems_the_end_update_mod.block.entity.ModBlockEntities;
 import net.saifa.quackems_the_end_update_mod.item.ModCreativeModTabs;
 import net.saifa.quackems_the_end_update_mod.item.ModItems;
+import net.saifa.quackems_the_end_update_mod.loot.ModLootModifiers;
 import net.saifa.quackems_the_end_update_mod.screen.EndSawBlockScreen;
 import net.saifa.quackems_the_end_update_mod.screen.ModMenuTypes;
 import org.slf4j.Logger;
@@ -46,6 +47,8 @@ public class Quackems_The_End_Update
         ModBlockEntities.register(modEventBus);
 
         ModMenuTypes.register(modEventBus);
+
+        ModLootModifiers.register(modEventBus);
 
 
         MinecraftForge.EVENT_BUS.register(this);

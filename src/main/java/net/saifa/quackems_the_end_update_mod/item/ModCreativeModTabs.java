@@ -59,6 +59,7 @@ public class ModCreativeModTabs {
                         output.accept(ModBlocks.ENDSTONE_STRETCHER.get());
                         output.accept(ModBlocks.END_VENEER.get());
                         output.accept(ModBlocks.END_GRASS_BLOCK.get());
+                        output.accept(ModBlocks.END_SLUDGE.get());
 
 
                         output.accept(ModBlocks.END_STAIRS.get());

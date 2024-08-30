@@ -25,7 +25,8 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 .add(ModBlocks.AMORITE_ORE.get()).add(ModBlocks.OVERWORLD_XP_ORE.get()).add(ModBlocks.NETHER_XP_ORE.get()).addTag(Tags.Blocks.ORES);
 
         this.tag(BlockTags.MINEABLE_WITH_SHOVEL)
-                .add(ModBlocks.END_GRASS_BLOCK.get());
+                .add(ModBlocks.END_GRASS_BLOCK.get())
+                .add(ModBlocks.END_SLUDGE.get());
 
 
 
@@ -88,7 +89,8 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 .add(ModBlocks.END_WOOD.get())
                 .add(ModBlocks.STRIPPED_END_OAK_LOG.get())
                 .add(ModBlocks.STRIPPED_END_WOOD.get())
-                .add(ModBlocks.END_GRASS_BLOCK.get());
+                .add(ModBlocks.END_GRASS_BLOCK.get())
+                .add(ModBlocks.END_SLUDGE.get());
 
         this.tag(BlockTags.NEEDS_STONE_TOOL);
 

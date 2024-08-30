@@ -28,6 +28,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.ENDSTONE_STRETCHER);
         blockWithItem(ModBlocks.END_VENEER);
         blockWithItem(ModBlocks.END_PLANKS);
+        blockWithItem(ModBlocks.END_SLUDGE);
 
 
 

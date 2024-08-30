@@ -34,6 +34,11 @@ public class ModBlocks {
     public static final RegistryObject<Block> AMORITE_BLOCK = registerBlock("amorite_block",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).strength(5f).requiresCorrectToolForDrops()));
 
+    public static final RegistryObject<Block> END_SLUDGE = registerBlock("end_sludge",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.SLIME_BLOCK).strength(5f).requiresCorrectToolForDrops()
+                    .jumpFactor(1.5f)
+                    .speedFactor(0.1f)));
+
     public static final RegistryObject<Block> END_GRASS_BLOCK = registerBlock("end_grass",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.GRASS_BLOCK).strength(3f).requiresCorrectToolForDrops()));
 

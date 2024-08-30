@@ -34,5 +34,6 @@ public class DataGenerators {
 
         generator.addProvider(event.includeServer(), new ModGlobalLootModifiersProvider(packOutput));
 
+
     }
 }

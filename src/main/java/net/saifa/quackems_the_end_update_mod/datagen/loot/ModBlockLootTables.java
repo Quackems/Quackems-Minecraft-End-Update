@@ -8,6 +8,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.GrassBlock;
 import net.minecraft.world.level.storage.loot.LootTable;
 import net.minecraft.world.level.storage.loot.entries.LootItem;
 import net.minecraft.world.level.storage.loot.functions.ApplyBonusCount;
@@ -23,6 +24,10 @@ import net.saifa.quackems_the_end_update_mod.item.ModItems;
 import java.util.Set;
 
 public class ModBlockLootTables extends BlockLootSubProvider {
+
+
+    protected static final float[] NORMAL_END_GRASS_BLOCK_CHANCES = new float[]{0.5F, 0.625F, 0.835F, 1F};
+
     public ModBlockLootTables() {
         super(Set.of(), FeatureFlags.REGISTRY.allFlags());
     }
@@ -40,7 +45,7 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.STRIPPED_END_WOOD.get());
         this.dropSelf(ModBlocks.END_PLANKS.get());
         this.dropSelf(ModBlocks.END_SAW_BLOCK.get());
-        this.dropSelf(ModBlocks.END_GRASS_BLOCK.get());
+        this.dropSelf(ModBlocks.END_SLUDGE.get());
 
         this.add(ModBlocks.END_LEAVES.get(), block ->
                 createLeavesDrops(block, ModBlocks.AMORITE_BLOCK.get(), NORMAL_LEAVES_SAPLING_CHANCES)); // TODO: CHANGE TO SAPLING!
@@ -53,6 +58,10 @@ public class ModBlockLootTables extends BlockLootSubProvider {
 
         this.add(ModBlocks.NETHER_XP_ORE.get(),
                 block -> createOreDrop(ModBlocks.NETHER_XP_ORE.get(), Items.NETHERRACK));
+
+
+        this.dropOther(ModBlocks.END_GRASS_BLOCK.get(),
+                ModBlocks.END_SLUDGE.get());
 
 
         this.dropSelf(ModBlocks.END_STAIRS.get());
