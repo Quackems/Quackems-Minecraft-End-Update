@@ -3,6 +3,7 @@ package net.saifa.quackems_the_end_update_mod.datagen;
 import net.minecraft.advancements.critereon.ItemPredicate;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
+import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
@@ -64,6 +65,43 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('G', Items.GOLD_INGOT)
                 .unlockedBy(getHasName(ModItems.AMORITE.get()), has(ModItems.AMORITE.get()))
                 .save(consumer);
+
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.AMORITE_CHESTPLATE.get())
+                .pattern("A A")
+                .pattern("AAA")
+                .pattern("AAA")
+                .define('A', ModItems.POLISHED_AMORITE.get())
+                .unlockedBy(getHasName(ModItems.POLISHED_AMORITE.get()), has(ModItems.POLISHED_AMORITE.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.AMORITE_LEGGINGS.get())
+                .pattern("AAA")
+                .pattern("A A")
+                .pattern("A A")
+                .define('A', ModItems.POLISHED_AMORITE.get())
+                .unlockedBy(getHasName(ModItems.POLISHED_AMORITE.get()), has(ModItems.POLISHED_AMORITE.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.AMORITE_BOOTS.get())
+                .pattern("   ")
+                .pattern("A A")
+                .pattern("A A")
+                .define('A', ModItems.POLISHED_AMORITE.get())
+                .unlockedBy(getHasName(ModItems.POLISHED_AMORITE.get()), has(ModItems.POLISHED_AMORITE.get()))
+                .save(consumer);
+
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.AMORITE_HELMET.get())
+                .pattern("   ")
+                .pattern("AAA")
+                .pattern("A A")
+                .define('A', ModItems.POLISHED_AMORITE.get())
+                .unlockedBy(getHasName(ModItems.POLISHED_AMORITE.get()), has(ModItems.POLISHED_AMORITE.get()))
+                .save(consumer);
+
+
+
 
 
 

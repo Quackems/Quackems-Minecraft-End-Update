@@ -14,7 +14,12 @@ import java.util.List;
 
 public class ModToolTiers {
     public static final Tier AMORITE = TierSortingRegistry.registerTier(
-            new ForgeTier(5, 3500, 5, 8f, 25,
+            new ForgeTier(6, 3500, 20, 8f, 25,
                     ModTags.Blocks.NEEDS_AMORITE_TOOL, () -> Ingredient.of(ModItems.AMORITE.get())),
             new ResourceLocation(Quackems_The_End_Update.MOD_ID, "amorite"), List.of(Tiers.NETHERITE), List.of());
+
+    public static final Tier CORRUPTED_DIAMOND = TierSortingRegistry.registerTier(
+            new ForgeTier(5, 2350, 13, 3f, 45,
+                    ModTags.Blocks.NEEDS_CORRUPTED_DIAMOND_TOOL, () -> Ingredient.of(ModItems.CORRUPTED_DIAMOND.get())),
+            new ResourceLocation(Quackems_The_End_Update.MOD_ID, "corrupted_diamond"), List.of(Tiers.NETHERITE), List.of());
 }

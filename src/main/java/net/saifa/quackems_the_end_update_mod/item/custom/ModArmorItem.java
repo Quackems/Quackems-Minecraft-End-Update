@@ -3,12 +3,14 @@ package net.saifa.quackems_the_end_update_mod.item.custom;
 import com.google.common.collect.ImmutableMap;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
+import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.ArmorMaterial;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.saifa.quackems_the_end_update_mod.item.ModArmorMaterials;
+import net.saifa.quackems_the_end_update_mod.item.ModItems;
 
 import java.util.Map;
 
@@ -16,7 +18,10 @@ public class ModArmorItem extends ArmorItem {
     private static final Map<ArmorMaterial, MobEffectInstance> MATERIAL_TO_EFFECT_MAP =
             (new ImmutableMap.Builder<ArmorMaterial, MobEffectInstance>())
                     .put(ModArmorMaterials.AMORITE, new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 200, 1,
-                            false,false, true)).build();
+                            false,false, true))
+                    .put(ModArmorMaterials.CORRUPTED_DIAMOND ,new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 200, 1,
+                            false,false,true)).build();
+
 
     public ModArmorItem(ArmorMaterial pMaterial, Type pType, Properties pProperties) {
         super(pMaterial, pType, pProperties);

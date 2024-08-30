@@ -25,7 +25,11 @@ public class ModItemTagGenerator extends ItemTagsProvider {
                 .add(ModItems.AMORITE_HELMET.get(),
                         ModItems.AMORITE_CHESTPLATE.get(),
                         ModItems.AMORITE_LEGGINGS.get(),
-                        ModItems.AMORITE_BOOTS.get());
+                        ModItems.AMORITE_BOOTS.get(),
+                        ModItems.CORRUPTED_DIAMOND_HELMET.get(),
+                        ModItems.CORRUPTED_DIAMOND_CHESTPLATE.get(),
+                        ModItems.CORRUPTED_DIAMOND_LEGGINGS.get(),
+                        ModItems.CORRUPTED_DIAMOND_BOOTS.get());
 
 
 

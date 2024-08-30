@@ -39,6 +39,8 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.STRIPPED_END_OAK_LOG.get());
         this.dropSelf(ModBlocks.STRIPPED_END_WOOD.get());
         this.dropSelf(ModBlocks.END_PLANKS.get());
+        this.dropSelf(ModBlocks.END_SAW_BLOCK.get());
+        this.dropSelf(ModBlocks.END_GRASS_BLOCK.get());
 
         this.add(ModBlocks.END_LEAVES.get(), block ->
                 createLeavesDrops(block, ModBlocks.AMORITE_BLOCK.get(), NORMAL_LEAVES_SAPLING_CHANCES)); // TODO: CHANGE TO SAPLING!

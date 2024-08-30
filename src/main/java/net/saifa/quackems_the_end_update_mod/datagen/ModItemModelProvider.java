@@ -51,12 +51,14 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.AMORITE_DETECTOR);
         simpleItem(ModItems.END_APPLE);
         simpleItem(ModItems.END_COAL);
+        simpleItem(ModItems.POLISHED_AMORITE);
+        simpleItem(ModItems.CORRUPTED_DIAMOND);
 
         simpleBlockItem(ModBlocks.END_DOOR);
 
-        fenceItem(ModBlocks.END_FENCE, ModBlocks.AMORITE_BLOCK);//TODO:FIX THIS
-        buttonItem(ModBlocks.END_BUTTON, ModBlocks.AMORITE_BLOCK);
-        wallItem(ModBlocks.END_WALL, ModBlocks.AMORITE_BLOCK);
+        fenceItem(ModBlocks.END_FENCE, ModBlocks.END_PLANKS);//TODO:FIX THIS
+        buttonItem(ModBlocks.END_BUTTON, ModBlocks.END_PLANKS);
+        wallItem(ModBlocks.END_WALL, ModBlocks.END_PLANKS);
 
         wallItem(ModBlocks.END_PRISMARINE_WALL, ModBlocks.END_PRISMARINE_BRICK);
 
@@ -83,10 +85,20 @@ public class ModItemModelProvider extends ItemModelProvider {
         handheldItem(ModItems.AMORITE_PICKAXE);
         handheldItem(ModItems.AMORITE_SHOVEL);
 
+        handheldItem(ModItems.CORRUPTED_DIAMOND_AXE);
+        handheldItem(ModItems.CORRUPTED_DIAMOND_SWORD);
+        handheldItem(ModItems.CORRUPTED_DIAMOND_HOE);
+        handheldItem(ModItems.CORRUPTED_DIAMOND_PICKAXE);
+        handheldItem(ModItems.CORRUPTED_DIAMOND_SHOVEL);
+
         trimmedArmorItem(ModItems.AMORITE_HELMET);
         trimmedArmorItem(ModItems.AMORITE_CHESTPLATE);
         trimmedArmorItem(ModItems.AMORITE_LEGGINGS);
         trimmedArmorItem(ModItems.AMORITE_BOOTS);
+        trimmedArmorItem(ModItems.CORRUPTED_DIAMOND_HELMET);
+        trimmedArmorItem(ModItems.CORRUPTED_DIAMOND_CHESTPLATE);
+        trimmedArmorItem(ModItems.CORRUPTED_DIAMOND_LEGGINGS);
+        trimmedArmorItem(ModItems.CORRUPTED_DIAMOND_BOOTS);
 
     }
 

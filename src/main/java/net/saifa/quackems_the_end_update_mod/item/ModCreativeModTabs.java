@@ -20,6 +20,7 @@ public class ModCreativeModTabs {
                     .title(Component.translatable("creativetab.quackems_tab"))
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(ModItems.AMORITE.get());
+                        output.accept(ModItems.POLISHED_AMORITE.get());
                         output.accept(ModItems.METAL_DETECTOR.get());
                         output.accept(ModItems.AMORITE_DETECTOR.get());
                         output.accept(ModItems.END_APPLE.get());
@@ -31,11 +32,23 @@ public class ModCreativeModTabs {
                         output.accept(ModItems.AMORITE_SHOVEL.get());
                         output.accept(ModItems.AMORITE_HOE.get());
 
+                        output.accept(ModItems.CORRUPTED_DIAMOND_SWORD.get());
+                        output.accept(ModItems.CORRUPTED_DIAMOND_AXE.get());
+                        output.accept(ModItems.CORRUPTED_DIAMOND_PICKAXE.get());
+                        output.accept(ModItems.CORRUPTED_DIAMOND_SHOVEL.get());
+                        output.accept(ModItems.CORRUPTED_DIAMOND_HOE.get());
+                        output.accept(ModItems.CORRUPTED_DIAMOND.get());
+
 
                         output.accept(ModItems.AMORITE_HELMET.get());
                         output.accept(ModItems.AMORITE_CHESTPLATE.get());
                         output.accept(ModItems.AMORITE_LEGGINGS.get());
                         output.accept(ModItems.AMORITE_BOOTS.get());
+
+                        output.accept(ModItems.CORRUPTED_DIAMOND_HELMET.get());
+                        output.accept(ModItems.CORRUPTED_DIAMOND_CHESTPLATE.get());
+                        output.accept(ModItems.CORRUPTED_DIAMOND_LEGGINGS.get());
+                        output.accept(ModItems.CORRUPTED_DIAMOND_BOOTS.get());
 
 
                         output.accept(ModBlocks.AMORITE_ORE.get());
@@ -45,6 +58,7 @@ public class ModCreativeModTabs {
                         output.accept(ModBlocks.END_PRISMARINE_BRICK.get());
                         output.accept(ModBlocks.ENDSTONE_STRETCHER.get());
                         output.accept(ModBlocks.END_VENEER.get());
+                        output.accept(ModBlocks.END_GRASS_BLOCK.get());
 
 
                         output.accept(ModBlocks.END_STAIRS.get());
@@ -72,6 +86,7 @@ public class ModCreativeModTabs {
                         output.accept(ModBlocks.STRIPPED_END_WOOD.get());
                         output.accept(ModBlocks.END_LEAVES.get());
                         output.accept(ModBlocks.END_PLANKS.get());
+                        output.accept(ModBlocks.END_SAW_BLOCK.get());
 
 
                     })

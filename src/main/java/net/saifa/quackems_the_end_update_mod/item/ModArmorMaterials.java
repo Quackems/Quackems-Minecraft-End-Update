@@ -11,7 +11,9 @@ import java.util.function.Supplier;
 
 public enum ModArmorMaterials implements ArmorMaterial {
     AMORITE("amorite", 400, new int[]{ 140, 180, 160, 120 }, 25,
-            SoundEvents.ARMOR_EQUIP_GOLD, 50f, 5f, () -> Ingredient.of(ModItems.AMORITE.get()));
+            SoundEvents.ARMOR_EQUIP_GOLD, 50f, 5f, () -> Ingredient.of(ModItems.POLISHED_AMORITE.get())),
+    CORRUPTED_DIAMOND("corrupted_diamond", 200, new int[]{ 70, 90, 80, 60 }, 45,
+            SoundEvents.ARMOR_EQUIP_GOLD, 20f, 1f, () -> Ingredient.of(ModItems.CORRUPTED_DIAMOND.get()));
 
     private final String name;
     private final int durabilityMultiplier;

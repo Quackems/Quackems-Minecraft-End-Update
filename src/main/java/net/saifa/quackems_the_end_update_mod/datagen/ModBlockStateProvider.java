@@ -30,6 +30,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.END_PLANKS);
 
 
+
         stairsBlock(((StairBlock) ModBlocks.END_STAIRS.get()), blockTexture(ModBlocks.END_PLANKS.get()));
         slabBlock(((SlabBlock) ModBlocks.END_SLAB.get()), blockTexture(ModBlocks.END_PLANKS.get()), blockTexture(ModBlocks.END_PLANKS.get()));
 
@@ -76,6 +77,13 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
 
         leavesBlock(ModBlocks.END_LEAVES);
+
+
+        simpleBlockWithItem(ModBlocks.END_SAW_BLOCK.get(),
+                new ModelFile.UncheckedModelFile(modLoc("block/end_saw_block")));
+
+        simpleBlockWithItem(ModBlocks.END_GRASS_BLOCK.get(),
+                new ModelFile.UncheckedModelFile(modLoc("block/end_grass")));
 
 
     }

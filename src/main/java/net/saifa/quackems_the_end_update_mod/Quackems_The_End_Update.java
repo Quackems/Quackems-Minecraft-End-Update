@@ -1,6 +1,7 @@
 package net.saifa.quackems_the_end_update_mod;
 
 import com.mojang.logging.LogUtils;
+import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -15,8 +16,11 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.saifa.quackems_the_end_update_mod.block.ModBlocks;
+import net.saifa.quackems_the_end_update_mod.block.entity.ModBlockEntities;
 import net.saifa.quackems_the_end_update_mod.item.ModCreativeModTabs;
 import net.saifa.quackems_the_end_update_mod.item.ModItems;
+import net.saifa.quackems_the_end_update_mod.screen.EndSawBlockScreen;
+import net.saifa.quackems_the_end_update_mod.screen.ModMenuTypes;
 import org.slf4j.Logger;
 
 // The value here should match an entry in the META-INF/mods.toml file
@@ -38,6 +42,10 @@ public class Quackems_The_End_Update
         ModBlocks.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
+
+        ModBlockEntities.register(modEventBus);
+
+        ModMenuTypes.register(modEventBus);
 
 
         MinecraftForge.EVENT_BUS.register(this);
@@ -70,6 +78,7 @@ public class Quackems_The_End_Update
     {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event){
+            MenuScreens.register(ModMenuTypes.END_SAW_MENU.get(), EndSawBlockScreen::new);
             
         }
     }

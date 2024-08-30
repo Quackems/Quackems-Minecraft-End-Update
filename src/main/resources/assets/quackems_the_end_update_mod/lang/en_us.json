@@ -1,6 +1,10 @@
 {
   "item.quackems_the_end_update_mod.amorite": "Amorite",
 
+  "item.quackems_the_end_update_mod.corrupted_diamond": "Corrupted Diamond",
+
+  "item.quackems_the_end_update_mod.polished_amorite": "Polished Amorite",
+
   "item.quackems_the_end_update_mod.metal_detector": "Metal Detector",
 
   "item.quackems_the_end_update_mod.amorite_detector": "Amorite Detector",
@@ -21,6 +25,16 @@
 
   "item.quackems_the_end_update_mod.amorite_hoe": "Amorite Hoe",
 
+  "item.quackems_the_end_update_mod.corrupted_diamond_sword": "Corrupted Diamond Sword",
+
+  "item.quackems_the_end_update_mod.corrupted_diamond_axe": "Corrupted Diamond Axe",
+
+  "item.quackems_the_end_update_mod.corrupted_diamond_pickaxe": "Corrupted Diamond Pickaxe",
+
+  "item.quackems_the_end_update_mod.corrupted_diamond_shovel": "Corrupted Diamond Shovel",
+
+  "item.quackems_the_end_update_mod.corrupted_diamond_hoe": "Corrupted Diamond Hoe",
+
 
   "item.quackems_the_end_update_mod.amorite_helmet": "Amorite Helmet",
 
@@ -29,6 +43,14 @@
   "item.quackems_the_end_update_mod.amorite_leggings": "Amorite Leggings",
 
   "item.quackems_the_end_update_mod.amorite_boots": "Amorite Boots",
+
+  "item.quackems_the_end_update_mod.corrupted_diamond_helmet": "Corrupted Diamond Helmet",
+
+  "item.quackems_the_end_update_mod.corrupted_diamond_chestplate": "Corrupted Diamond Chestplate",
+
+  "item.quackems_the_end_update_mod.corrupted_diamond_leggings": "Corrupted Diamond Leggings",
+
+  "item.quackems_the_end_update_mod.corrupted_diamond_boots": "Corrupted Diamond Boots",
 
 
 
@@ -96,6 +118,8 @@
 
   "block.quackems_the_end_update_mod.amorite_block": "Block of Amorite",
 
+  "block.quackems_the_end_update_mod.end_grass": "End Grass Block",
+
   "block.quackems_the_end_update_mod.overworld_xp_ore": "Stone XP Ore",
 
   "block.quackems_the_end_update_mod.nether_xp_ore": "Netherrack XP Ore",
@@ -105,6 +129,9 @@
   "block.quackems_the_end_update_mod.endstone_stretcher": "EndStone Stretcher",
 
   "block.quackems_the_end_update_mod.end_veneer": "End Veneer",
+
+
+  "block.quackems_the_end_update_mod.end_saw_block": "End Saw",
 
 
 

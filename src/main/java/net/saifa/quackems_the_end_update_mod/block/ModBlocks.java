@@ -17,6 +17,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.saifa.quackems_the_end_update_mod.Quackems_The_End_Update;
+import net.saifa.quackems_the_end_update_mod.block.custom.EndSawBlock;
 import net.saifa.quackems_the_end_update_mod.block.custom.ModFlammableRotatedPillarBlock;
 import net.saifa.quackems_the_end_update_mod.item.ModItems;
 import org.apache.commons.compress.compressors.lz77support.LZ77Compressor;
@@ -32,6 +33,9 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> AMORITE_BLOCK = registerBlock("amorite_block",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).strength(5f).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> END_GRASS_BLOCK = registerBlock("end_grass",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.GRASS_BLOCK).strength(3f).requiresCorrectToolForDrops()));
 
 
     public static final RegistryObject<Block> END_PLANKS = registerBlock("end_planks",
@@ -157,6 +161,9 @@ public class ModBlocks {
                     return 30;
                 }
             });
+
+    public static final RegistryObject<Block> END_SAW_BLOCK = registerBlock("end_saw_block",
+            () -> new EndSawBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).strength(3f).requiresCorrectToolForDrops().noOcclusion()));
 
 
 

@@ -16,7 +16,11 @@ public class ModItems {
             DeferredRegister.create(ForgeRegistries.ITEMS, Quackems_The_End_Update.MOD_ID);
 
     public static final RegistryObject<Item> AMORITE = ITEMS.register("amorite",
-            () -> new Item(new Item.Properties()));
+            () -> new Item(new Item.Properties().rarity(Rarity.RARE)));
+    public static final RegistryObject<Item> POLISHED_AMORITE = ITEMS.register("polished_amorite",
+            () -> new Item(new Item.Properties().rarity(Rarity.RARE)));
+    public static final RegistryObject<Item> CORRUPTED_DIAMOND = ITEMS.register("corrupted_diamond",
+            () -> new Item(new Item.Properties().rarity(Rarity.UNCOMMON)));
     public static final RegistryObject<Item> METAL_DETECTOR = ITEMS.register("metal_detector",
             () -> new MetalDetectorItem(new Item.Properties().durability(65)));
 
@@ -33,25 +37,47 @@ public class ModItems {
             () -> new FuelItem(new Item.Properties(), 16000));
 
     public static final RegistryObject<Item> AMORITE_SWORD = ITEMS.register("amorite_sword",
-            () -> new SwordItem(ModToolTiers.AMORITE, 21, 1, new Item.Properties()));
+            () -> new SwordItem(ModToolTiers.AMORITE, 21, 0, new Item.Properties().rarity(Rarity.EPIC)));
     public static final RegistryObject<Item> AMORITE_PICKAXE = ITEMS.register("amorite_pickaxe",
-            () -> new PickaxeItem(ModToolTiers.AMORITE, 1, 0, new Item.Properties()));
+            () -> new PickaxeItem(ModToolTiers.AMORITE, 1, 0, new Item.Properties().rarity(Rarity.EPIC)));
     public static final RegistryObject<Item> AMORITE_AXE = ITEMS.register("amorite_axe",
-            () -> new AxeItem(ModToolTiers.AMORITE, 31, -2, new Item.Properties()));
+            () -> new AxeItem(ModToolTiers.AMORITE, 31, -2, new Item.Properties().rarity(Rarity.EPIC)));
     public static final RegistryObject<Item> AMORITE_SHOVEL = ITEMS.register("amorite_shovel",
-            () -> new ShovelItem(ModToolTiers.AMORITE, -5, 1, new Item.Properties()));
+            () -> new ShovelItem(ModToolTiers.AMORITE, -5, 1, new Item.Properties().rarity(Rarity.EPIC)));
     public static final RegistryObject<Item> AMORITE_HOE = ITEMS.register("amorite_hoe",
-            () -> new HoeItem(ModToolTiers.AMORITE, -5, 1, new Item.Properties()));
+            () -> new HoeItem(ModToolTiers.AMORITE, -5, 1, new Item.Properties().rarity(Rarity.EPIC)));
+
+    public static final RegistryObject<Item> CORRUPTED_DIAMOND_SWORD = ITEMS.register("corrupted_diamond_sword",
+            () -> new SwordItem(ModToolTiers.CORRUPTED_DIAMOND, 16, 0, new Item.Properties().rarity(Rarity.RARE)));
+    public static final RegistryObject<Item> CORRUPTED_DIAMOND_PICKAXE = ITEMS.register("corrupted_diamond_pickaxe",
+            () -> new PickaxeItem(ModToolTiers.CORRUPTED_DIAMOND, 2, 0, new Item.Properties().rarity(Rarity.RARE)));
+    public static final RegistryObject<Item> CORRUPTED_DIAMOND_AXE = ITEMS.register("corrupted_diamond_axe",
+            () -> new AxeItem(ModToolTiers.CORRUPTED_DIAMOND, 26, -2, new Item.Properties().rarity(Rarity.RARE)));
+    public static final RegistryObject<Item> CORRUPTED_DIAMOND_SHOVEL = ITEMS.register("corrupted_diamond_shovel",
+            () -> new ShovelItem(ModToolTiers.CORRUPTED_DIAMOND, 1, 1, new Item.Properties().rarity(Rarity.RARE)));
+    public static final RegistryObject<Item> CORRUPTED_DIAMOND_HOE = ITEMS.register("corrupted_diamond_hoe",
+            () -> new HoeItem(ModToolTiers.CORRUPTED_DIAMOND, 1, 1, new Item.Properties().rarity(Rarity.RARE)));
 
 
     public static final RegistryObject<Item> AMORITE_HELMET = ITEMS.register("amorite_helmet",
-            () -> new ModArmorItem(ModArmorMaterials.AMORITE, ArmorItem.Type.HELMET, new Item.Properties()));
+            () -> new ModArmorItem(ModArmorMaterials.AMORITE, ArmorItem.Type.HELMET, new Item.Properties().rarity(Rarity.EPIC)));
     public static final RegistryObject<Item> AMORITE_CHESTPLATE = ITEMS.register("amorite_chestplate",
-            () -> new ArmorItem(ModArmorMaterials.AMORITE, ArmorItem.Type.CHESTPLATE, new Item.Properties()));
+            () -> new ArmorItem(ModArmorMaterials.AMORITE, ArmorItem.Type.CHESTPLATE, new Item.Properties().rarity(Rarity.EPIC)));
     public static final RegistryObject<Item> AMORITE_LEGGINGS = ITEMS.register("amorite_leggings",
-            () -> new ArmorItem(ModArmorMaterials.AMORITE, ArmorItem.Type.LEGGINGS, new Item.Properties()));
+            () -> new ArmorItem(ModArmorMaterials.AMORITE, ArmorItem.Type.LEGGINGS, new Item.Properties().rarity(Rarity.EPIC)));
     public static final RegistryObject<Item> AMORITE_BOOTS = ITEMS.register("amorite_boots",
-            () -> new ArmorItem(ModArmorMaterials.AMORITE, ArmorItem.Type.BOOTS, new Item.Properties()));
+            () -> new ArmorItem(ModArmorMaterials.AMORITE, ArmorItem.Type.BOOTS, new Item.Properties().rarity(Rarity.EPIC)));
+
+
+    public static final RegistryObject<Item> CORRUPTED_DIAMOND_HELMET = ITEMS.register("corrupted_diamond_helmet",
+            () -> new ModArmorItem(ModArmorMaterials.CORRUPTED_DIAMOND, ArmorItem.Type.HELMET, new Item.Properties().rarity(Rarity.RARE)));
+    public static final RegistryObject<Item> CORRUPTED_DIAMOND_CHESTPLATE = ITEMS.register("corrupted_diamond_chestplate",
+            () -> new ArmorItem(ModArmorMaterials.CORRUPTED_DIAMOND, ArmorItem.Type.CHESTPLATE, new Item.Properties().rarity(Rarity.RARE)));
+    public static final RegistryObject<Item> CORRUPTED_DIAMOND_LEGGINGS = ITEMS.register("corrupted_diamond_leggings",
+            () -> new ArmorItem(ModArmorMaterials.CORRUPTED_DIAMOND, ArmorItem.Type.LEGGINGS, new Item.Properties().rarity(Rarity.RARE)));
+    public static final RegistryObject<Item> CORRUPTED_DIAMOND_BOOTS = ITEMS.register("corrupted_diamond_boots",
+            () -> new ArmorItem(ModArmorMaterials.CORRUPTED_DIAMOND, ArmorItem.Type.BOOTS, new Item.Properties().rarity(Rarity.RARE)));
+
 
 
 
