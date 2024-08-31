@@ -22,7 +22,11 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
     @Override
     protected void addTags(HolderLookup.Provider pProvider) {
         this.tag(ModTags.Blocks.METAL_DETECTOR_VALUABLES)
-                .add(ModBlocks.AMORITE_ORE.get()).add(ModBlocks.OVERWORLD_XP_ORE.get()).add(ModBlocks.NETHER_XP_ORE.get()).addTag(Tags.Blocks.ORES);
+                .add(ModBlocks.AMORITE_ORE.get())
+                .add(ModBlocks.STONE_XP_ORE.get())
+                .add(ModBlocks.DEEPSLATE_XP_ORE.get())
+                .add(ModBlocks.NETHER_XP_ORE.get())
+                .addTag(Tags.Blocks.ORES);
 
         this.tag(BlockTags.MINEABLE_WITH_SHOVEL)
                 .add(ModBlocks.END_GRASS_BLOCK.get())
@@ -34,7 +38,8 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
         this.tag(BlockTags.MINEABLE_WITH_PICKAXE)
                 .add(ModBlocks.AMORITE_BLOCK.get(),
                         ModBlocks.AMORITE_ORE.get(),
-                        ModBlocks.OVERWORLD_XP_ORE.get(),
+                        ModBlocks.STONE_XP_ORE.get(),
+                        ModBlocks.DEEPSLATE_XP_ORE.get(),
                         ModBlocks.NETHER_XP_ORE.get(),
                         ModBlocks.END_PRISMARINE_BRICK.get(),
                         ModBlocks.ENDSTONE_STRETCHER.get(),
@@ -43,7 +48,8 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                         ModBlocks.END_PRISMARINE_STAIRS.get(),
                         ModBlocks.ENDSTONE_STRETCHER_SLAB.get(),
                         ModBlocks.ENDSTONE_STRETCHER_WALL.get(),
-                        ModBlocks.ENDSTONE_STRETCHER_STAIRS.get());
+                        ModBlocks.ENDSTONE_STRETCHER_STAIRS.get(),
+                        ModBlocks.END_SLUDGE_BRICK.get());
 
         this.tag(BlockTags.MINEABLE_WITH_AXE)
                 .add(ModBlocks.END_STAIRS.get())
@@ -64,7 +70,7 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
 
 
         this.tag(BlockTags.NEEDS_IRON_TOOL)
-                .add(ModBlocks.OVERWORLD_XP_ORE.get())
+                .add(ModBlocks.STONE_XP_ORE.get())
                 .add(ModBlocks.ENDSTONE_STRETCHER.get())
                 .add(ModBlocks.END_PRISMARINE_BRICK.get());
 
@@ -90,7 +96,9 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 .add(ModBlocks.STRIPPED_END_OAK_LOG.get())
                 .add(ModBlocks.STRIPPED_END_WOOD.get())
                 .add(ModBlocks.END_GRASS_BLOCK.get())
-                .add(ModBlocks.END_SLUDGE.get());
+                .add(ModBlocks.END_SLUDGE.get())
+                .add(ModBlocks.END_SLUDGE_BRICK.get())
+                .add(ModBlocks.DEEPSLATE_XP_ORE.get());
 
         this.tag(BlockTags.NEEDS_STONE_TOOL);
 

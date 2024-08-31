@@ -22,7 +22,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
     protected void registerStatesAndModels() {
         blockWithItem(ModBlocks.AMORITE_BLOCK);
         blockWithItem(ModBlocks.AMORITE_ORE);
-        blockWithItem(ModBlocks.OVERWORLD_XP_ORE);
+        blockWithItem(ModBlocks.STONE_XP_ORE);
+        blockWithItem(ModBlocks.DEEPSLATE_XP_ORE);
         blockWithItem(ModBlocks.NETHER_XP_ORE);
         blockWithItem(ModBlocks.END_PRISMARINE_BRICK);
         blockWithItem(ModBlocks.ENDSTONE_STRETCHER);
@@ -62,6 +63,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
 
 
+
         logBlock(((RotatedPillarBlock) ModBlocks.END_OAK_LOG.get()));
         axisBlock(((RotatedPillarBlock) ModBlocks.END_WOOD.get()), blockTexture(ModBlocks.END_OAK_LOG.get()),
                 blockTexture(ModBlocks.END_OAK_LOG.get()));
@@ -77,6 +79,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockItem(ModBlocks.STRIPPED_END_WOOD);
 
 
+
         leavesBlock(ModBlocks.END_LEAVES);
 
 
@@ -84,7 +87,13 @@ public class ModBlockStateProvider extends BlockStateProvider {
                 new ModelFile.UncheckedModelFile(modLoc("block/end_saw_block")));
 
         simpleBlockWithItem(ModBlocks.END_GRASS_BLOCK.get(),
-                new ModelFile.UncheckedModelFile(modLoc("block/end_grass")));
+                new ModelFile.UncheckedModelFile(modLoc("block/end_grass_block")));
+
+        simpleBlockWithItem(ModBlocks.END_GRASS.get(),
+                new ModelFile.UncheckedModelFile(modLoc("block/end_grass_flower")));
+
+        simpleBlockWithItem(ModBlocks.END_SLUDGE_BRICK.get(),
+                new ModelFile.UncheckedModelFile(modLoc("block/end_sludge_brick")));
 
 
     }

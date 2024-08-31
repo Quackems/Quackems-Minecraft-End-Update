@@ -36,7 +36,8 @@ public class ModBlockLootTables extends BlockLootSubProvider {
     protected void generate() {
         this.dropSelf(ModBlocks.AMORITE_BLOCK.get());
         this.dropSelf(ModBlocks.AMORITE_ORE.get());
-        this.dropSelf(ModBlocks.OVERWORLD_XP_ORE.get());
+        this.dropSelf(ModBlocks.STONE_XP_ORE.get());
+        this.dropSelf(ModBlocks.DEEPSLATE_XP_ORE.get());
         this.dropSelf(ModBlocks.END_PRISMARINE_BRICK.get());
         this.dropSelf(ModBlocks.ENDSTONE_STRETCHER.get());
         this.dropSelf(ModBlocks.END_OAK_LOG.get());
@@ -46,15 +47,23 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.END_PLANKS.get());
         this.dropSelf(ModBlocks.END_SAW_BLOCK.get());
         this.dropSelf(ModBlocks.END_SLUDGE.get());
+        this.dropSelf(ModBlocks.END_SLUDGE_BRICK.get());
+
+        this.add(ModBlocks.END_GRASS.get(),
+                block -> createGrassDrops(ModBlocks.END_GRASS.get()));
+
+
 
         this.add(ModBlocks.END_LEAVES.get(), block ->
                 createLeavesDrops(block, ModBlocks.AMORITE_BLOCK.get(), NORMAL_LEAVES_SAPLING_CHANCES)); // TODO: CHANGE TO SAPLING!
 
         this.add(ModBlocks.AMORITE_ORE.get(),
-                block -> createCopperLikeOreDrops(ModBlocks.AMORITE_ORE.get(), ModItems.AMORITE.get()));
+                block -> createOreDrop(ModBlocks.AMORITE_ORE.get(), ModItems.AMORITE.get()));
 
-        this.add(ModBlocks.OVERWORLD_XP_ORE.get(),
-                block -> createOreDrop(ModBlocks.OVERWORLD_XP_ORE.get(), Items.COBBLESTONE));
+        this.add(ModBlocks.STONE_XP_ORE.get(),
+                block -> createOreDrop(ModBlocks.STONE_XP_ORE.get(), Items.COBBLESTONE));
+        this.add(ModBlocks.DEEPSLATE_XP_ORE.get(),
+                block -> createOreDrop(ModBlocks.DEEPSLATE_XP_ORE.get(), Items.COBBLED_DEEPSLATE));
 
         this.add(ModBlocks.NETHER_XP_ORE.get(),
                 block -> createOreDrop(ModBlocks.NETHER_XP_ORE.get(), Items.NETHERRACK));

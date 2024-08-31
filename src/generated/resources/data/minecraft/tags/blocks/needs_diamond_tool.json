@@ -20,7 +20,9 @@
     "quackems_the_end_update_mod:end_wood",
     "quackems_the_end_update_mod:stripped_end_oak_log",
     "quackems_the_end_update_mod:stripped_end_wood",
-    "quackems_the_end_update_mod:end_grass",
-    "quackems_the_end_update_mod:end_sludge"
+    "quackems_the_end_update_mod:end_grass_block",
+    "quackems_the_end_update_mod:end_sludge",
+    "quackems_the_end_update_mod:end_sludge_brick",
+    "quackems_the_end_update_mod:deepslate_xp_ore"
   ]
 }

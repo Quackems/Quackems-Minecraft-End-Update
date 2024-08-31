@@ -118,11 +118,17 @@
 
   "block.quackems_the_end_update_mod.amorite_block": "Block of Amorite",
 
-  "block.quackems_the_end_update_mod.end_grass": "End Grass Block",
+  "block.quackems_the_end_update_mod.end_grass_flower": "End Grass",
+
+  "block.quackems_the_end_update_mod.end_grass_block": "End Grass Block",
 
   "block.quackems_the_end_update_mod.end_sludge": "End Sludge",
 
-  "block.quackems_the_end_update_mod.overworld_xp_ore": "Stone XP Ore",
+  "block.quackems_the_end_update_mod.end_sludge_brick": "End Sludge Brick",
+
+  "block.quackems_the_end_update_mod.stone_xp_ore": "Stone XP Ore",
+
+  "block.quackems_the_end_update_mod.deepslate_xp_ore": "Deepslate XP Ore",
 
   "block.quackems_the_end_update_mod.nether_xp_ore": "Netherrack XP Ore",
 

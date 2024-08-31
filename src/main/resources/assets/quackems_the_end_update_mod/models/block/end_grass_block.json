@@ -1,10 +1,10 @@
 {
 	"credit": "Made with Blockbench",
 	"textures": {
-		"1": "quackems_the_end_update_mod:block/end_grass_sides",
-		"2": "quackems_the_end_update_mod:block/end_grass_top",
-		"3": "quackems_the_end_update_mod:block/end_grass_bottom",
-		"particle": "quackems_the_end_update_mod:block/end_grass_bottom"
+		"1": "quackems_the_end_update_mod:block/end_grass_block_sides",
+		"2": "quackems_the_end_update_mod:block/end_grass_block_top",
+		"3": "quackems_the_end_update_mod:block/end_grass_block_bottom",
+		"particle": "quackems_the_end_update_mod:block/end_grass_block_bottom"
 	},
 	"elements": [
 		{
@@ -29,22 +29,22 @@
 		},
 		"firstperson_righthand": {
 			"rotation": [0, 15, 0],
-			"scale": [0.4, 0.4, 0.4]
+			"scale": [0.5, 0.5, 0.5]
 		},
 		"firstperson_lefthand": {
 			"rotation": [0, 15, 0],
-			"scale": [0.4, 0.4, 0.4]
-		},
-		"ground": {
-			"translation": [0, 1.5, 0],
 			"scale": [0.5, 0.5, 0.5]
 		},
+		"ground": {
+			"translation": [0, 0.5, 0],
+			"scale": [0.3, 0.3, 0.3]
+		},
 		"gui": {
-			"rotation": [20, -25, 0],
-			"scale": [0.65, 0.65, 0.65]
+			"rotation": [20, 20, 0],
+			"scale": [0.6, 0.6, 0.6]
 		},
 		"fixed": {
-			"scale": [0.8, 0.8, 0.8]
+			"scale": [0.5, 0.5, 0.5]
 		}
 	}
 }

@@ -51,15 +51,23 @@ public class ModCreativeModTabs {
                         output.accept(ModItems.CORRUPTED_DIAMOND_BOOTS.get());
 
 
+
+                        output.accept(ModItems.END_BRUTE_SPAWN_EGG.get());
+
+
+
                         output.accept(ModBlocks.AMORITE_ORE.get());
                         output.accept(ModBlocks.AMORITE_BLOCK.get());
-                        output.accept(ModBlocks.OVERWORLD_XP_ORE.get());
+                        output.accept(ModBlocks.STONE_XP_ORE.get());
+                        output.accept(ModBlocks.DEEPSLATE_XP_ORE.get());
                         output.accept(ModBlocks.NETHER_XP_ORE.get());
                         output.accept(ModBlocks.END_PRISMARINE_BRICK.get());
                         output.accept(ModBlocks.ENDSTONE_STRETCHER.get());
                         output.accept(ModBlocks.END_VENEER.get());
                         output.accept(ModBlocks.END_GRASS_BLOCK.get());
                         output.accept(ModBlocks.END_SLUDGE.get());
+                        output.accept(ModBlocks.END_SLUDGE_BRICK.get());
+                        output.accept(ModBlocks.END_GRASS.get());
 
 
                         output.accept(ModBlocks.END_STAIRS.get());

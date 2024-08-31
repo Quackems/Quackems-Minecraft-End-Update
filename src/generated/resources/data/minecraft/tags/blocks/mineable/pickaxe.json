@@ -2,7 +2,8 @@
   "values": [
     "quackems_the_end_update_mod:amorite_block",
     "quackems_the_end_update_mod:amorite_ore",
-    "quackems_the_end_update_mod:overworld_xp_ore",
+    "quackems_the_end_update_mod:stone_xp_ore",
+    "quackems_the_end_update_mod:deepslate_xp_ore",
     "quackems_the_end_update_mod:nether_xp_ore",
     "quackems_the_end_update_mod:end_prismarine_brick",
     "quackems_the_end_update_mod:endstone_stretcher",
@@ -11,6 +12,7 @@
     "quackems_the_end_update_mod:end_prismarine_stairs",
     "quackems_the_end_update_mod:endstone_stretcher_slab",
     "quackems_the_end_update_mod:endstone_stretcher_wall",
-    "quackems_the_end_update_mod:endstone_stretcher_stairs"
+    "quackems_the_end_update_mod:endstone_stretcher_stairs",
+    "quackems_the_end_update_mod:end_sludge_brick"
   ]
 }

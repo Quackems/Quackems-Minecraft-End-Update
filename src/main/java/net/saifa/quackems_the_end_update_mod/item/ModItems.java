@@ -1,11 +1,15 @@
 package net.saifa.quackems_the_end_update_mod.item;
 
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.*;
+import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.saifa.quackems_the_end_update_mod.Quackems_The_End_Update;
+import net.saifa.quackems_the_end_update_mod.entity.ModEntities;
 import net.saifa.quackems_the_end_update_mod.item.custom.AmoriteDetectorItem;
 import net.saifa.quackems_the_end_update_mod.item.custom.FuelItem;
 import net.saifa.quackems_the_end_update_mod.item.custom.MetalDetectorItem;
@@ -81,7 +85,9 @@ public class ModItems {
 
 
 
-
+    public static final RegistryObject<Item> END_BRUTE_SPAWN_EGG = ITEMS.register("end_brute_spawn_egg",
+            () -> new ForgeSpawnEggItem(ModEntities.END_BRUTE, 0x7e9680, 0xc5d1c5,
+                    new Item.Properties()));
 
 
     public static void register(IEventBus eventBus){

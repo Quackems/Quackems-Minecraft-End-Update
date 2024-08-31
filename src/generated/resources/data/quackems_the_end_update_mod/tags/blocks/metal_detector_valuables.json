@@ -1,7 +1,8 @@
 {
   "values": [
     "quackems_the_end_update_mod:amorite_ore",
-    "quackems_the_end_update_mod:overworld_xp_ore",
+    "quackems_the_end_update_mod:stone_xp_ore",
+    "quackems_the_end_update_mod:deepslate_xp_ore",
     "quackems_the_end_update_mod:nether_xp_ore",
     "#forge:ores"
   ]

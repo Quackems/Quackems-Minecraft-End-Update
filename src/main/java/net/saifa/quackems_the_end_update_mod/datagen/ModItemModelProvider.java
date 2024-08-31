@@ -100,6 +100,14 @@ public class ModItemModelProvider extends ItemModelProvider {
         trimmedArmorItem(ModItems.CORRUPTED_DIAMOND_LEGGINGS);
         trimmedArmorItem(ModItems.CORRUPTED_DIAMOND_BOOTS);
 
+
+        simpleBlockItemBlockTexture(ModBlocks.END_GRASS);
+
+
+
+        withExistingParent(ModItems.END_BRUTE_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
+
+
     }
 
     private void trimmedArmorItem(RegistryObject<Item> itemRegistryObject) {
@@ -185,6 +193,14 @@ public class ModItemModelProvider extends ItemModelProvider {
                 new ResourceLocation("item/generated")).texture("layer0",
                 new ResourceLocation(Quackems_The_End_Update.MOD_ID,"item/" + item.getId().getPath()));
     }
+
+    private ItemModelBuilder simpleBlockItemBlockTexture(RegistryObject<Block> item) {
+        return withExistingParent(item.getId().getPath(),
+                new ResourceLocation("item/generated")).texture("layer0",
+                new ResourceLocation(Quackems_The_End_Update.MOD_ID,"block/" + item.getId().getPath()));
+    }
+
+
 
 
     private ItemModelBuilder handheldItem(RegistryObject<Item> item) {

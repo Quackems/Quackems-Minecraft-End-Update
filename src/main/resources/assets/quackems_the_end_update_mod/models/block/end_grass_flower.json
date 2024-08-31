@@ -1,0 +1,8 @@
+{
+  "parent": "quackems_the_end_update_mod:block/mod_tinted_cross",
+  "textures": {
+    "cross": "quackems_the_end_update_mod:block/end_grass_flower"
+
+  },
+  "render_type": "cutout"
+}

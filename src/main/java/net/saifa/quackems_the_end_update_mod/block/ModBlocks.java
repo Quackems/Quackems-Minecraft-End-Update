@@ -2,9 +2,9 @@ package net.saifa.quackems_the_end_update_mod.block;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
-import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.util.valueproviders.UniformInt;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.BlockGetter;
@@ -17,10 +17,10 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.saifa.quackems_the_end_update_mod.Quackems_The_End_Update;
+import net.saifa.quackems_the_end_update_mod.block.custom.EndGrassBlock;
 import net.saifa.quackems_the_end_update_mod.block.custom.EndSawBlock;
 import net.saifa.quackems_the_end_update_mod.block.custom.ModFlammableRotatedPillarBlock;
 import net.saifa.quackems_the_end_update_mod.item.ModItems;
-import org.apache.commons.compress.compressors.lz77support.LZ77Compressor;
 
 import java.util.function.Supplier;
 
@@ -39,8 +39,18 @@ public class ModBlocks {
                     .jumpFactor(1.5f)
                     .speedFactor(0.1f)));
 
-    public static final RegistryObject<Block> END_GRASS_BLOCK = registerBlock("end_grass",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.GRASS_BLOCK).strength(3f).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> END_SLUDGE_BRICK = registerBlock("end_sludge_brick",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.BRICKS).strength(5f).requiresCorrectToolForDrops()
+                    .jumpFactor(0.1f)
+                    .speedFactor(1.25f)));
+
+    public static final RegistryObject<GrassBlock> END_GRASS_BLOCK = registerBlock("end_grass_block",
+            () -> new GrassBlock(BlockBehaviour.Properties.copy(Blocks.GRASS_BLOCK).strength(3f)
+                    .requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block>  END_GRASS = registerBlock("end_grass_flower",
+            () -> new FlowerBlock(() -> MobEffects.LUCK, 5,
+                    BlockBehaviour.Properties.copy(Blocks.GRASS).noOcclusion().noCollission()));
 
 
     public static final RegistryObject<Block> END_PLANKS = registerBlock("end_planks",
@@ -65,11 +75,16 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.END_STONE).requiresCorrectToolForDrops()));
 
 
-    public static final RegistryObject<Block> OVERWORLD_XP_ORE = registerBlock("overworld_xp_ore",
+
+
+    public static final RegistryObject<Block> STONE_XP_ORE = registerBlock("stone_xp_ore",
             () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.STONE).strength(2f).requiresCorrectToolForDrops(), UniformInt.of(15,30)));
 
+    public static final RegistryObject<Block> DEEPSLATE_XP_ORE = registerBlock("deepslate_xp_ore",
+            () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.STONE).strength(2f).requiresCorrectToolForDrops(), UniformInt.of(20,35)));
+
     public static final RegistryObject<Block> NETHER_XP_ORE = registerBlock("nether_xp_ore",
-            () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.NETHERRACK).strength(1f).requiresCorrectToolForDrops(), UniformInt.of(25,45)));
+            () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.NETHERRACK).strength(1f).requiresCorrectToolForDrops(), UniformInt.of(30,50)));
 
     public static final RegistryObject<Block> END_PRISMARINE_BRICK = registerBlock("end_prismarine_brick",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.END_STONE_BRICKS).requiresCorrectToolForDrops()));
