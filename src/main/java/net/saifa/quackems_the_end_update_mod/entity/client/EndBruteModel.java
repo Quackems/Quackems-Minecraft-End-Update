@@ -63,6 +63,7 @@ public class EndBruteModel<T extends Entity> extends HierarchicalModel<T> {
 
         this.animateWalk(ModAnimationDefinitions.WALKING, limbSwing, limbSwingAmount, 2, 2.5f);
         this.animate(((EndBruteEntity) entity).idleAnimationState, ModAnimationDefinitions.IDLE, ageInTicks, 1f);
+        this.animate(((EndBruteEntity) entity).attackAnimationState, ModAnimationDefinitions.ATTACK, ageInTicks, 1f);
     }
 
     @Override

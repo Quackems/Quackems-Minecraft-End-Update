@@ -37,6 +37,9 @@ public class ModItems {
     public static final RegistryObject<Item> END_STAFF = ITEMS.register("end_staff",
             () -> new Item(new Item.Properties().stacksTo(1).rarity(Rarity.EPIC)));
 
+    public static final RegistryObject<Item> ENDER_HILT = ITEMS.register("ender_hilt",
+            () -> new Item(new Item.Properties().stacksTo(1).rarity(Rarity.RARE)));
+
     public static final RegistryObject<Item> END_COAL = ITEMS.register("end_coal",
             () -> new FuelItem(new Item.Properties(), 16000));
 

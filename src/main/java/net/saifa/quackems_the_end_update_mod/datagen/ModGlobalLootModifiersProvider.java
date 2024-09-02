@@ -2,6 +2,7 @@ package net.saifa.quackems_the_end_update_mod.datagen;
 
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.util.random.Weight;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.storage.loot.predicates.LootItemBlockStatePropertyCondition;
 import net.minecraft.world.level.storage.loot.predicates.LootItemCondition;
@@ -26,7 +27,7 @@ public class ModGlobalLootModifiersProvider extends GlobalLootModifierProvider {
                 LootItemBlockStatePropertyCondition.hasBlockStateProperties(ModBlocks.END_GRASS_BLOCK.get()).build(),
                 LootItemRandomChanceCondition.randomChance(0.1f).build()}, ModItems.END_COAL.get()));
 
-        add("corrupt_diamond_from_enderman", new AddItemModifier(new LootItemCondition[]{
+        add("corrupt_diamond_from_ender_dragon", new AddItemModifier(new LootItemCondition[]{
                 new LootTableIdCondition.Builder(new ResourceLocation("entities/ender_dragon")).build()},
                 ModItems.AMORITE.get()));
 

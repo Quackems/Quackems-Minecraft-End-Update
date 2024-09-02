@@ -1,4 +1,4 @@
-// 1.20.1	2024-08-31T19:29:56.292285	Item Models: quackems_the_end_update_mod
+// 1.20.1	2024-09-01T22:23:20.4389325	Item Models: quackems_the_end_update_mod
 7db0fe1a19642d2cb68c4a20d1321f9084f00c2d assets/quackems_the_end_update_mod/models/item/amorite.json
 b434cf72646d0046bf4eb51ae31bf9a9e6b21f30 assets/quackems_the_end_update_mod/models/item/amorite_axe.json
 8772129df0e2cfb3ab83ff3e66d6939803d1d4e9 assets/quackems_the_end_update_mod/models/item/amorite_boots.json
@@ -100,6 +100,7 @@ f08b2458f4df11f5b8f13ad6354bbfecf60d1921 assets/quackems_the_end_update_mod/mode
 d9d0aca7bdbfe7fc6205fd9dac84400d11b9d139 assets/quackems_the_end_update_mod/models/item/corrupted_diamond_pickaxe.json
 b0adbecbd4fc944937fe062e73a0b802bc21bdaa assets/quackems_the_end_update_mod/models/item/corrupted_diamond_shovel.json
 8af0d1acd9f1ca85f919f8846261a5bd7e3cff66 assets/quackems_the_end_update_mod/models/item/corrupted_diamond_sword.json
+a50bfed8cc841271747660711220e29395ac7c27 assets/quackems_the_end_update_mod/models/item/ender_hilt.json
 ef4e61710ca5b63178ec62540c413e8c10590e01 assets/quackems_the_end_update_mod/models/item/endstone_stretcher_slab.json
 9312a314c0e2ae92342ff44fa8bb32ef26c38822 assets/quackems_the_end_update_mod/models/item/endstone_stretcher_stairs.json
 dbb13fedd06541d3063e5e87b864e41c07badeda assets/quackems_the_end_update_mod/models/item/endstone_stretcher_wall.json

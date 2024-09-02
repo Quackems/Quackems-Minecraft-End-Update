@@ -48,6 +48,10 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.END_SAW_BLOCK.get());
         this.dropSelf(ModBlocks.END_SLUDGE.get());
         this.dropSelf(ModBlocks.END_SLUDGE_BRICK.get());
+        this.dropSelf(ModBlocks.CRACKED_END_STONE_BRICK.get());
+        this.dropSelf(ModBlocks.BAUXITE.get());
+        this.dropSelf(ModBlocks.TOUGHENED_BAUXITE.get());
+        this.dropSelf(ModBlocks.PURPUR_LANTERN.get());
 
         this.add(ModBlocks.END_GRASS.get(),
                 block -> createGrassDrops(ModBlocks.END_GRASS.get()));

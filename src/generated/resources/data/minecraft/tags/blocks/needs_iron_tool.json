@@ -2,6 +2,10 @@
   "values": [
     "quackems_the_end_update_mod:stone_xp_ore",
     "quackems_the_end_update_mod:endstone_stretcher",
-    "quackems_the_end_update_mod:end_prismarine_brick"
+    "quackems_the_end_update_mod:cracked_end_stone_brick",
+    "quackems_the_end_update_mod:end_prismarine_brick",
+    "quackems_the_end_update_mod:bauxite",
+    "quackems_the_end_update_mod:toughened_bauxite",
+    "quackems_the_end_update_mod:purpur_lantern"
   ]
 }

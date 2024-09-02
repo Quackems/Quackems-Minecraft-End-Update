@@ -101,6 +101,161 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .save(consumer);
 
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.CORRUPTED_DIAMOND_CHESTPLATE.get())
+                .pattern("D D")
+                .pattern("DDD")
+                .pattern("DDD")
+                .define('D', ModItems.CORRUPTED_DIAMOND.get())
+                .unlockedBy(getHasName(ModItems.CORRUPTED_DIAMOND.get()), has(ModItems.CORRUPTED_DIAMOND.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.CORRUPTED_DIAMOND_LEGGINGS.get())
+                .pattern("DDD")
+                .pattern("D D")
+                .pattern("D D")
+                .define('D', ModItems.CORRUPTED_DIAMOND.get())
+                .unlockedBy(getHasName(ModItems.CORRUPTED_DIAMOND.get()), has(ModItems.CORRUPTED_DIAMOND.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.CORRUPTED_DIAMOND_BOOTS.get())
+                .pattern("   ")
+                .pattern("D D")
+                .pattern("D D")
+                .define('D', ModItems.CORRUPTED_DIAMOND.get())
+                .unlockedBy(getHasName(ModItems.CORRUPTED_DIAMOND.get()), has(ModItems.CORRUPTED_DIAMOND.get()))
+                .save(consumer);
+
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.CORRUPTED_DIAMOND_HELMET.get())
+                .pattern("   ")
+                .pattern("DDD")
+                .pattern("D D")
+                .define('D', ModItems.CORRUPTED_DIAMOND.get())
+                .unlockedBy(getHasName(ModItems.CORRUPTED_DIAMOND.get()), has(ModItems.CORRUPTED_DIAMOND.get()))
+                .save(consumer);
+
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.AMORITE_SWORD.get())
+                        .pattern(" A ")
+                        .pattern(" A ")
+                        .pattern(" S ")
+                        .define('A', ModItems.AMORITE.get())
+                        .define('S', Items.STICK)
+                        .unlockedBy(getHasName(ModItems.POLISHED_AMORITE.get()), has(ModItems.POLISHED_AMORITE.get()))
+                        .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.AMORITE_PICKAXE.get())
+                .pattern("AAA")
+                .pattern(" S ")
+                .pattern(" S ")
+                .define('A', ModItems.AMORITE.get())
+                .define('S', Items.STICK)
+                .unlockedBy(getHasName(ModItems.POLISHED_AMORITE.get()), has(ModItems.POLISHED_AMORITE.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.AMORITE_AXE.get())
+                .pattern(" AA")
+                .pattern(" SA")
+                .pattern(" S ")
+                .define('A', ModItems.AMORITE.get())
+                .define('S', Items.STICK)
+                .unlockedBy(getHasName(ModItems.POLISHED_AMORITE.get()), has(ModItems.POLISHED_AMORITE.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.AMORITE_HOE.get())
+                .pattern(" AA")
+                .pattern(" S ")
+                .pattern(" S ")
+                .define('A', ModItems.AMORITE.get())
+                .define('S', Items.STICK)
+                .unlockedBy(getHasName(ModItems.POLISHED_AMORITE.get()), has(ModItems.POLISHED_AMORITE.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.AMORITE_SHOVEL.get())
+                .pattern(" A ")
+                .pattern(" S ")
+                .pattern(" S ")
+                .define('A', ModItems.AMORITE.get())
+                .define('S', Items.STICK)
+                .unlockedBy(getHasName(ModItems.POLISHED_AMORITE.get()), has(ModItems.POLISHED_AMORITE.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.CORRUPTED_DIAMOND_SWORD.get())
+                .pattern(" D ")
+                .pattern(" D ")
+                .pattern(" S ")
+                .define('D', ModItems.CORRUPTED_DIAMOND.get())
+                .define('S', Items.STICK)
+                .unlockedBy(getHasName(ModItems.CORRUPTED_DIAMOND.get()), has(ModItems.CORRUPTED_DIAMOND.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.CORRUPTED_DIAMOND_PICKAXE.get())
+                .pattern("DDD")
+                .pattern(" S ")
+                .pattern(" S ")
+                .define('D', ModItems.CORRUPTED_DIAMOND.get())
+                .define('S', Items.STICK)
+                .unlockedBy(getHasName(ModItems.CORRUPTED_DIAMOND.get()), has(ModItems.CORRUPTED_DIAMOND.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.CORRUPTED_DIAMOND_AXE.get())
+                .pattern(" DD")
+                .pattern(" SD")
+                .pattern(" S ")
+                .define('D', ModItems.CORRUPTED_DIAMOND.get())
+                .define('S', Items.STICK)
+                .unlockedBy(getHasName(ModItems.CORRUPTED_DIAMOND.get()), has(ModItems.CORRUPTED_DIAMOND.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.CORRUPTED_DIAMOND_HOE.get())
+                .pattern(" DD")
+                .pattern(" S ")
+                .pattern(" S ")
+                .define('D', ModItems.CORRUPTED_DIAMOND.get())
+                .define('S', Items.STICK)
+                .unlockedBy(getHasName(ModItems.CORRUPTED_DIAMOND.get()), has(ModItems.CORRUPTED_DIAMOND.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.CORRUPTED_DIAMOND_SHOVEL.get())
+                .pattern(" D ")
+                .pattern(" S ")
+                .pattern(" S ")
+                .define('D', ModItems.CORRUPTED_DIAMOND.get())
+                .define('S', Items.STICK)
+                .unlockedBy(getHasName(ModItems.CORRUPTED_DIAMOND.get()), has(ModItems.CORRUPTED_DIAMOND.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.CORRUPTED_DIAMOND.get(), 2)
+                .pattern("CDC")
+                .pattern("DED")
+                .pattern("CDC")
+                .define('C', Items.CRYING_OBSIDIAN)
+                .define('D', Items.DIAMOND)
+                .define('E', Items.ENDER_PEARL)
+                .unlockedBy(getHasName(Items.DIAMOND), has(Items.DIAMOND))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.BAUXITE.get(), 2)
+                .pattern("   ")
+                .pattern("AL ")
+                .pattern("D  ")
+                .define('L', Items.LAPIS_LAZULI)
+                .define('D', Blocks.DIORITE)
+                .define('A', Blocks.ANDESITE)
+                .unlockedBy(getHasName(Items.LAPIS_LAZULI), has(Items.LAPIS_LAZULI))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.TOUGHENED_BAUXITE.get())
+                .pattern("   ")
+                .pattern("BB ")
+                .pattern("BB ")
+                .define('B', ModBlocks.BAUXITE.get())
+                .unlockedBy(getHasName(ModBlocks.BAUXITE.get()), has(ModBlocks.BAUXITE.get()))
+                .save(consumer);
+
+
+
+
 
 
 
@@ -110,6 +265,8 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .requires(ModBlocks.AMORITE_BLOCK.get())
                 .unlockedBy(getHasName(ModBlocks.AMORITE_BLOCK.get()), has(ModBlocks.AMORITE_BLOCK.get()))
                 .save(consumer);
+
+
 
 
 

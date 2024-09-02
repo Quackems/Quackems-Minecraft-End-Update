@@ -30,6 +30,9 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.END_VENEER);
         blockWithItem(ModBlocks.END_PLANKS);
         blockWithItem(ModBlocks.END_SLUDGE);
+        blockWithItem(ModBlocks.CRACKED_END_STONE_BRICK);
+        blockWithItem(ModBlocks.BAUXITE);
+        blockWithItem(ModBlocks.TOUGHENED_BAUXITE);
 
 
 
@@ -94,6 +97,9 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
         simpleBlockWithItem(ModBlocks.END_SLUDGE_BRICK.get(),
                 new ModelFile.UncheckedModelFile(modLoc("block/end_sludge_brick")));
+
+        simpleBlockWithItem(ModBlocks.PURPUR_LANTERN.get(),
+                new ModelFile.UncheckedModelFile(modLoc("block/purpur_lantern")));
 
 
     }

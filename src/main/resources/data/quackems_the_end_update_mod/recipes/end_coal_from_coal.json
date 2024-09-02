@@ -1,0 +1,12 @@
+{
+  "type": "quackems_the_end_update_mod:end_sawing",
+  "ingredients": [
+    {
+      "item": "minecraft:coal"
+    }
+  ],
+  "output": {
+    "count": 1,
+    "item": "quackems_the_end_update_mod:end_coal"
+  }
+}

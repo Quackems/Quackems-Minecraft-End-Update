@@ -53,6 +53,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.END_COAL);
         simpleItem(ModItems.POLISHED_AMORITE);
         simpleItem(ModItems.CORRUPTED_DIAMOND);
+        simpleItem(ModItems.ENDER_HILT);
 
         simpleBlockItem(ModBlocks.END_DOOR);
 

@@ -26,6 +26,7 @@ public class ModCreativeModTabs {
                         output.accept(ModItems.END_APPLE.get());
                         output.accept(ModItems.END_COAL.get());
                         output.accept(ModItems.END_STAFF.get());
+                        output.accept(ModItems.ENDER_HILT.get());
                         output.accept(ModItems.AMORITE_SWORD.get());
                         output.accept(ModItems.AMORITE_AXE.get());
                         output.accept(ModItems.AMORITE_PICKAXE.get());
@@ -67,7 +68,11 @@ public class ModCreativeModTabs {
                         output.accept(ModBlocks.END_GRASS_BLOCK.get());
                         output.accept(ModBlocks.END_SLUDGE.get());
                         output.accept(ModBlocks.END_SLUDGE_BRICK.get());
+                        output.accept(ModBlocks.CRACKED_END_STONE_BRICK.get());
+                        output.accept(ModBlocks.BAUXITE.get());
+                        output.accept(ModBlocks.TOUGHENED_BAUXITE.get());
                         output.accept(ModBlocks.END_GRASS.get());
+                        output.accept(ModBlocks.PURPUR_LANTERN.get());
 
 
                         output.accept(ModBlocks.END_STAIRS.get());

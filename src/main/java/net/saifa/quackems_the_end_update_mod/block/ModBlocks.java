@@ -34,6 +34,20 @@ public class ModBlocks {
     public static final RegistryObject<Block> AMORITE_BLOCK = registerBlock("amorite_block",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).strength(5f).requiresCorrectToolForDrops()));
 
+    public static final RegistryObject<Block> CRACKED_END_STONE_BRICK = registerBlock("cracked_end_stone_brick",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE_BRICKS).strength(4f).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> BAUXITE = registerBlock("bauxite",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIORITE).strength(3f).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> TOUGHENED_BAUXITE = registerBlock("toughened_bauxite",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.COPPER_BLOCK).strength(3f).requiresCorrectToolForDrops()));
+
+
+    public static final RegistryObject<Block> PURPUR_LANTERN = registerBlock("purpur_lantern",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.SEA_LANTERN).strength(3f).requiresCorrectToolForDrops().lightLevel((p_152688_) -> {
+                return 15;
+            })));
+
     public static final RegistryObject<Block> END_SLUDGE = registerBlock("end_sludge",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.SLIME_BLOCK).strength(5f).requiresCorrectToolForDrops()
                     .jumpFactor(1.5f)
@@ -81,7 +95,7 @@ public class ModBlocks {
             () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.STONE).strength(2f).requiresCorrectToolForDrops(), UniformInt.of(15,30)));
 
     public static final RegistryObject<Block> DEEPSLATE_XP_ORE = registerBlock("deepslate_xp_ore",
-            () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.STONE).strength(2f).requiresCorrectToolForDrops(), UniformInt.of(20,35)));
+            () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.STONE).strength(2.75f).requiresCorrectToolForDrops(), UniformInt.of(20,35)));
 
     public static final RegistryObject<Block> NETHER_XP_ORE = registerBlock("nether_xp_ore",
             () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.NETHERRACK).strength(1f).requiresCorrectToolForDrops(), UniformInt.of(30,50)));

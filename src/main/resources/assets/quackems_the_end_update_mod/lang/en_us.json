@@ -15,6 +15,8 @@
 
   "item.quackems_the_end_update_mod.end_staff": "End Staff",
 
+  "item.quackems_the_end_update_mod.ender_hilt": "Ender Hilt",
+
   "item.quackems_the_end_update_mod.amorite_sword": "Amorite Sword",
 
   "item.quackems_the_end_update_mod.amorite_axe": "Amorite Axe",
@@ -109,6 +111,9 @@
 
 
 
+  "entity.quackems_the_end_update_mod.end_brute": "End Brute",
+
+  "item.quackems_the_end_update_mod.end_brute_spawn_egg": "End Brute Spawn Egg",
 
 
 
@@ -137,6 +142,15 @@
   "block.quackems_the_end_update_mod.endstone_stretcher": "EndStone Stretcher",
 
   "block.quackems_the_end_update_mod.end_veneer": "End Veneer",
+
+  "block.quackems_the_end_update_mod.cracked_end_stone_brick": "Cracked End Stone Brick",
+
+  "block.quackems_the_end_update_mod.bauxite": "Bauxite",
+
+  "block.quackems_the_end_update_mod.toughened_bauxite": "Toughened Bauxite",
+
+  "block.quackems_the_end_update_mod.purpur_lantern": "Purpur Lantern",
+
 
 
   "block.quackems_the_end_update_mod.end_saw_block": "End Saw",
