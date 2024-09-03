@@ -34,6 +34,9 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.BAUXITE);
         blockWithItem(ModBlocks.TOUGHENED_BAUXITE);
         blockWithItem(ModBlocks.POLISHED_BAUXITE);
+        blockWithItem(ModBlocks.BAUXITE_BRICK);
+
+        buttonBlock(((ButtonBlock) ModBlocks.POLISHED_BAUXITE_BUTTON.get()), blockTexture(ModBlocks.POLISHED_BAUXITE.get()));
 
 
 

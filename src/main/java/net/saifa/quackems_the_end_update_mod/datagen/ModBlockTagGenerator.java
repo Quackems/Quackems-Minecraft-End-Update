@@ -53,6 +53,9 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                         ModBlocks.CRACKED_END_STONE_BRICK.get(),
                         ModBlocks.BAUXITE.get(),
                         ModBlocks.TOUGHENED_BAUXITE.get(),
+                        ModBlocks.POLISHED_BAUXITE.get(),
+                        ModBlocks.BAUXITE_BRICK.get(),
+                        ModBlocks.POLISHED_BAUXITE_BUTTON.get(),
                         ModBlocks.PURPUR_LANTERN.get());
 
         this.tag(BlockTags.MINEABLE_WITH_AXE)
@@ -80,6 +83,9 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 .add(ModBlocks.END_PRISMARINE_BRICK.get())
                 .add(ModBlocks.BAUXITE.get())
                 .add(ModBlocks.TOUGHENED_BAUXITE.get())
+                .add(ModBlocks.POLISHED_BAUXITE.get())
+                .add(ModBlocks.BAUXITE_BRICK.get())
+                .add(ModBlocks.POLISHED_BAUXITE_BUTTON.get())
                 .add(ModBlocks.PURPUR_LANTERN.get());
 
         this.tag(BlockTags.NEEDS_DIAMOND_TOOL)

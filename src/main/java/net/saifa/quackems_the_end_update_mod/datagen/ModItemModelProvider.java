@@ -54,11 +54,13 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.POLISHED_AMORITE);
         simpleItem(ModItems.CORRUPTED_DIAMOND);
         simpleItem(ModItems.ENDER_HILT);
+        simpleItem(ModItems.AMORITE_INFUSED_BOW);
 
         simpleBlockItem(ModBlocks.END_DOOR);
 
         fenceItem(ModBlocks.END_FENCE, ModBlocks.END_PLANKS);//TODO:FIX THIS
         buttonItem(ModBlocks.END_BUTTON, ModBlocks.END_PLANKS);
+        buttonItem(ModBlocks.POLISHED_BAUXITE_BUTTON, ModBlocks.POLISHED_BAUXITE);
         wallItem(ModBlocks.END_WALL, ModBlocks.END_PLANKS);
 
         wallItem(ModBlocks.END_PRISMARINE_WALL, ModBlocks.END_PRISMARINE_BRICK);
@@ -107,6 +109,7 @@ public class ModItemModelProvider extends ItemModelProvider {
 
 
         withExistingParent(ModItems.END_BRUTE_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
+        withExistingParent(ModItems.END_STALKER_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
 
 
     }

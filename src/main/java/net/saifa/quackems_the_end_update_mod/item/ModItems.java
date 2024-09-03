@@ -4,17 +4,16 @@ import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.*;
 import net.minecraft.world.item.enchantment.Enchantment;
+import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraftforge.common.ForgeSpawnEggItem;
+import net.minecraftforge.common.Tags;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.saifa.quackems_the_end_update_mod.Quackems_The_End_Update;
 import net.saifa.quackems_the_end_update_mod.entity.ModEntities;
-import net.saifa.quackems_the_end_update_mod.item.custom.AmoriteDetectorItem;
-import net.saifa.quackems_the_end_update_mod.item.custom.FuelItem;
-import net.saifa.quackems_the_end_update_mod.item.custom.MetalDetectorItem;
-import net.saifa.quackems_the_end_update_mod.item.custom.ModArmorItem;
+import net.saifa.quackems_the_end_update_mod.item.custom.*;
 
 public class ModItems {
     public static final DeferredRegister<Item> ITEMS =
@@ -87,10 +86,19 @@ public class ModItems {
             () -> new ArmorItem(ModArmorMaterials.CORRUPTED_DIAMOND, ArmorItem.Type.BOOTS, new Item.Properties().rarity(Rarity.RARE)));
 
 
+    public static final RegistryObject<Item> AMORITE_INFUSED_BOW = ITEMS.register("amorite_infused_bow",
+            () -> new AmoriteBowItem(new Item.Properties().stacksTo(1).rarity(Rarity.RARE)
+                    .durability(7200)));
+
+
 
 
     public static final RegistryObject<Item> END_BRUTE_SPAWN_EGG = ITEMS.register("end_brute_spawn_egg",
             () -> new ForgeSpawnEggItem(ModEntities.END_BRUTE, 0x7e9680, 0xc5d1c5,
+                    new Item.Properties()));
+
+    public static final RegistryObject<Item> END_STALKER_SPAWN_EGG = ITEMS.register("end_stalker_spawn_egg",
+            () -> new ForgeSpawnEggItem(ModEntities.END_STALKER, 0x7e9680, 0xc5d1c5,
                     new Item.Properties()));
 
 

@@ -41,6 +41,11 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.COPPER_BLOCK).strength(3f).requiresCorrectToolForDrops()));
     public static final RegistryObject<Block> POLISHED_BAUXITE = registerBlock("polished_bauxite",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.BRICKS).strength(3f).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> BAUXITE_BRICK = registerBlock("bauxite_brick",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.BRICKS).strength(3f).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> POLISHED_BAUXITE_BUTTON = registerBlock("polished_bauxite_button",
+            () -> new ButtonBlock(BlockBehaviour.Properties.copy(Blocks.OAK_BUTTON).strength(3f).requiresCorrectToolForDrops(),
+                    BlockSetType.OAK, 20, true));
 
 
     public static final RegistryObject<Block> PURPUR_LANTERN = registerBlock("purpur_lantern",

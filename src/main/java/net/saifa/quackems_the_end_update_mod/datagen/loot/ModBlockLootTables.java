@@ -52,6 +52,8 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.BAUXITE.get());
         this.dropSelf(ModBlocks.TOUGHENED_BAUXITE.get());
         this.dropSelf(ModBlocks.POLISHED_BAUXITE.get());
+        this.dropSelf(ModBlocks.BAUXITE_BRICK.get());
+        this.dropSelf(ModBlocks.POLISHED_BAUXITE_BUTTON.get());
         this.dropSelf(ModBlocks.PURPUR_LANTERN.get());
 
         this.add(ModBlocks.END_GRASS.get(),

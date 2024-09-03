@@ -227,10 +227,11 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.CORRUPTED_DIAMOND.get(), 2)
                 .pattern("CDC")
-                .pattern("DED")
+                .pattern("ENE")
                 .pattern("CDC")
                 .define('C', Items.CRYING_OBSIDIAN)
                 .define('D', Items.DIAMOND)
+                .define('N', Items.NETHERITE_INGOT)
                 .define('E', Items.ENDER_PEARL)
                 .unlockedBy(getHasName(Items.DIAMOND), has(Items.DIAMOND))
                 .save(consumer);
@@ -259,6 +260,15 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern(" E ")
                 .define('G', Blocks.GRASS_BLOCK)
                 .define('E', Items.ENDER_PEARL)
+                .unlockedBy(getHasName(Blocks.GRASS_BLOCK), has(Blocks.GRASS_BLOCK))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.AMORITE_INFUSED_BOW.get())
+                .pattern("AAA")
+                .pattern("ABA")
+                .pattern("AAA")
+                .define('B', Items.BOW)
+                .define('A', ModItems.AMORITE.get())
                 .unlockedBy(getHasName(Blocks.GRASS_BLOCK), has(Blocks.GRASS_BLOCK))
                 .save(consumer);
 
@@ -325,15 +335,22 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                         of(ModBlocks.BAUXITE.get()).build()))
                 .save(consumer);
 
-        SingleItemRecipeBuilder.stonecutting(Ingredient.of(ModItems.AMORITE.get()), RecipeCategory.DECORATIONS, ModItems.POLISHED_AMORITE.get())
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(ModBlocks.BAUXITE.get()), RecipeCategory.DECORATIONS, ModBlocks.BAUXITE_BRICK.get())
                 .unlockedBy("has_bauxite", inventoryTrigger(ItemPredicate.Builder.item().
                         of(ModBlocks.BAUXITE.get()).build()))
                 .save(consumer);
 
-        SingleItemRecipeBuilder.stonecutting(Ingredient.of(ModBlocks.END_SLUDGE.get()), RecipeCategory.MISC, ModBlocks.END_SLUDGE_BRICK.get())
-                .unlockedBy("has_bauxite", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(ModBlocks.BAUXITE.get()).build()))
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(ModItems.AMORITE.get()), RecipeCategory.DECORATIONS, ModItems.POLISHED_AMORITE.get())
+                .unlockedBy("has_amorite", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(ModItems.AMORITE.get()).build()))
                 .save(consumer);
+
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(ModBlocks.END_SLUDGE.get()), RecipeCategory.MISC, ModBlocks.END_SLUDGE_BRICK.get())
+                .unlockedBy("has_end_sludge", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(ModBlocks.END_SLUDGE.get()).build()))
+                .save(consumer);
+
+
 
 
     }

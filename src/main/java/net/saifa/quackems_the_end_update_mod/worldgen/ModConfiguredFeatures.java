@@ -40,7 +40,7 @@ public class ModConfiguredFeatures {
         register(context, NETHER_XP_ORE_KEY, Feature.ORE, new OreConfiguration(netherrackReplacables,
                 ModBlocks.NETHER_XP_ORE.get().defaultBlockState(), 3));
         register(context, END_AMORITE_ORE_KEY, Feature.ORE, new OreConfiguration(endReplaceables,
-                ModBlocks.AMORITE_ORE.get().defaultBlockState(), 1));
+                ModBlocks.AMORITE_ORE.get().defaultBlockState(), 1, 100));
     }
 
 

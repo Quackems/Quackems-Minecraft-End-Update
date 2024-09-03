@@ -8,5 +8,8 @@ public class ModModelLayers {
     public static final ModelLayerLocation END_BRUTE_LAYER = new ModelLayerLocation(
             new ResourceLocation(Quackems_The_End_Update.MOD_ID, "end_brute_layer"), "main");
 
+    public static final ModelLayerLocation END_STALKER_LAYER = new ModelLayerLocation(
+            new ResourceLocation(Quackems_The_End_Update.MOD_ID, "end_stalker_layer"), "main");
+
 
 }

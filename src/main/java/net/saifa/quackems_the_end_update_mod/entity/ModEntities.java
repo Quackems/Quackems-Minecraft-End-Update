@@ -8,6 +8,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.saifa.quackems_the_end_update_mod.Quackems_The_End_Update;
 import net.saifa.quackems_the_end_update_mod.entity.custom.EndBruteEntity;
+import net.saifa.quackems_the_end_update_mod.entity.custom.EndStalkerEntity;
 
 public class ModEntities {
 
@@ -18,6 +19,11 @@ public class ModEntities {
     public static final RegistryObject<EntityType<EndBruteEntity>> END_BRUTE =
             ENTITY_TYPES.register("end_brute", () -> EntityType.Builder.of(EndBruteEntity::new, MobCategory.MONSTER)
                     .sized(1, 1.75f).build("end_brute"));
+
+    public static final RegistryObject<EntityType<EndStalkerEntity>> END_STALKER =
+            ENTITY_TYPES.register("end_stalker", () -> EntityType.Builder.of(EndStalkerEntity::new, MobCategory.MONSTER)
+                    .sized(1, 1.75f).build("end_stalker"));
+
 
 
 

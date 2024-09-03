@@ -6,6 +6,7 @@ import net.minecraftforge.fml.common.Mod;
 import net.saifa.quackems_the_end_update_mod.Quackems_The_End_Update;
 import net.saifa.quackems_the_end_update_mod.entity.ModEntities;
 import net.saifa.quackems_the_end_update_mod.entity.custom.EndBruteEntity;
+import net.saifa.quackems_the_end_update_mod.entity.custom.EndStalkerEntity;
 
 @Mod.EventBusSubscriber(modid = Quackems_The_End_Update.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
 
@@ -14,5 +15,6 @@ public class ModEventBusEvents {
     @SubscribeEvent
     public static void registerAttributes(EntityAttributeCreationEvent event){
         event.put(ModEntities.END_BRUTE.get(), EndBruteEntity.createAttributes().build());
+        event.put(ModEntities.END_STALKER.get(), EndStalkerEntity.createAttributes().build());
     }
 }

@@ -26,6 +26,7 @@ public class ModCreativeModTabs {
                         output.accept(ModItems.END_APPLE.get());
                         output.accept(ModItems.END_COAL.get());
                         output.accept(ModItems.END_STAFF.get());
+                        output.accept(ModItems.AMORITE_INFUSED_BOW.get());
                         output.accept(ModItems.ENDER_HILT.get());
                         output.accept(ModItems.AMORITE_SWORD.get());
                         output.accept(ModItems.AMORITE_AXE.get());
@@ -54,6 +55,7 @@ public class ModCreativeModTabs {
 
 
                         output.accept(ModItems.END_BRUTE_SPAWN_EGG.get());
+                        output.accept(ModItems.END_STALKER_SPAWN_EGG.get());
 
 
 
@@ -72,6 +74,8 @@ public class ModCreativeModTabs {
                         output.accept(ModBlocks.BAUXITE.get());
                         output.accept(ModBlocks.TOUGHENED_BAUXITE.get());
                         output.accept(ModBlocks.POLISHED_BAUXITE.get());
+                        output.accept(ModBlocks.BAUXITE_BRICK.get());
+                        output.accept(ModBlocks.POLISHED_BAUXITE_BUTTON.get());
                         output.accept(ModBlocks.END_GRASS.get());
                         output.accept(ModBlocks.PURPUR_LANTERN.get());
 

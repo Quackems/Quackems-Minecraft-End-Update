@@ -19,6 +19,7 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.saifa.quackems_the_end_update_mod.block.ModBlocks;
 import net.saifa.quackems_the_end_update_mod.entity.ModEntities;
 import net.saifa.quackems_the_end_update_mod.entity.client.EndBruteRenderer;
+import net.saifa.quackems_the_end_update_mod.entity.client.EndStalkerRenderer;
 import net.saifa.quackems_the_end_update_mod.item.ModCreativeModTabs;
 import net.saifa.quackems_the_end_update_mod.item.ModItems;
 import net.saifa.quackems_the_end_update_mod.loot.ModLootModifiers;
@@ -84,6 +85,7 @@ public class Quackems_The_End_Update
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event){
             EntityRenderers.register(ModEntities.END_BRUTE.get(), EndBruteRenderer::new);
+            EntityRenderers.register(ModEntities.END_STALKER.get(), EndStalkerRenderer::new);
         }
     }
 }
