@@ -36,11 +36,11 @@ public class ModConfiguredFeatures {
                         ModBlocks.STONE_XP_ORE.get().defaultBlockState()),
                 OreConfiguration.target(deepslateReplaceables, ModBlocks.DEEPSLATE_XP_ORE.get().defaultBlockState()));
 
-        register(context, OVERWORLD_XP_ORE_KEY, Feature.ORE, new OreConfiguration(overworldXpOres, 8));
+        register(context, OVERWORLD_XP_ORE_KEY, Feature.ORE, new OreConfiguration(overworldXpOres, 6));
         register(context, NETHER_XP_ORE_KEY, Feature.ORE, new OreConfiguration(netherrackReplacables,
-                ModBlocks.NETHER_XP_ORE.get().defaultBlockState(), 4));
+                ModBlocks.NETHER_XP_ORE.get().defaultBlockState(), 3));
         register(context, END_AMORITE_ORE_KEY, Feature.ORE, new OreConfiguration(endReplaceables,
-                ModBlocks.AMORITE_ORE.get().defaultBlockState(), 4));
+                ModBlocks.AMORITE_ORE.get().defaultBlockState(), 1));
     }
 
 

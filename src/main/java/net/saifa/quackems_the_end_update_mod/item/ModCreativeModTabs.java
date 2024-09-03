@@ -71,6 +71,7 @@ public class ModCreativeModTabs {
                         output.accept(ModBlocks.CRACKED_END_STONE_BRICK.get());
                         output.accept(ModBlocks.BAUXITE.get());
                         output.accept(ModBlocks.TOUGHENED_BAUXITE.get());
+                        output.accept(ModBlocks.POLISHED_BAUXITE.get());
                         output.accept(ModBlocks.END_GRASS.get());
                         output.accept(ModBlocks.PURPUR_LANTERN.get());
 
@@ -100,7 +101,6 @@ public class ModCreativeModTabs {
                         output.accept(ModBlocks.STRIPPED_END_WOOD.get());
                         output.accept(ModBlocks.END_LEAVES.get());
                         output.accept(ModBlocks.END_PLANKS.get());
-                        output.accept(ModBlocks.END_SAW_BLOCK.get());
 
 
                     })

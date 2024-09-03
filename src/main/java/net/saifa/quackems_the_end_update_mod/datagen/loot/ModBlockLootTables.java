@@ -5,6 +5,7 @@ import net.minecraft.data.loot.BlockLootSubProvider;
 import net.minecraft.world.flag.FeatureFlagSet;
 import net.minecraft.world.flag.FeatureFlags;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.block.Block;
@@ -45,12 +46,12 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.STRIPPED_END_OAK_LOG.get());
         this.dropSelf(ModBlocks.STRIPPED_END_WOOD.get());
         this.dropSelf(ModBlocks.END_PLANKS.get());
-        this.dropSelf(ModBlocks.END_SAW_BLOCK.get());
         this.dropSelf(ModBlocks.END_SLUDGE.get());
         this.dropSelf(ModBlocks.END_SLUDGE_BRICK.get());
         this.dropSelf(ModBlocks.CRACKED_END_STONE_BRICK.get());
         this.dropSelf(ModBlocks.BAUXITE.get());
         this.dropSelf(ModBlocks.TOUGHENED_BAUXITE.get());
+        this.dropSelf(ModBlocks.POLISHED_BAUXITE.get());
         this.dropSelf(ModBlocks.PURPUR_LANTERN.get());
 
         this.add(ModBlocks.END_GRASS.get(),
@@ -61,8 +62,8 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.add(ModBlocks.END_LEAVES.get(), block ->
                 createLeavesDrops(block, ModBlocks.AMORITE_BLOCK.get(), NORMAL_LEAVES_SAPLING_CHANCES)); // TODO: CHANGE TO SAPLING!
 
-        this.add(ModBlocks.AMORITE_ORE.get(),
-                block -> createOreDrop(ModBlocks.AMORITE_ORE.get(), ModItems.AMORITE.get()));
+        this.dropOther(ModBlocks.AMORITE_ORE.get(),
+                 ModItems.AMORITE.get());
 
         this.add(ModBlocks.STONE_XP_ORE.get(),
                 block -> createOreDrop(ModBlocks.STONE_XP_ORE.get(), Items.COBBLESTONE));

@@ -33,6 +33,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.CRACKED_END_STONE_BRICK);
         blockWithItem(ModBlocks.BAUXITE);
         blockWithItem(ModBlocks.TOUGHENED_BAUXITE);
+        blockWithItem(ModBlocks.POLISHED_BAUXITE);
 
 
 
@@ -86,8 +87,6 @@ public class ModBlockStateProvider extends BlockStateProvider {
         leavesBlock(ModBlocks.END_LEAVES);
 
 
-        simpleBlockWithItem(ModBlocks.END_SAW_BLOCK.get(),
-                new ModelFile.UncheckedModelFile(modLoc("block/end_saw_block")));
 
         simpleBlockWithItem(ModBlocks.END_GRASS_BLOCK.get(),
                 new ModelFile.UncheckedModelFile(modLoc("block/end_grass_block")));

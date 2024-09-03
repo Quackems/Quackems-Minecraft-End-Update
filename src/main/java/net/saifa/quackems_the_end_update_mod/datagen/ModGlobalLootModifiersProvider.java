@@ -31,8 +31,5 @@ public class ModGlobalLootModifiersProvider extends GlobalLootModifierProvider {
                 new LootTableIdCondition.Builder(new ResourceLocation("entities/ender_dragon")).build()},
                 ModItems.AMORITE.get()));
 
-        add("corrupt_diamond_from_end_cities", new AddItemModifier(new LootItemCondition[]{
-                new LootTableIdCondition.Builder(new ResourceLocation("chests/end_city_treasure")).build()},
-                ModItems.CORRUPTED_DIAMOND.get()));
     }
 }

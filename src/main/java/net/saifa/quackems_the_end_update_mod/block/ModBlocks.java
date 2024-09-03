@@ -17,8 +17,6 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.saifa.quackems_the_end_update_mod.Quackems_The_End_Update;
-import net.saifa.quackems_the_end_update_mod.block.custom.EndGrassBlock;
-import net.saifa.quackems_the_end_update_mod.block.custom.EndSawBlock;
 import net.saifa.quackems_the_end_update_mod.block.custom.ModFlammableRotatedPillarBlock;
 import net.saifa.quackems_the_end_update_mod.item.ModItems;
 
@@ -41,6 +39,8 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIORITE).strength(3f).requiresCorrectToolForDrops()));
     public static final RegistryObject<Block> TOUGHENED_BAUXITE = registerBlock("toughened_bauxite",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.COPPER_BLOCK).strength(3f).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> POLISHED_BAUXITE = registerBlock("polished_bauxite",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.BRICKS).strength(3f).requiresCorrectToolForDrops()));
 
 
     public static final RegistryObject<Block> PURPUR_LANTERN = registerBlock("purpur_lantern",
@@ -58,7 +58,7 @@ public class ModBlocks {
                     .jumpFactor(0.1f)
                     .speedFactor(1.25f)));
 
-    public static final RegistryObject<GrassBlock> END_GRASS_BLOCK = registerBlock("end_grass_block",
+    public static final RegistryObject<Block> END_GRASS_BLOCK = registerBlock("end_grass_block",
             () -> new GrassBlock(BlockBehaviour.Properties.copy(Blocks.GRASS_BLOCK).strength(3f)
                     .requiresCorrectToolForDrops()));
 
@@ -196,8 +196,6 @@ public class ModBlocks {
                 }
             });
 
-    public static final RegistryObject<Block> END_SAW_BLOCK = registerBlock("end_saw_block",
-            () -> new EndSawBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).strength(3f).requiresCorrectToolForDrops().noOcclusion()));
 
 
 

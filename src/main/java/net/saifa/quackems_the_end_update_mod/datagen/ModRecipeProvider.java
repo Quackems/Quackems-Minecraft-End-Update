@@ -253,10 +253,14 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(ModBlocks.BAUXITE.get()), has(ModBlocks.BAUXITE.get()))
                 .save(consumer);
 
-
-
-
-
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.END_GRASS_BLOCK.get())
+                .pattern(" E ")
+                .pattern("EGE")
+                .pattern(" E ")
+                .define('G', Blocks.GRASS_BLOCK)
+                .define('E', Items.ENDER_PEARL)
+                .unlockedBy(getHasName(Blocks.GRASS_BLOCK), has(Blocks.GRASS_BLOCK))
+                .save(consumer);
 
 
 
@@ -270,50 +274,65 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
 
 
-        SingleItemRecipeBuilder.stonecutting(Ingredient.of(Blocks.END_STONE), RecipeCategory.MISC, ModBlocks.END_PRISMARINE_BRICK.get())
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(Blocks.END_STONE), RecipeCategory.DECORATIONS, ModBlocks.END_PRISMARINE_BRICK.get())
                 .unlockedBy("has_end_stone", inventoryTrigger(ItemPredicate.Builder.item().
                         of(Blocks.END_STONE).build()))
                 .save(consumer);
 
 
-        SingleItemRecipeBuilder.stonecutting(Ingredient.of(Blocks.END_STONE), RecipeCategory.MISC, ModBlocks.ENDSTONE_STRETCHER.get())
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(Blocks.END_STONE), RecipeCategory.DECORATIONS, ModBlocks.ENDSTONE_STRETCHER.get())
                 .unlockedBy("has_end_stone", inventoryTrigger(ItemPredicate.Builder.item().
                         of(Blocks.END_STONE).build()))
                 .save(consumer);
 
-        SingleItemRecipeBuilder.stonecutting(Ingredient.of(Blocks.END_STONE), RecipeCategory.MISC, ModBlocks.END_VENEER.get())
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(Blocks.END_STONE), RecipeCategory.DECORATIONS, ModBlocks.END_VENEER.get())
                 .unlockedBy("has_end_stone", inventoryTrigger(ItemPredicate.Builder.item().
                         of(Blocks.END_STONE).build()))
                 .save(consumer);
 
-        SingleItemRecipeBuilder.stonecutting(Ingredient.of(Blocks.END_STONE, ModBlocks.END_PRISMARINE_BRICK.get()), RecipeCategory.MISC, ModBlocks.END_PRISMARINE_STAIRS.get())
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(Blocks.END_STONE, ModBlocks.END_PRISMARINE_BRICK.get()), RecipeCategory.DECORATIONS, ModBlocks.END_PRISMARINE_STAIRS.get())
                 .unlockedBy("has_end_stone", inventoryTrigger(ItemPredicate.Builder.item().
                         of(Blocks.END_STONE).build()))
                 .save(consumer);
 
-        SingleItemRecipeBuilder.stonecutting(Ingredient.of(Blocks.END_STONE, ModBlocks.END_PRISMARINE_BRICK.get()), RecipeCategory.MISC, ModBlocks.END_PRISMARINE_SLAB.get())
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(Blocks.END_STONE, ModBlocks.END_PRISMARINE_BRICK.get()), RecipeCategory.DECORATIONS, ModBlocks.END_PRISMARINE_SLAB.get())
                 .unlockedBy("has_end_stone", inventoryTrigger(ItemPredicate.Builder.item().
                         of(Blocks.END_STONE).build()))
                 .save(consumer);
 
-        SingleItemRecipeBuilder.stonecutting(Ingredient.of(Blocks.END_STONE, ModBlocks.END_PRISMARINE_BRICK.get()), RecipeCategory.MISC, ModBlocks.END_PRISMARINE_WALL.get())
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(Blocks.END_STONE, ModBlocks.END_PRISMARINE_BRICK.get()), RecipeCategory.DECORATIONS, ModBlocks.END_PRISMARINE_WALL.get())
                 .unlockedBy("has_end_stone", inventoryTrigger(ItemPredicate.Builder.item().
                         of(Blocks.END_STONE).build()))
                 .save(consumer);
 
-        SingleItemRecipeBuilder.stonecutting(Ingredient.of(Blocks.END_STONE, ModBlocks.ENDSTONE_STRETCHER.get()), RecipeCategory.MISC, ModBlocks.ENDSTONE_STRETCHER_STAIRS.get())
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(Blocks.END_STONE, ModBlocks.ENDSTONE_STRETCHER.get()), RecipeCategory.DECORATIONS, ModBlocks.ENDSTONE_STRETCHER_STAIRS.get())
                 .unlockedBy("has_end_stone", inventoryTrigger(ItemPredicate.Builder.item().
                         of(Blocks.END_STONE).build()))
                 .save(consumer);
 
-        SingleItemRecipeBuilder.stonecutting(Ingredient.of(Blocks.END_STONE, ModBlocks.ENDSTONE_STRETCHER.get()), RecipeCategory.MISC, ModBlocks.ENDSTONE_STRETCHER_SLAB.get())
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(Blocks.END_STONE, ModBlocks.ENDSTONE_STRETCHER.get()), RecipeCategory.DECORATIONS, ModBlocks.ENDSTONE_STRETCHER_SLAB.get())
                 .unlockedBy("has_end_stone", inventoryTrigger(ItemPredicate.Builder.item().
                         of(Blocks.END_STONE).build()))
                 .save(consumer);
 
-        SingleItemRecipeBuilder.stonecutting(Ingredient.of(Blocks.END_STONE, ModBlocks.ENDSTONE_STRETCHER.get()), RecipeCategory.MISC, ModBlocks.ENDSTONE_STRETCHER_WALL.get())
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(Blocks.END_STONE, ModBlocks.ENDSTONE_STRETCHER.get()), RecipeCategory.DECORATIONS, ModBlocks.ENDSTONE_STRETCHER_WALL.get())
                 .unlockedBy("has_end_stone", inventoryTrigger(ItemPredicate.Builder.item().
                         of(Blocks.END_STONE).build()))
+                .save(consumer);
+
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(ModBlocks.BAUXITE.get()), RecipeCategory.DECORATIONS, ModBlocks.POLISHED_BAUXITE.get())
+                .unlockedBy("has_bauxite", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(ModBlocks.BAUXITE.get()).build()))
+                .save(consumer);
+
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(ModItems.AMORITE.get()), RecipeCategory.DECORATIONS, ModItems.POLISHED_AMORITE.get())
+                .unlockedBy("has_bauxite", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(ModBlocks.BAUXITE.get()).build()))
+                .save(consumer);
+
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(ModBlocks.END_SLUDGE.get()), RecipeCategory.MISC, ModBlocks.END_SLUDGE_BRICK.get())
+                .unlockedBy("has_bauxite", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(ModBlocks.BAUXITE.get()).build()))
                 .save(consumer);
 
 

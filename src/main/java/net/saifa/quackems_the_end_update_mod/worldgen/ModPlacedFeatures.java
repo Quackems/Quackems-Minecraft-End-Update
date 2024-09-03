@@ -24,13 +24,13 @@ public class ModPlacedFeatures {
         HolderGetter<ConfiguredFeature<?, ?>> configuredFeatures = context.lookup(Registries.CONFIGURED_FEATURE);
 
         register(context, XP_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.OVERWORLD_XP_ORE_KEY),
-                ModOrePlacement.commonOrePlacement(8,
+                ModOrePlacement.commonOrePlacement(6,
                         HeightRangePlacement.uniform(VerticalAnchor.absolute(-64), VerticalAnchor.absolute(60))));
         register(context, NETHER_XP_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.NETHER_XP_ORE_KEY),
-                ModOrePlacement.commonOrePlacement(12,
+                ModOrePlacement.commonOrePlacement(4,
                         HeightRangePlacement.uniform(VerticalAnchor.absolute(-20), VerticalAnchor.absolute(120))));
         register(context, END_AMORITE_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.END_AMORITE_ORE_KEY),
-                ModOrePlacement.commonOrePlacement(3,
+                ModOrePlacement.commonOrePlacement(1,
                         HeightRangePlacement.uniform(VerticalAnchor.absolute(10), VerticalAnchor.absolute(60))));
     }
 

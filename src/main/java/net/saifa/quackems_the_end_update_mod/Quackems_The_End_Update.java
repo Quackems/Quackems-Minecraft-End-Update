@@ -2,7 +2,6 @@ package net.saifa.quackems_the_end_update_mod;
 
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.gui.screens.MenuScreens;
-import net.minecraft.client.renderer.entity.EntityRenderer;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
@@ -18,15 +17,12 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.saifa.quackems_the_end_update_mod.block.ModBlocks;
-import net.saifa.quackems_the_end_update_mod.block.entity.ModBlockEntities;
 import net.saifa.quackems_the_end_update_mod.entity.ModEntities;
 import net.saifa.quackems_the_end_update_mod.entity.client.EndBruteRenderer;
 import net.saifa.quackems_the_end_update_mod.item.ModCreativeModTabs;
 import net.saifa.quackems_the_end_update_mod.item.ModItems;
 import net.saifa.quackems_the_end_update_mod.loot.ModLootModifiers;
-import net.saifa.quackems_the_end_update_mod.recipe.ModRecipes;
-import net.saifa.quackems_the_end_update_mod.screen.EndSawBlockScreen;
-import net.saifa.quackems_the_end_update_mod.screen.ModMenuTypes;
+
 import org.slf4j.Logger;
 
 // The value here should match an entry in the META-INF/mods.toml file
@@ -49,15 +45,12 @@ public class Quackems_The_End_Update
 
         modEventBus.addListener(this::commonSetup);
 
-        ModBlockEntities.register(modEventBus);
 
-        ModMenuTypes.register(modEventBus);
 
         ModLootModifiers.register(modEventBus);
 
         ModEntities.register(modEventBus);
 
-        ModRecipes.register(modEventBus);
 
 
         MinecraftForge.EVENT_BUS.register(this);
@@ -90,7 +83,6 @@ public class Quackems_The_End_Update
     {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event){
-            MenuScreens.register(ModMenuTypes.END_SAW_MENU.get(), EndSawBlockScreen::new);
             EntityRenderers.register(ModEntities.END_BRUTE.get(), EndBruteRenderer::new);
         }
     }
