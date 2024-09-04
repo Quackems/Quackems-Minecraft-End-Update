@@ -10,6 +10,7 @@ import net.saifa.quackems_the_end_update_mod.Quackems_The_End_Update;
 import net.saifa.quackems_the_end_update_mod.worldgen.ModBiomeModifiers;
 import net.saifa.quackems_the_end_update_mod.worldgen.ModConfiguredFeatures;
 import net.saifa.quackems_the_end_update_mod.worldgen.ModPlacedFeatures;
+import net.saifa.quackems_the_end_update_mod.worldgen.biome.ModBiomes;
 
 import java.util.Set;
 import java.util.concurrent.CompletableFuture;
@@ -18,7 +19,8 @@ public class ModWorldGenProvider extends DatapackBuiltinEntriesProvider {
     public static final RegistrySetBuilder BUILDER = new RegistrySetBuilder()
             .add(Registries.CONFIGURED_FEATURE, ModConfiguredFeatures::bootstrap)
             .add(Registries.PLACED_FEATURE, ModPlacedFeatures::bootstrap)
-            .add(ForgeRegistries.Keys.BIOME_MODIFIERS, ModBiomeModifiers::bootstrap);
+            .add(ForgeRegistries.Keys.BIOME_MODIFIERS, ModBiomeModifiers::bootstrap)
+            .add(Registries.BIOME, ModBiomes::boostrap);
 
 
 

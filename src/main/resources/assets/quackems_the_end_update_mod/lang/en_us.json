@@ -96,6 +96,8 @@
 
   "block.quackems_the_end_update_mod.end_planks": "End Planks",
 
+  "block.quackems_the_end_update_mod.end_wood_sapling": "End Wood Sapling",
+
 
 
   "block.quackems_the_end_update_mod.end_prismarine_stairs": "End Prismarine Stairs",
@@ -162,6 +164,10 @@
   "block.quackems_the_end_update_mod.polished_bauxite_button": "Polished Bauxite Button",
 
   "block.quackems_the_end_update_mod.purpur_lantern": "Purpur Lantern",
+
+
+
+  "sounds.quackems_the_end_update_mod.metal_detector_found_ore" : "Metal Detector Beep",
 
 
 

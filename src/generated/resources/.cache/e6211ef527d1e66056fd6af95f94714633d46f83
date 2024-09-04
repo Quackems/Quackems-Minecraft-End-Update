@@ -1,4 +1,4 @@
-// 1.20.1	2024-09-03T14:18:09.6628515	Item Models: quackems_the_end_update_mod
+// 1.20.1	2024-09-04T18:14:56.567926	Item Models: quackems_the_end_update_mod
 7db0fe1a19642d2cb68c4a20d1321f9084f00c2d assets/quackems_the_end_update_mod/models/item/amorite.json
 b434cf72646d0046bf4eb51ae31bf9a9e6b21f30 assets/quackems_the_end_update_mod/models/item/amorite_axe.json
 8772129df0e2cfb3ab83ff3e66d6939803d1d4e9 assets/quackems_the_end_update_mod/models/item/amorite_boots.json
@@ -122,6 +122,7 @@ ad247ace9b5f457d5867a23ed9bbee0003c87769 assets/quackems_the_end_update_mod/mode
 63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/quackems_the_end_update_mod/models/item/end_stalker_spawn_egg.json
 323b2f595d71b6266de5380bf6c5bd1882bbe493 assets/quackems_the_end_update_mod/models/item/end_trapdoor.json
 bf92f7661033dc4a7eeedbd490034fa9186573ac assets/quackems_the_end_update_mod/models/item/end_wall.json
+742350ffd99ecf377545bc0780e5a65c0ffeebad assets/quackems_the_end_update_mod/models/item/end_wood_sapling.json
 b1f98ba7c140a3b70989d31a7e3d60e5a1a6a903 assets/quackems_the_end_update_mod/models/item/metal_detector.json
 991329b71568972db008674a8c3cdf9d0c9d7804 assets/quackems_the_end_update_mod/models/item/polished_amorite.json
 372a2f85d460fbd24f307f5d614888674ddf0aa7 assets/quackems_the_end_update_mod/models/item/polished_bauxite_button.json

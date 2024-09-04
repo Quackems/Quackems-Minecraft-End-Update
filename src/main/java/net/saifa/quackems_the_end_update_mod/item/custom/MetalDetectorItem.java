@@ -3,6 +3,7 @@ package net.saifa.quackems_the_end_update_mod.item.custom;
 import net.minecraft.client.resources.language.I18n;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
+import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
@@ -15,6 +16,7 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 import net.saifa.quackems_the_end_update_mod.block.ModBlocks;
 import net.saifa.quackems_the_end_update_mod.item.ModItems;
+import net.saifa.quackems_the_end_update_mod.sound.ModSounds;
 import net.saifa.quackems_the_end_update_mod.util.ModTags;
 import org.jetbrains.annotations.Nullable;
 
@@ -39,6 +41,9 @@ public class MetalDetectorItem extends Item{
                 if (isValuableBlock(state)) {
                     outputValuableCoordinates(positionClicked.below(i), player, state.getBlock());
                     foundBlock = true;
+
+                    pContext.getLevel().playSeededSound(null, positionClicked.getX(), positionClicked.getY(), positionClicked.getZ(),
+                            ModSounds.METAL_DETECTOR_FOUND_ORE.get(), SoundSource.BLOCKS, 0.25f, 2f, 0);
 
                     break;
                 }

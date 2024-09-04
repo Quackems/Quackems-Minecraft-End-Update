@@ -105,6 +105,7 @@ public class ModCreativeModTabs {
                         output.accept(ModBlocks.STRIPPED_END_WOOD.get());
                         output.accept(ModBlocks.END_LEAVES.get());
                         output.accept(ModBlocks.END_PLANKS.get());
+                        output.accept(ModBlocks.END_WOOD_SAPLING.get());
 
 
                     })

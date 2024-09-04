@@ -4,6 +4,7 @@ import com.mojang.logging.LogUtils;
 import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.item.CreativeModeTabs;
+import net.minecraft.world.level.levelgen.SurfaceRules;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -24,7 +25,11 @@ import net.saifa.quackems_the_end_update_mod.item.ModCreativeModTabs;
 import net.saifa.quackems_the_end_update_mod.item.ModItems;
 import net.saifa.quackems_the_end_update_mod.loot.ModLootModifiers;
 
+import net.saifa.quackems_the_end_update_mod.sound.ModSounds;
+import net.saifa.quackems_the_end_update_mod.worldgen.biome.ModTerrablender;
+import net.saifa.quackems_the_end_update_mod.worldgen.biome.surface.ModSurfaceRules;
 import org.slf4j.Logger;
+import terrablender.api.SurfaceRuleManager;
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(Quackems_The_End_Update.MOD_ID)
@@ -46,6 +51,9 @@ public class Quackems_The_End_Update
 
         modEventBus.addListener(this::commonSetup);
 
+        ModSounds.register(modEventBus);
+        ModTerrablender.registerBiomes();
+
 
 
         ModLootModifiers.register(modEventBus);
@@ -63,6 +71,7 @@ public class Quackems_The_End_Update
     }
 
     private void commonSetup(final FMLCommonSetupEvent event){
+        SurfaceRuleManager.addSurfaceRules(SurfaceRuleManager.RuleCategory.OVERWORLD, MOD_ID, ModSurfaceRules.makeRules());
 
     }
 

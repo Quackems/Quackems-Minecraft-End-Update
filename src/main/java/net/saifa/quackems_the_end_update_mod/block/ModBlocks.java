@@ -19,6 +19,7 @@ import net.minecraftforge.registries.RegistryObject;
 import net.saifa.quackems_the_end_update_mod.Quackems_The_End_Update;
 import net.saifa.quackems_the_end_update_mod.block.custom.ModFlammableRotatedPillarBlock;
 import net.saifa.quackems_the_end_update_mod.item.ModItems;
+import net.saifa.quackems_the_end_update_mod.worldgen.tree.EndTreeGrower;
 
 import java.util.function.Supplier;
 
@@ -67,9 +68,8 @@ public class ModBlocks {
             () -> new GrassBlock(BlockBehaviour.Properties.copy(Blocks.GRASS_BLOCK).strength(3f)
                     .requiresCorrectToolForDrops()));
 
-    public static final RegistryObject<Block>  END_GRASS = registerBlock("end_grass_flower",
-            () -> new FlowerBlock(() -> MobEffects.LUCK, 5,
-                    BlockBehaviour.Properties.copy(Blocks.GRASS).noOcclusion().noCollission()));
+    public static final RegistryObject<Block> END_GRASS = registerBlock("end_grass_flower",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.GRASS).noOcclusion().noCollission()));
 
 
     public static final RegistryObject<Block> END_PLANKS = registerBlock("end_planks",
@@ -169,6 +169,9 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> END_OAK_LOG = registerBlock("end_oak_log",
             () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG).requiresCorrectToolForDrops().strength(4.5f)));
+
+    public static final RegistryObject<Block> END_WOOD_SAPLING = registerBlock("end_wood_sapling",
+            () -> new SaplingBlock(new EndTreeGrower(), BlockBehaviour.Properties.copy(Blocks.CHERRY_SAPLING)));
 
     public static final RegistryObject<Block> END_WOOD = registerBlock("end_wood",
             () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WOOD).requiresCorrectToolForDrops().strength(4.5f)));

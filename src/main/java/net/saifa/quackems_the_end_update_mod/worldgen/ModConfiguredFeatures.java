@@ -4,13 +4,21 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstapContext;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.server.packs.resources.Resource;
 import net.minecraft.tags.BlockTags;
+import net.minecraft.util.valueproviders.ConstantInt;
+import net.minecraft.world.item.crafting.Recipe;
 import net.minecraft.world.level.block.Blocks;
 
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.configurations.FeatureConfiguration;
 import net.minecraft.world.level.levelgen.feature.configurations.OreConfiguration;
+import net.minecraft.world.level.levelgen.feature.configurations.TreeConfiguration;
+import net.minecraft.world.level.levelgen.feature.featuresize.TwoLayersFeatureSize;
+import net.minecraft.world.level.levelgen.feature.foliageplacers.BlobFoliagePlacer;
+import net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider;
+import net.minecraft.world.level.levelgen.feature.trunkplacers.StraightTrunkPlacer;
 import net.minecraft.world.level.levelgen.structure.templatesystem.BlockMatchTest;
 import net.minecraft.world.level.levelgen.structure.templatesystem.RuleTest;
 import net.minecraft.world.level.levelgen.structure.templatesystem.TagMatchTest;
@@ -26,6 +34,12 @@ public class ModConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> NETHER_XP_ORE_KEY = registerKey("nether_xp_ore");
     public static final ResourceKey<ConfiguredFeature<?, ?>> END_AMORITE_ORE_KEY = registerKey("end_amorite_ore");
 
+
+    public static final ResourceKey<ConfiguredFeature<?, ?>> END_TREE_KEY = registerKey("end_tree");
+
+
+
+
     public static void bootstrap(BootstapContext<ConfiguredFeature<?, ?>> context) {
         RuleTest stoneReplaceable = new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES);
         RuleTest deepslateReplaceables = new TagMatchTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES);
@@ -40,7 +54,18 @@ public class ModConfiguredFeatures {
         register(context, NETHER_XP_ORE_KEY, Feature.ORE, new OreConfiguration(netherrackReplacables,
                 ModBlocks.NETHER_XP_ORE.get().defaultBlockState(), 3));
         register(context, END_AMORITE_ORE_KEY, Feature.ORE, new OreConfiguration(endReplaceables,
-                ModBlocks.AMORITE_ORE.get().defaultBlockState(), 1, 100));
+                ModBlocks.AMORITE_ORE.get().defaultBlockState(), 1, 1));
+
+
+        register(context, END_TREE_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
+                BlockStateProvider.simple(ModBlocks.END_OAK_LOG.get()),
+                new StraightTrunkPlacer(5, 4, 3),
+
+                BlockStateProvider.simple(ModBlocks.END_LEAVES.get()),
+                new BlobFoliagePlacer(ConstantInt.of(3), ConstantInt.of(2), 3),
+
+                new TwoLayersFeatureSize(1, 0, 2)).build());
+
     }
 
 

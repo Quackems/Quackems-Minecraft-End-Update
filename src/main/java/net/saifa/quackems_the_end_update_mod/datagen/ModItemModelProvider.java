@@ -111,7 +111,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         withExistingParent(ModItems.END_BRUTE_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
         withExistingParent(ModItems.END_STALKER_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
 
-
+        saplingItem(ModBlocks.END_WOOD_SAPLING);
     }
 
     private void trimmedArmorItem(RegistryObject<Item> itemRegistryObject) {
@@ -159,6 +159,13 @@ public class ModItemModelProvider extends ItemModelProvider {
                                         "item/" + itemRegistryObject.getId().getPath()));
             });
         }
+    }
+
+
+    private ItemModelBuilder saplingItem(RegistryObject<Block> item) {
+        return withExistingParent(item.getId().getPath(),
+                new ResourceLocation("item/generated")).texture("layer0",
+                new ResourceLocation(Quackems_The_End_Update.MOD_ID,"block/" + item.getId().getPath()));
     }
 
     private ItemModelBuilder simpleItem(RegistryObject<Item> item) {
