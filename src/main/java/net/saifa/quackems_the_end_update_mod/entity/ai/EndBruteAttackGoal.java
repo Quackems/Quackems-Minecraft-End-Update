@@ -48,7 +48,7 @@ public class EndBruteAttackGoal extends MeleeAttackGoal {
     }
 
     private boolean isEnemyWithinAttackDistance(LivingEntity pEnemy, double pDistToEnemySqr) {
-        return pDistToEnemySqr <= this.getAttackReachSqr(pEnemy);
+        return pDistToEnemySqr <= this.getAttackInterval();
     }
 
     protected void resetAttackCooldown() {

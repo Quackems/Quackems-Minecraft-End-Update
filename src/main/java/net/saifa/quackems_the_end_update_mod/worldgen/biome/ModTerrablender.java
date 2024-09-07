@@ -6,6 +6,6 @@ import terrablender.api.Regions;
 
 public class ModTerrablender {
     public static void registerBiomes() {
-        Regions.register(new ModEndRegion(new ResourceLocation(Quackems_The_End_Update.MOD_ID, "overworld"), 5));
+        Regions.register(new ModEndRegion(new ResourceLocation(Quackems_The_End_Update.MOD_ID, "the_end"), 5));
     }
 }

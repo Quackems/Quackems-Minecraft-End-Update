@@ -26,7 +26,7 @@ public class EndStalkerAttackGoal extends MeleeAttackGoal{
         ticksUntilNextAttack = 5;
     }
 
-    @Override
+
     protected void checkAndPerformAttack(LivingEntity pEnemy, double pDistToEnemySqr) {
         if (isEnemyWithinAttackDistance(pEnemy, pDistToEnemySqr)) {
             shouldCountTillNextAttack = true;
@@ -48,7 +48,7 @@ public class EndStalkerAttackGoal extends MeleeAttackGoal{
     }
 
     private boolean isEnemyWithinAttackDistance(LivingEntity pEnemy, double pDistToEnemySqr) {
-        return pDistToEnemySqr <= this.getAttackReachSqr(pEnemy);
+        return pDistToEnemySqr <= this.getAttackInterval();
     }
 
     protected void resetAttackCooldown() {
