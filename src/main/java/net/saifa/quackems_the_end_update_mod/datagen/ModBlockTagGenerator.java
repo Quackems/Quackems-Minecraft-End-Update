@@ -6,7 +6,6 @@ import net.minecraft.tags.BlockTags;
 import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.data.BlockTagsProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
-import net.minecraftforge.fml.common.Mod;
 import net.saifa.quackems_the_end_update_mod.Quackems_The_End_Update;
 import net.saifa.quackems_the_end_update_mod.block.ModBlocks;
 import net.saifa.quackems_the_end_update_mod.util.ModTags;
@@ -38,6 +37,7 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
         this.tag(BlockTags.MINEABLE_WITH_PICKAXE)
                 .add(ModBlocks.AMORITE_BLOCK.get(),
                         ModBlocks.AMORITE_ORE.get(),
+                        ModBlocks.CORRUPTED_DIAMOND_BLOCK.get(),
                         ModBlocks.STONE_XP_ORE.get(),
                         ModBlocks.DEEPSLATE_XP_ORE.get(),
                         ModBlocks.NETHER_XP_ORE.get(),
@@ -90,6 +90,7 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
 
         this.tag(BlockTags.NEEDS_DIAMOND_TOOL)
                 .add(ModBlocks.AMORITE_BLOCK.get())
+                .add(ModBlocks.CORRUPTED_DIAMOND_BLOCK.get())
                 .add(ModBlocks.END_STAIRS.get())
                 .add(ModBlocks.END_SLAB.get())
                 .add(ModBlocks.END_WALL.get())

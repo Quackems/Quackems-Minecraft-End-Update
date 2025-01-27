@@ -1,8 +1,9 @@
-// 1.20.1	2024-09-04T18:14:56.5719265	Loot Tables
+// 1.20.1	2025-01-26T17:00:19.8396886	Loot Tables
 37014783fc9516e8e9b2cda9e31f6b31bb6cd361 data/quackems_the_end_update_mod/loot_tables/blocks/amorite_block.json
 d1f08d66a16baee516d9e15253686604c0184ccd data/quackems_the_end_update_mod/loot_tables/blocks/amorite_ore.json
 4807cc04a5736c1da583958ca64dbc823dd6c329 data/quackems_the_end_update_mod/loot_tables/blocks/bauxite.json
 e6ca84229a9dff3e914c0682a05c93c90308aa54 data/quackems_the_end_update_mod/loot_tables/blocks/bauxite_brick.json
+e9bfa79d39489d52d0c4faa10c642c070a238116 data/quackems_the_end_update_mod/loot_tables/blocks/corrupted_diamond_block.json
 f1cc825cd2c357b24d3b93c9738dacd28452eb39 data/quackems_the_end_update_mod/loot_tables/blocks/cracked_end_stone_brick.json
 e712ece94f09ae17d692a22e3beba500481c2626 data/quackems_the_end_update_mod/loot_tables/blocks/deepslate_xp_ore.json
 5287c1709c237f740280d3931bcef37886120b5d data/quackems_the_end_update_mod/loot_tables/blocks/endstone_stretcher.json

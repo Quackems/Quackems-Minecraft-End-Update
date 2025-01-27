@@ -3,21 +3,15 @@ package net.saifa.quackems_the_end_update_mod.datagen;
 import net.minecraft.advancements.critereon.ItemPredicate;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
-import net.minecraft.tags.TagKey;
-import net.minecraft.world.item.Item;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
-import net.minecraft.world.item.crafting.SingleItemRecipe;
-import net.minecraft.world.item.crafting.StonecutterRecipe;
-import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.StonecutterBlock;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
+import net.saifa.quackems_the_end_update_mod.Quackems_The_End_Update;
 import net.saifa.quackems_the_end_update_mod.block.ModBlocks;
 import net.saifa.quackems_the_end_update_mod.item.ModItems;
-import net.saifa.quackems_the_end_update_mod.util.ModTags;
 
-import java.io.Writer;
 import java.util.function.Consumer;
 
 public class ModRecipeProvider extends RecipeProvider implements IConditionBuilder {
@@ -26,8 +20,14 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         super(pOutput);
     }
 
+    private ResourceLocation makeID(String name) {
+        return new ResourceLocation(Quackems_The_End_Update.MOD_ID, name);
+    }
+
     @Override
     protected void buildRecipes(Consumer<FinishedRecipe> consumer) {
+
+
 
 
 
@@ -37,6 +37,14 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("AAA")
                 .define('A', ModItems.AMORITE.get())
                 .unlockedBy(getHasName(ModItems.AMORITE.get()), has(ModItems.AMORITE.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.CORRUPTED_DIAMOND_BLOCK.get())
+                .pattern("CCC")
+                .pattern("CCC")
+                .pattern("CCC")
+                .define('C', ModItems.CORRUPTED_DIAMOND.get())
+                .unlockedBy(getHasName(ModItems.CORRUPTED_DIAMOND.get()), has(ModItems.CORRUPTED_DIAMOND.get()))
                 .save(consumer);
 
 
@@ -136,13 +144,13 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
 
         ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.AMORITE_SWORD.get())
-                        .pattern(" A ")
-                        .pattern(" A ")
-                        .pattern(" S ")
-                        .define('A', ModItems.AMORITE.get())
-                        .define('S', Items.STICK)
-                        .unlockedBy(getHasName(ModItems.POLISHED_AMORITE.get()), has(ModItems.POLISHED_AMORITE.get()))
-                        .save(consumer);
+                .pattern(" A ")
+                .pattern(" A ")
+                .pattern(" S ")
+                .define('A', ModItems.AMORITE.get())
+                .define('S', Items.STICK)
+                .unlockedBy(getHasName(ModItems.POLISHED_AMORITE.get()), has(ModItems.POLISHED_AMORITE.get()))
+                .save(consumer);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.AMORITE_PICKAXE.get())
                 .pattern("AAA")
@@ -234,7 +242,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('N', Items.NETHERITE_INGOT)
                 .define('E', Items.ENDER_PEARL)
                 .unlockedBy(getHasName(Items.DIAMOND), has(Items.DIAMOND))
-                .save(consumer);
+                .save(consumer, makeID("corrupted_diamond_from_many"));
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.BAUXITE.get(), 2)
                 .pattern("   ")
@@ -246,6 +254,25 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(Items.LAPIS_LAZULI), has(Items.LAPIS_LAZULI))
                 .save(consumer);
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.END_GRASS_BLOCK.get())
+                .pattern(" P ")
+                .pattern("PGP")
+                .pattern(" P ")
+                .define('P', Items.ENDER_PEARL)
+                .define('G', Blocks.GRASS_BLOCK)
+                .unlockedBy(getHasName(Items.ENDER_PEARL), has(Items.ENDER_PEARL))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.ENDER_HILT.get())
+                .pattern("OCO")
+                .pattern("CSC")
+                .pattern("OCO")
+                .define('S', Items.STICK)
+                .define('C', ModItems.CORRUPTED_DIAMOND.get())
+                .define('O', Blocks.OBSIDIAN)
+                .unlockedBy(getHasName(ModItems.CORRUPTED_DIAMOND.get()), has(ModItems.CORRUPTED_DIAMOND.get()))
+                .save(consumer);
+
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.TOUGHENED_BAUXITE.get())
                 .pattern("   ")
                 .pattern("BB ")
@@ -254,23 +281,162 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(ModBlocks.BAUXITE.get()), has(ModBlocks.BAUXITE.get()))
                 .save(consumer);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.END_GRASS_BLOCK.get())
-                .pattern(" E ")
-                .pattern("EGE")
-                .pattern(" E ")
-                .define('G', Blocks.GRASS_BLOCK)
-                .define('E', Items.ENDER_PEARL)
-                .unlockedBy(getHasName(Blocks.GRASS_BLOCK), has(Blocks.GRASS_BLOCK))
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.END_SLUDGE.get())
+                .pattern(" P ")
+                .pattern("PBP")
+                .pattern(" P ")
+                .define('B', Blocks.DIRT)
+                .define('P', Items.ENDER_PEARL)
+                .unlockedBy(getHasName(ModBlocks.BAUXITE.get()), has(ModBlocks.BAUXITE.get()))
                 .save(consumer);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.AMORITE_INFUSED_BOW.get())
-                .pattern("AAA")
-                .pattern("ABA")
-                .pattern("AAA")
+                .pattern(" EC")
+                .pattern("EBA")
+                .pattern(" EC")
                 .define('B', Items.BOW)
                 .define('A', ModItems.AMORITE.get())
-                .unlockedBy(getHasName(Blocks.GRASS_BLOCK), has(Blocks.GRASS_BLOCK))
+                .define('C', ModItems.CORRUPTED_DIAMOND.get())
+                .define('E', ModItems.ENDER_HILT.get())
+                .unlockedBy(getHasName(ModItems.ENDER_HILT.get()), has(ModItems.ENDER_HILT.get()))
                 .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.END_WOOD_SAPLING.get())
+                .pattern("CEC")
+                .pattern("ESE")
+                .pattern("CEC")
+                .define('S', Items.OAK_SAPLING)
+                .define('C', ModItems.CORRUPTED_DIAMOND.get())
+                .define('E', Items.ENDER_PEARL)
+                .unlockedBy(getHasName(ModItems.CORRUPTED_DIAMOND.get()), has(ModItems.CORRUPTED_DIAMOND.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.END_WOOD.get(), 4)
+                .pattern("   ")
+                .pattern("LL ")
+                .pattern("LL ")
+                .define('L', ModBlocks.END_OAK_LOG.get())
+                .unlockedBy(getHasName(ModBlocks.END_OAK_LOG.get()), has(ModBlocks.END_OAK_LOG.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.END_FENCE.get() ,3)
+                .pattern("   ")
+                .pattern("PSP")
+                .pattern("PSP")
+                .define('P', ModBlocks.END_PLANKS.get())
+                .define('S', Items.STICK)
+                .unlockedBy(getHasName(ModBlocks.END_PLANKS.get()), has(ModBlocks.END_PLANKS.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.END_FENCE_GATE.get())
+                .pattern("   ")
+                .pattern("SPS")
+                .pattern("SPS")
+                .define('P', ModBlocks.END_PLANKS.get())
+                .define('S', Items.STICK)
+                .unlockedBy(getHasName(ModBlocks.END_PLANKS.get()), has(ModBlocks.END_PLANKS.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.END_STAIRS.get())
+                .pattern("  P")
+                .pattern(" PP")
+                .pattern("PPP")
+                .define('P', ModBlocks.END_PLANKS.get())
+                .unlockedBy(getHasName(ModBlocks.END_PLANKS.get()), has(ModBlocks.END_PLANKS.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.END_PRESSURE_PLATE.get(), 2)
+                .pattern("   ")
+                .pattern("   ")
+                .pattern("PP ")
+                .define('P', ModBlocks.END_PLANKS.get())
+                .unlockedBy(getHasName(ModBlocks.END_PLANKS.get()), has(ModBlocks.END_PLANKS.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.END_DOOR.get(), 3)
+                .pattern("PP ")
+                .pattern("PP ")
+                .pattern("PP ")
+                .define('P', ModBlocks.END_PLANKS.get())
+                .unlockedBy(getHasName(ModBlocks.END_PLANKS.get()), has(ModBlocks.END_PLANKS.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.END_TRAPDOOR.get(), 2)
+                .pattern("   ")
+                .pattern("PPP")
+                .pattern("PPP")
+                .define('P', ModBlocks.END_PLANKS.get())
+                .unlockedBy(getHasName(ModBlocks.END_PLANKS.get()), has(ModBlocks.END_PLANKS.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.END_SLAB.get(), 6)
+                .pattern("   ")
+                .pattern("   ")
+                .pattern("PPP")
+                .define('P', ModBlocks.END_PLANKS.get())
+                .unlockedBy(getHasName(ModBlocks.END_PLANKS.get()), has(ModBlocks.END_PLANKS.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.END_WALL.get(), 6)
+                .pattern(" P ")
+                .pattern("PPP")
+                .pattern("PPP")
+                .define('P', ModBlocks.END_PLANKS.get())
+                .unlockedBy(getHasName(ModBlocks.END_PLANKS.get()), has(ModBlocks.END_PLANKS.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.PURPUR_LANTERN.get())
+                .pattern("FEF")
+                .pattern("ESE")
+                .pattern("FEF")
+                .define('F', Blocks.PEARLESCENT_FROGLIGHT)
+                .define('S', Blocks.SEA_LANTERN)
+                .define('E', Items.ENDER_PEARL)
+                .unlockedBy(getHasName(Blocks.SEA_LANTERN), has(Blocks.SEA_LANTERN))
+                .save(consumer);
+
+
+
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.FOOD, ModItems.BURGER.get())
+                .pattern(" S ")
+                .pattern(" P ")
+                .pattern(" B ")
+                .define('P', ModItems.PATTY.get())
+                .define('B', Items.BREAD)
+                .define('S', ModItems.SEEDED_BREAD.get())
+                .unlockedBy(getHasName(Items.COOKED_BEEF), has(Items.COOKED_BEEF))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.FOOD, ModItems.SEEDED_BREAD.get())
+                .pattern("   ")
+                .pattern(" S ")
+                .pattern(" B ")
+                .define('B', Items.BREAD)
+                .define('S', Items.WHEAT_SEEDS)
+                .unlockedBy(getHasName(Items.BREAD), has(Items.BREAD))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.FOOD, ModItems.LAMB_KEBAB.get())
+                .pattern(" L ")
+                .pattern("BL ")
+                .pattern(" S ")
+                .define('B', Items.BEETROOT)
+                .define('S', Items.STICK)
+                .define('L', Items.COOKED_MUTTON)
+                .unlockedBy(getHasName(Items.COOKED_MUTTON), has(Items.COOKED_MUTTON))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.FOOD, ModItems.CHICKEN_KEBAB.get())
+                .pattern(" C ")
+                .pattern("BC ")
+                .pattern(" S ")
+                .define('B', Items.BEETROOT)
+                .define('S', Items.STICK)
+                .define('C', Items.COOKED_CHICKEN)
+                .unlockedBy(getHasName(Items.COOKED_CHICKEN), has(Items.COOKED_CHICKEN))
+                .save(consumer);
+
 
 
 
@@ -279,6 +445,34 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .requires(ModBlocks.AMORITE_BLOCK.get())
                 .unlockedBy(getHasName(ModBlocks.AMORITE_BLOCK.get()), has(ModBlocks.AMORITE_BLOCK.get()))
                 .save(consumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.CORRUPTED_DIAMOND.get(), 9)
+                .requires(ModBlocks.CORRUPTED_DIAMOND_BLOCK.get())
+                .unlockedBy(getHasName(ModBlocks.CORRUPTED_DIAMOND_BLOCK.get()), has(ModBlocks.CORRUPTED_DIAMOND_BLOCK.get()))
+                .save(consumer, (makeID("corrupted_diamond_from_corrupted_diamond_block_2")));
+
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.END_PLANKS.get(), 4)
+                .requires(ModBlocks.END_OAK_LOG.get())
+                .unlockedBy(getHasName(ModBlocks.END_OAK_LOG.get()), has(ModBlocks.END_OAK_LOG.get()))
+                .save(consumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.END_OAK_LOG.get(), 4)
+                .requires(ModBlocks.END_WOOD.get(), 4)
+                .unlockedBy(getHasName(ModBlocks.END_WOOD.get()), has(ModBlocks.END_WOOD.get()))
+                .save(consumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.END_BUTTON.get(), 1)
+                .requires(ModBlocks.END_PLANKS.get())
+                .unlockedBy(getHasName(ModBlocks.END_PLANKS.get()), has(ModBlocks.END_PLANKS.get()))
+                .save(consumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, ModItems.PATTY.get())
+                .requires(Items.COOKED_BEEF)
+                .unlockedBy(getHasName(Items.COOKED_BEEF), has(Items.COOKED_BEEF))
+                .save(consumer);
+
+
 
 
 
@@ -349,7 +543,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_end_sludge", inventoryTrigger(ItemPredicate.Builder.item().
                         of(ModBlocks.END_SLUDGE.get()).build()))
                 .save(consumer);
-
 
 
 

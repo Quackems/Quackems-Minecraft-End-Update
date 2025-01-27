@@ -24,6 +24,11 @@ public class ModCreativeModTabs {
                         output.accept(ModItems.METAL_DETECTOR.get());
                         output.accept(ModItems.AMORITE_DETECTOR.get());
                         output.accept(ModItems.END_APPLE.get());
+                        output.accept(ModItems.BURGER.get());
+                        output.accept(ModItems.PATTY.get());
+                        output.accept(ModItems.SEEDED_BREAD.get());
+                        output.accept(ModItems.LAMB_KEBAB.get());
+                        output.accept(ModItems.CHICKEN_KEBAB.get());
                         output.accept(ModItems.END_COAL.get());
                         output.accept(ModItems.END_STAFF.get());
                         output.accept(ModItems.AMORITE_INFUSED_BOW.get());
@@ -61,6 +66,7 @@ public class ModCreativeModTabs {
 
                         output.accept(ModBlocks.AMORITE_ORE.get());
                         output.accept(ModBlocks.AMORITE_BLOCK.get());
+                        output.accept(ModBlocks.CORRUPTED_DIAMOND_BLOCK.get());
                         output.accept(ModBlocks.STONE_XP_ORE.get());
                         output.accept(ModBlocks.DEEPSLATE_XP_ORE.get());
                         output.accept(ModBlocks.NETHER_XP_ORE.get());

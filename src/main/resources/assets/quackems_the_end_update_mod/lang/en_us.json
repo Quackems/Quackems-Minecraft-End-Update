@@ -11,6 +11,40 @@
 
   "item.quackems_the_end_update_mod.end_apple": "End Apple",
 
+  "item.quackems_the_end_update_mod.burger": "Burger",
+
+  "item.quackems_the_end_update_mod.patty": "Burger Patty",
+
+  "item.quackems_the_end_update_mod.seeded_bread": "Seeded Bread",
+
+  "item.quackems_the_end_update_mod.lamb_kebab": "Lamb Kebab",
+
+  "item.minecraft.potion.effect.miners_drink": "Miners Drink",
+
+  "item.minecraft.splash_potion.effect.miners_drink": "Splash Miners Drink",
+
+  "item.minecraft.lingering_potion.effect.miners_drink": "Lingering Miners Drink",
+
+  "item.minecraft.tipped_arrow.effect.miners_drink": "Miners Soul Tipped Arrow",
+
+  "item.minecraft.potion.effect.miners_drink_glow": "Glowstone Enforced Miners Drink",
+
+  "item.minecraft.splash_potion.effect.miners_drink_glow": "Glowstone Enforced Splash Miners Drink",
+
+  "item.minecraft.lingering_potion.effect.miners_drink_glow": "Glowstone Enforced Lingering Miners Drink",
+
+  "item.minecraft.tipped_arrow.effect.miners_drink_glow": "Glowstone Enforced Miners Soul Tipped Arrow",
+
+  "item.minecraft.potion.effect.miners_drink_red": "Redstone Enforced Miners Drink",
+
+  "item.minecraft.splash_potion.effect.miners_drink_red": "Redstone Enforced Splash Miners Drink",
+
+  "item.minecraft.lingering_potion.effect.miners_drink_red": "Redstone Enforced Lingering Miners Drink",
+
+  "item.minecraft.tipped_arrow.effect.miners_drink_red": "Redstone Enforced Miners Soul Tipped Arrow",
+
+  "item.quackems_the_end_update_mod.chicken_kebab": "Chicken Kebab",
+
   "item.quackems_the_end_update_mod.end_coal": "End Coal",
 
   "item.quackems_the_end_update_mod.end_staff": "End Staff",
@@ -130,6 +164,8 @@
   "block.quackems_the_end_update_mod.amorite_ore": "Amorite Ore",
 
   "block.quackems_the_end_update_mod.amorite_block": "Block of Amorite",
+
+  "block.quackems_the_end_update_mod.corrupted_diamond_block": "Block of Corrupted Diamond",
 
   "block.quackems_the_end_update_mod.end_grass_flower": "End Grass",
 

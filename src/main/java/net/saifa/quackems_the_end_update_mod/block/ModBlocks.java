@@ -4,7 +4,6 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.util.valueproviders.UniformInt;
-import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.BlockGetter;
@@ -31,7 +30,10 @@ public class ModBlocks {
             () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.END_STONE).strength(6.5f).requiresCorrectToolForDrops(), UniformInt.of(9,15)));
 
     public static final RegistryObject<Block> AMORITE_BLOCK = registerBlock("amorite_block",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).strength(5f).requiresCorrectToolForDrops()));
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK).strength(5f).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> CORRUPTED_DIAMOND_BLOCK = registerBlock("corrupted_diamond_block",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK).strength(4f).requiresCorrectToolForDrops().speedFactor(1.25f)));
 
     public static final RegistryObject<Block> CRACKED_END_STONE_BRICK = registerBlock("cracked_end_stone_brick",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE_BRICKS).strength(4f).requiresCorrectToolForDrops()));

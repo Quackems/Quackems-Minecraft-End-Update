@@ -6,7 +6,6 @@ import net.minecraft.world.level.block.*;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
 import net.minecraftforge.client.model.generators.ModelFile;
 import net.minecraftforge.common.data.ExistingFileHelper;
-import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.saifa.quackems_the_end_update_mod.Quackems_The_End_Update;
@@ -22,6 +21,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
     protected void registerStatesAndModels() {
         blockWithItem(ModBlocks.AMORITE_BLOCK);
         blockWithItem(ModBlocks.AMORITE_ORE);
+        blockWithItem(ModBlocks.CORRUPTED_DIAMOND_BLOCK);
         blockWithItem(ModBlocks.STONE_XP_ORE);
         blockWithItem(ModBlocks.DEEPSLATE_XP_ORE);
         blockWithItem(ModBlocks.NETHER_XP_ORE);

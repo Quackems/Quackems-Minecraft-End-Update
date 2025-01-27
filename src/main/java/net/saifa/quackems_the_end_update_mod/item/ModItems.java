@@ -3,6 +3,7 @@ package net.saifa.quackems_the_end_update_mod.item;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.*;
+import net.minecraft.world.item.alchemy.Potion;
 import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraftforge.common.ForgeSpawnEggItem;
@@ -16,6 +17,9 @@ import net.saifa.quackems_the_end_update_mod.entity.ModEntities;
 import net.saifa.quackems_the_end_update_mod.item.custom.*;
 
 public class ModItems {
+
+    public static final DeferredRegister<Potion> POTIONS
+            = DeferredRegister.create(ForgeRegistries.POTIONS, Quackems_The_End_Update.MOD_ID);
     public static final DeferredRegister<Item> ITEMS =
             DeferredRegister.create(ForgeRegistries.ITEMS, Quackems_The_End_Update.MOD_ID);
 
@@ -26,13 +30,42 @@ public class ModItems {
     public static final RegistryObject<Item> CORRUPTED_DIAMOND = ITEMS.register("corrupted_diamond",
             () -> new Item(new Item.Properties().rarity(Rarity.UNCOMMON)));
     public static final RegistryObject<Item> METAL_DETECTOR = ITEMS.register("metal_detector",
-            () -> new MetalDetectorItem(new Item.Properties().durability(65)));
+            () -> new MetalDetectorItem(new Item.Properties().durability(65).rarity(Rarity.RARE)));
 
     public static final RegistryObject<Item> AMORITE_DETECTOR = ITEMS.register("amorite_detector",
-            () -> new AmoriteDetectorItem(new Item.Properties().durability(95)));
+            () -> new AmoriteDetectorItem(new Item.Properties().durability(95).rarity(Rarity.UNCOMMON)));
 
     public static final RegistryObject<Item> END_APPLE = ITEMS.register("end_apple",
-            () -> new Item(new Item.Properties().food(ModFoods.END_APPLE)));
+            () -> new Item(new Item.Properties().food(ModFoods.END_APPLE).rarity(Rarity.RARE)));
+
+    public static final RegistryObject<Item> BURGER = ITEMS.register("burger",
+            () -> new Item(new Item.Properties().food(ModFoods.BURGER).stacksTo(64).rarity(Rarity.UNCOMMON)));
+
+
+    public static final RegistryObject<Item> PATTY = ITEMS.register("patty",
+            () -> new Item(new Item.Properties().stacksTo(64)));
+
+    public static final RegistryObject<Item> SEEDED_BREAD = ITEMS.register("seeded_bread",
+            () -> new Item(new Item.Properties().stacksTo(64)));
+
+    public static final RegistryObject<Item> LAMB_KEBAB = ITEMS.register("lamb_kebab",
+            () -> new Item(new Item.Properties().food(ModFoods.KEBAB).stacksTo(64).rarity(Rarity.UNCOMMON)));
+
+    public static final RegistryObject<Item> CHICKEN_KEBAB = ITEMS.register("chicken_kebab",
+            () -> new Item(new Item.Properties().food(ModFoods.KEBAB).stacksTo(64).rarity(Rarity.UNCOMMON)));
+
+
+    public static final RegistryObject<Potion> MINERS_DRINK = POTIONS.register("miners_drink",
+            () -> new Potion(new MobEffectInstance(MobEffects.DIG_SPEED, 6000, 1)));
+
+    public static final RegistryObject<Potion> MINERS_DRINK_GLOW = POTIONS.register("miners_drink_glow",
+            () -> new Potion(new MobEffectInstance(MobEffects.DIG_SPEED, 6000, 2)));
+
+    public static final RegistryObject<Potion> MINERS_DRINK_RED = POTIONS.register("miners_drink_red",
+            () -> new Potion(new MobEffectInstance(MobEffects.DIG_SPEED, 12000, 1)));
+
+
+
 
     public static final RegistryObject<Item> END_STAFF = ITEMS.register("end_staff",
             () -> new Item(new Item.Properties().stacksTo(1).rarity(Rarity.EPIC)));
@@ -104,5 +137,6 @@ public class ModItems {
 
     public static void register(IEventBus eventBus){
         ITEMS.register(eventBus);
+        POTIONS.register(eventBus);
     }
 }

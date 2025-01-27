@@ -6,15 +6,14 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.packs.PackType;
 import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.alchemy.Potion;
 import net.minecraft.world.item.armortrim.TrimMaterial;
 import net.minecraft.world.item.armortrim.TrimMaterials;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.client.model.generators.ItemModelBuilder;
 import net.minecraftforge.client.model.generators.ItemModelProvider;
 import net.minecraftforge.client.model.generators.ModelFile;
 import net.minecraftforge.common.data.ExistingFileHelper;
-import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.saifa.quackems_the_end_update_mod.Quackems_The_End_Update;
@@ -50,6 +49,11 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.METAL_DETECTOR);
         simpleItem(ModItems.AMORITE_DETECTOR);
         simpleItem(ModItems.END_APPLE);
+        simpleItem(ModItems.BURGER);
+        simpleItem(ModItems.LAMB_KEBAB);
+        simpleItem(ModItems.CHICKEN_KEBAB);
+        simpleItem(ModItems.PATTY);
+        simpleItem(ModItems.SEEDED_BREAD);
         simpleItem(ModItems.END_COAL);
         simpleItem(ModItems.POLISHED_AMORITE);
         simpleItem(ModItems.CORRUPTED_DIAMOND);
@@ -58,7 +62,7 @@ public class ModItemModelProvider extends ItemModelProvider {
 
         simpleBlockItem(ModBlocks.END_DOOR);
 
-        fenceItem(ModBlocks.END_FENCE, ModBlocks.END_PLANKS);//TODO:FIX THIS
+        fenceItem(ModBlocks.END_FENCE, ModBlocks.END_PLANKS);
         buttonItem(ModBlocks.END_BUTTON, ModBlocks.END_PLANKS);
         buttonItem(ModBlocks.POLISHED_BAUXITE_BUTTON, ModBlocks.POLISHED_BAUXITE);
         wallItem(ModBlocks.END_WALL, ModBlocks.END_PLANKS);
@@ -220,4 +224,5 @@ public class ModItemModelProvider extends ItemModelProvider {
                 new ResourceLocation(Quackems_The_End_Update.MOD_ID,"item/" + item.getId().getPath()));
 
     }
+
 }
