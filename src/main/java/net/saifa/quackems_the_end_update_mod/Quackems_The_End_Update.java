@@ -28,7 +28,10 @@ import net.saifa.quackems_the_end_update_mod.loot.ModLootModifiers;
 
 import net.saifa.quackems_the_end_update_mod.sound.ModSounds;
 import net.saifa.quackems_the_end_update_mod.util.BetterBrewingRecipe;
+import net.saifa.quackems_the_end_update_mod.worldgen.biome.ModTerrablender;
+import net.saifa.quackems_the_end_update_mod.worldgen.biome.surface.ModSurfaceRules;
 import org.slf4j.Logger;
+import terrablender.api.SurfaceRuleManager;
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(Quackems_The_End_Update.MOD_ID)
@@ -53,8 +56,7 @@ public class Quackems_The_End_Update
         ModSounds.register(modEventBus);
 
 
-
-
+        ModTerrablender.registerBiomes();
 
 
 
@@ -73,6 +75,12 @@ public class Quackems_The_End_Update
     }
 
     private void commonSetup(final FMLCommonSetupEvent event){
+
+        SurfaceRuleManager.addSurfaceRules(SurfaceRuleManager.RuleCategory.OVERWORLD, MOD_ID, ModSurfaceRules.makeRules());
+
+
+
+
         BrewingRecipeRegistry.addRecipe(new BetterBrewingRecipe(Potions.AWKWARD,
                 ModItems.AMORITE.get(), ModItems.MINERS_DRINK.get()));
 

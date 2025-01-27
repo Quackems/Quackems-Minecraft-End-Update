@@ -25,6 +25,8 @@ public class ModPlacedFeatures {
 
     public static final ResourceKey<PlacedFeature> END_TREE_PLACED_KEY = registerKey("end_tree_placed");
 
+    public static final ResourceKey<PlacedFeature> END_GRASS_PLACED_KEY = registerKey("end_grass_placed");
+
     public static void bootstrap(BootstapContext<PlacedFeature> context) {
         HolderGetter<ConfiguredFeature<?, ?>> configuredFeatures = context.lookup(Registries.CONFIGURED_FEATURE);
 
@@ -42,6 +44,10 @@ public class ModPlacedFeatures {
         register(context, END_TREE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.END_TREE_KEY),
                 VegetationPlacements.treePlacement(PlacementUtils.countExtra(3, 0.1f, 2),
                         ModBlocks.END_WOOD_SAPLING.get()));
+
+        register(context, END_GRASS_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.END_TREE_KEY),
+                VegetationPlacements.treePlacement(PlacementUtils.countExtra(3, 0.1f, 2),
+                        ModBlocks.END_GRASS.get()));
     }
 
 

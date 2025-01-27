@@ -1,5 +1,6 @@
 package net.saifa.quackems_the_end_update_mod.block;
 
+import com.mojang.serialization.Codec;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.sounds.SoundEvents;
@@ -11,11 +12,13 @@ import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
+import net.minecraftforge.common.PlantType;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.saifa.quackems_the_end_update_mod.Quackems_The_End_Update;
+import net.saifa.quackems_the_end_update_mod.block.custom.GrassBlock;
 import net.saifa.quackems_the_end_update_mod.block.custom.ModFlammableRotatedPillarBlock;
 import net.saifa.quackems_the_end_update_mod.item.ModItems;
 import net.saifa.quackems_the_end_update_mod.worldgen.tree.EndTreeGrower;
@@ -23,6 +26,16 @@ import net.saifa.quackems_the_end_update_mod.worldgen.tree.EndTreeGrower;
 import java.util.function.Supplier;
 
 public class ModBlocks {
+
+
+
+
+
+
+
+
+
+
     public static final DeferredRegister<Block> BLOCKS =
             DeferredRegister.create(ForgeRegistries.BLOCKS, Quackems_The_End_Update.MOD_ID);
 
@@ -116,11 +129,11 @@ public class ModBlocks {
 
 
     public static final RegistryObject<Block> END_STAIRS = registerBlock("end_stairs",
-            () -> new StairBlock(() -> Blocks.OAK_PLANKS.defaultBlockState(),  //TODO:FIX THE STUPID PLANKS
+            () -> new StairBlock(() -> ModBlocks.END_PLANKS.get().defaultBlockState(),
                     BlockBehaviour.Properties.copy(Blocks.OAK_STAIRS).strength(3f).requiresCorrectToolForDrops()));
 
     public static final RegistryObject<Block> END_SLAB = registerBlock("end_slab",
-            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).strength(3f).requiresCorrectToolForDrops()));
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(ModBlocks.END_PLANKS.get()).strength(3f).requiresCorrectToolForDrops()));
 
     public static final RegistryObject<Block> END_BUTTON = registerBlock("end_button",
             () -> new ButtonBlock(BlockBehaviour.Properties.copy(Blocks.OAK_BUTTON).strength(3f).requiresCorrectToolForDrops(),
@@ -128,25 +141,25 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> END_PRESSURE_PLATE = registerBlock("end_pressure_plate",
             () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING,
-                    BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).strength(3f).requiresCorrectToolForDrops(),
+                    BlockBehaviour.Properties.copy(ModBlocks.END_PLANKS.get()).strength(3f).requiresCorrectToolForDrops(),
                     BlockSetType.OAK));
 
     public static final RegistryObject<Block> END_FENCE = registerBlock("end_fence",
-            () -> new FenceBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).strength(3f).requiresCorrectToolForDrops()));
+            () -> new FenceBlock(BlockBehaviour.Properties.copy(ModBlocks.END_PLANKS.get()).strength(3f).requiresCorrectToolForDrops()));
 
     public static final RegistryObject<Block> END_FENCE_GATE = registerBlock("end_fence_gate",
-            () -> new FenceGateBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).strength(3f).requiresCorrectToolForDrops(),
+            () -> new FenceGateBlock(BlockBehaviour.Properties.copy(ModBlocks.END_PLANKS.get()).strength(3f).requiresCorrectToolForDrops(),
                     SoundEvents.NETHER_WOOD_FENCE_GATE_OPEN, SoundEvents.NETHER_WOOD_FENCE_GATE_CLOSE));
 
     public static final RegistryObject<Block> END_WALL = registerBlock("end_wall",
-            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).strength(3f).requiresCorrectToolForDrops()));
+            () -> new WallBlock(BlockBehaviour.Properties.copy(ModBlocks.END_PLANKS.get()).strength(3f).requiresCorrectToolForDrops()));
 
     public static final RegistryObject<Block> END_DOOR = registerBlock("end_door",
-            () -> new DoorBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).noOcclusion().strength(3f).requiresCorrectToolForDrops(),
+            () -> new DoorBlock(BlockBehaviour.Properties.copy(ModBlocks.END_PLANKS.get()).noOcclusion().strength(3f).requiresCorrectToolForDrops(),
                     BlockSetType.OAK));
 
     public static final RegistryObject<Block> END_TRAPDOOR = registerBlock("end_trapdoor",
-            () -> new TrapDoorBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).noOcclusion().strength(3f).requiresCorrectToolForDrops(),
+            () -> new TrapDoorBlock(BlockBehaviour.Properties.copy(ModBlocks.END_PLANKS.get()).noOcclusion().strength(3f).requiresCorrectToolForDrops(),
                     BlockSetType.OAK));
 
     public static final RegistryObject<Block> END_PRISMARINE_STAIRS = registerBlock("end_prismarine_stairs",

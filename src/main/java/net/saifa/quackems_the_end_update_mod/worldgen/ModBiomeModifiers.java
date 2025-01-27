@@ -23,6 +23,8 @@ public class ModBiomeModifiers {
 
     public static final ResourceKey<BiomeModifier> ADD_TREE_END = registerKey("add_tree_end");
 
+    public static final ResourceKey<BiomeModifier> ADD_GRASS_END = registerKey("add_grass_end");
+
 
 
     public static void bootstrap(BootstapContext<BiomeModifier> context){
@@ -49,6 +51,11 @@ public class ModBiomeModifiers {
         context.register(ADD_TREE_END, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
                 biomes.getOrThrow(BiomeTags.IS_END),
                 HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.END_TREE_PLACED_KEY)),
+                GenerationStep.Decoration.VEGETAL_DECORATION));
+
+        context.register(ADD_GRASS_END, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
+                biomes.getOrThrow(BiomeTags.IS_END),
+                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.END_GRASS_PLACED_KEY)),
                 GenerationStep.Decoration.VEGETAL_DECORATION));
 
 
