@@ -91,6 +91,11 @@
   "item.quackems_the_end_update_mod.corrupted_diamond_boots": "Corrupted Diamond Boots",
 
 
+  "item.quackems_the_end_update_mod.tomato_seeds": "Tomato Seeds",
+
+  "item.quackems_the_end_update_mod.tomato": "Tomato",
+
+
 
 
 
@@ -146,6 +151,9 @@
   "block.quackems_the_end_update_mod.endstone_stretcher_slab": "Endstone Stretcher Slab",
 
   "block.quackems_the_end_update_mod.endstone_stretcher_wall": "Endstone Stretcher Wall",
+
+
+  "block.quackems_the_end_update_mod.mod_portal": "Mod Portal",
 
 
 

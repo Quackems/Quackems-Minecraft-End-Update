@@ -254,14 +254,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(Items.LAPIS_LAZULI), has(Items.LAPIS_LAZULI))
                 .save(consumer);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.END_GRASS_BLOCK.get())
-                .pattern(" P ")
-                .pattern("PGP")
-                .pattern(" P ")
-                .define('P', Items.ENDER_PEARL)
-                .define('G', Blocks.GRASS_BLOCK)
-                .unlockedBy(getHasName(Items.ENDER_PEARL), has(Items.ENDER_PEARL))
-                .save(consumer);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.ENDER_HILT.get())
                 .pattern("OCO")
@@ -281,15 +273,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(ModBlocks.BAUXITE.get()), has(ModBlocks.BAUXITE.get()))
                 .save(consumer);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.END_SLUDGE.get())
-                .pattern(" P ")
-                .pattern("PBP")
-                .pattern(" P ")
-                .define('B', Blocks.DIRT)
-                .define('P', Items.ENDER_PEARL)
-                .unlockedBy(getHasName(ModBlocks.BAUXITE.get()), has(ModBlocks.BAUXITE.get()))
-                .save(consumer);
-
         ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.AMORITE_INFUSED_BOW.get())
                 .pattern(" EC")
                 .pattern("EBA")
@@ -300,16 +283,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('E', ModItems.ENDER_HILT.get())
                 .unlockedBy(getHasName(ModItems.ENDER_HILT.get()), has(ModItems.ENDER_HILT.get()))
                 .save(consumer);
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.END_WOOD_SAPLING.get())
-                .pattern("CEC")
-                .pattern("ESE")
-                .pattern("CEC")
-                .define('S', Items.OAK_SAPLING)
-                .define('C', ModItems.CORRUPTED_DIAMOND.get())
-                .define('E', Items.ENDER_PEARL)
-                .unlockedBy(getHasName(ModItems.CORRUPTED_DIAMOND.get()), has(ModItems.CORRUPTED_DIAMOND.get()))
-                .save(consumer);
+        
 
         ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.END_WOOD.get(), 4)
                 .pattern("   ")

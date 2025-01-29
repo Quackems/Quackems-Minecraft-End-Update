@@ -18,4 +18,8 @@ public class ModFoods {
             .saturationMod(6f)
             .effect(() -> new MobEffectInstance(MobEffects.HEAL, 40, 2), 0.5f).build();
 
+    public static final FoodProperties TOMATO = new FoodProperties.Builder().nutrition(3)
+            .saturationMod(2f)
+            .effect(() -> new MobEffectInstance(MobEffects.DAMAGE_BOOST, 100, 0), 0.25f).build();
+
 }

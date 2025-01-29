@@ -38,6 +38,8 @@ public class ModCreativeModTabs {
                         output.accept(ModItems.AMORITE_PICKAXE.get());
                         output.accept(ModItems.AMORITE_SHOVEL.get());
                         output.accept(ModItems.AMORITE_HOE.get());
+                        output.accept(ModItems.TOMATO_SEEDS.get());
+                        output.accept(ModItems.TOMATO.get());
 
                         output.accept(ModItems.CORRUPTED_DIAMOND_SWORD.get());
                         output.accept(ModItems.CORRUPTED_DIAMOND_AXE.get());
@@ -84,6 +86,7 @@ public class ModCreativeModTabs {
                         output.accept(ModBlocks.POLISHED_BAUXITE_BUTTON.get());
                         output.accept(ModBlocks.END_GRASS.get());
                         output.accept(ModBlocks.PURPUR_LANTERN.get());
+
 
 
                         output.accept(ModBlocks.END_STAIRS.get());

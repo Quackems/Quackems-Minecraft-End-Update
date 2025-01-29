@@ -54,6 +54,8 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.CHICKEN_KEBAB);
         simpleItem(ModItems.PATTY);
         simpleItem(ModItems.SEEDED_BREAD);
+        simpleItem(ModItems.TOMATO);
+        simpleItem(ModItems.TOMATO_SEEDS);
         simpleItem(ModItems.END_COAL);
         simpleItem(ModItems.POLISHED_AMORITE);
         simpleItem(ModItems.CORRUPTED_DIAMOND);

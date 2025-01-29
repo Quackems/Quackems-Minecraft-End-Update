@@ -13,6 +13,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.saifa.quackems_the_end_update_mod.Quackems_The_End_Update;
+import net.saifa.quackems_the_end_update_mod.block.ModBlocks;
 import net.saifa.quackems_the_end_update_mod.entity.ModEntities;
 import net.saifa.quackems_the_end_update_mod.item.custom.*;
 
@@ -122,6 +123,14 @@ public class ModItems {
     public static final RegistryObject<Item> AMORITE_INFUSED_BOW = ITEMS.register("amorite_infused_bow",
             () -> new AmoriteBowItem(new Item.Properties().stacksTo(1).rarity(Rarity.RARE)
                     .durability(7200)));
+
+
+    public static final RegistryObject<Item> TOMATO_SEEDS = ITEMS.register("tomato_seeds",
+            () -> new ItemNameBlockItem(ModBlocks.TOMATO_CROP.get(), new Item.Properties()));
+
+
+    public static final RegistryObject<Item> TOMATO = ITEMS.register("tomato",
+            () -> new Item(new Item.Properties().food(ModFoods.TOMATO).stacksTo(64)));
 
 
 

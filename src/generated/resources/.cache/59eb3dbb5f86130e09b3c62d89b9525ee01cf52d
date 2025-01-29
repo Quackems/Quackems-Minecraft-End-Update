@@ -1,4 +1,4 @@
-// 1.20.1	2025-01-26T17:00:19.8396886	Loot Tables
+// 1.20.1	2025-01-28T19:25:39.2168922	Loot Tables
 37014783fc9516e8e9b2cda9e31f6b31bb6cd361 data/quackems_the_end_update_mod/loot_tables/blocks/amorite_block.json
 d1f08d66a16baee516d9e15253686604c0184ccd data/quackems_the_end_update_mod/loot_tables/blocks/amorite_ore.json
 4807cc04a5736c1da583958ca64dbc823dd6c329 data/quackems_the_end_update_mod/loot_tables/blocks/bauxite.json
@@ -40,4 +40,5 @@ e0af2612b4990ebf6717eb4f6d00e5038462e617 data/quackems_the_end_update_mod/loot_t
 c5cd7a7759c7970484c6d16ea52fddb46fb50272 data/quackems_the_end_update_mod/loot_tables/blocks/stone_xp_ore.json
 29f4bfe835fcc915fb9d299e0d4fb953090c6ce4 data/quackems_the_end_update_mod/loot_tables/blocks/stripped_end_oak_log.json
 8b24f37ca6b140389e4ea01d62e0d8bd085470e8 data/quackems_the_end_update_mod/loot_tables/blocks/stripped_end_wood.json
+f0f4a19abd2971f437812ef98a7cc3601341c3ed data/quackems_the_end_update_mod/loot_tables/blocks/tomato_crop.json
 c14dafd600b5c128a9b9a4146f4763ba4904335c data/quackems_the_end_update_mod/loot_tables/blocks/toughened_bauxite.json

@@ -59,7 +59,7 @@ public class ModConfiguredFeatures {
 
         register(context, END_TREE_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
                 BlockStateProvider.simple(ModBlocks.END_OAK_LOG.get()),
-                new StraightTrunkPlacer(5, 4, 3),
+                new StraightTrunkPlacer(4, 3, 2),
 
                 BlockStateProvider.simple(ModBlocks.END_LEAVES.get()),
                 new BlobFoliagePlacer(ConstantInt.of(3), ConstantInt.of(2), 3),

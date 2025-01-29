@@ -1,4 +1,4 @@
-// 1.20.1	2025-01-25T18:46:16.1172665	Item Models: quackems_the_end_update_mod
+// 1.20.1	2025-01-28T19:25:39.2148926	Item Models: quackems_the_end_update_mod
 7db0fe1a19642d2cb68c4a20d1321f9084f00c2d assets/quackems_the_end_update_mod/models/item/amorite.json
 b434cf72646d0046bf4eb51ae31bf9a9e6b21f30 assets/quackems_the_end_update_mod/models/item/amorite_axe.json
 8772129df0e2cfb3ab83ff3e66d6939803d1d4e9 assets/quackems_the_end_update_mod/models/item/amorite_boots.json
@@ -131,3 +131,5 @@ dea1835173a4220c2410378f66fce40e998a1b85 assets/quackems_the_end_update_mod/mode
 991329b71568972db008674a8c3cdf9d0c9d7804 assets/quackems_the_end_update_mod/models/item/polished_amorite.json
 372a2f85d460fbd24f307f5d614888674ddf0aa7 assets/quackems_the_end_update_mod/models/item/polished_bauxite_button.json
 bb7b48af283644792aaa402bad8146b0e2424024 assets/quackems_the_end_update_mod/models/item/seeded_bread.json
+1f1dee27af7c1b82ddc741c37a5827cf780f9b34 assets/quackems_the_end_update_mod/models/item/tomato.json
+60ecaa12782792f8f4b12c0d221109313e73baaa assets/quackems_the_end_update_mod/models/item/tomato_seeds.json

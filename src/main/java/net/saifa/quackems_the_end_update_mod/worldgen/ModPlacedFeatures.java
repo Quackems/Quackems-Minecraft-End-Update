@@ -42,7 +42,7 @@ public class ModPlacedFeatures {
 
 
         register(context, END_TREE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.END_TREE_KEY),
-                VegetationPlacements.treePlacement(PlacementUtils.countExtra(3, 0.1f, 2),
+                VegetationPlacements.treePlacement(PlacementUtils.countExtra(1, 0.1f, 2),
                         ModBlocks.END_WOOD_SAPLING.get()));
 
         register(context, END_GRASS_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.END_TREE_KEY),

@@ -3,13 +3,17 @@ package net.saifa.quackems_the_end_update_mod.datagen;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.*;
+import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
+import net.minecraftforge.client.model.generators.ConfiguredModel;
 import net.minecraftforge.client.model.generators.ModelFile;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.saifa.quackems_the_end_update_mod.Quackems_The_End_Update;
 import net.saifa.quackems_the_end_update_mod.block.ModBlocks;
+import net.saifa.quackems_the_end_update_mod.block.custom.TomatoCropBlock;
+import java.util.function.Function;
 
 public class ModBlockStateProvider extends BlockStateProvider {
 
@@ -35,6 +39,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.TOUGHENED_BAUXITE);
         blockWithItem(ModBlocks.POLISHED_BAUXITE);
         blockWithItem(ModBlocks.BAUXITE_BRICK);
+
+        blockWithItem(ModBlocks.MOD_PORTAL);
 
         buttonBlock(((ButtonBlock) ModBlocks.POLISHED_BAUXITE_BUTTON.get()), blockTexture(ModBlocks.POLISHED_BAUXITE.get()));
 
@@ -104,7 +110,33 @@ public class ModBlockStateProvider extends BlockStateProvider {
                 new ModelFile.UncheckedModelFile(modLoc("block/purpur_lantern")));
 
         saplingBlock(ModBlocks.END_WOOD_SAPLING);
+
+
+
+
+        makeTomatoCrop((CropBlock)ModBlocks.TOMATO_CROP.get(), "tomato_stage", "tomato_stage");
     }
+
+
+    public void makeTomatoCrop(CropBlock block, String modelName, String textureName) {
+        Function<BlockState, ConfiguredModel[]> function = state -> tomatoStates(state, block, modelName, textureName);
+
+        getVariantBuilder(block).forAllStates(function);
+    }
+
+
+
+
+    private ConfiguredModel[] tomatoStates(BlockState state, CropBlock block, String modelName, String textureName) {
+        ConfiguredModel[] models = new ConfiguredModel[1];
+        models[0] = new ConfiguredModel(models().crop(modelName + state.getValue(((TomatoCropBlock) block).getAgeProperty()),
+                new ResourceLocation(Quackems_The_End_Update.MOD_ID, "block/" + textureName + state.getValue(((TomatoCropBlock) block).getAgeProperty()))).renderType("cutout"));
+
+        return models;
+    }
+
+
+
 
 
 
