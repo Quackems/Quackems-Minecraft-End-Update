@@ -86,7 +86,7 @@ public class ModCreativeModTabs {
                         output.accept(ModBlocks.POLISHED_BAUXITE_BUTTON.get());
                         output.accept(ModBlocks.END_GRASS.get());
                         output.accept(ModBlocks.PURPUR_LANTERN.get());
-
+                        output.accept(ModBlocks.MOD_PORTAL.get());
 
 
                         output.accept(ModBlocks.END_STAIRS.get());
@@ -115,6 +115,14 @@ public class ModCreativeModTabs {
                         output.accept(ModBlocks.END_LEAVES.get());
                         output.accept(ModBlocks.END_PLANKS.get());
                         output.accept(ModBlocks.END_WOOD_SAPLING.get());
+
+                        output.accept(ModBlocks.ELVEN_ASHWOOD_LOG.get());
+                        output.accept(ModBlocks.ELVEN_ASHWOOD_WOOD.get());
+                        output.accept(ModBlocks.STRIPPED_ELVEN_ASHWOOD_LOG.get());
+                        output.accept(ModBlocks.STRIPPED_ELVEN_ASHWOOD_WOOD.get());
+                        output.accept(ModBlocks.ELVEN_ASHWOOD_LEAVES.get());
+                        output.accept(ModBlocks.ELVEN_ASHWOOD_PLANKS.get());
+                        output.accept(ModBlocks.ELVEN_ASHWOOD_SAPLING.get());
 
 
                     })

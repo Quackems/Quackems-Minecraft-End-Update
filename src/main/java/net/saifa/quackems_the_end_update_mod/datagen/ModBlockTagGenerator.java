@@ -71,7 +71,11 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 .add(ModBlocks.END_OAK_LOG.get())
                 .add(ModBlocks.END_WOOD.get())
                 .add(ModBlocks.STRIPPED_END_OAK_LOG.get())
-                .add(ModBlocks.STRIPPED_END_WOOD.get());
+                .add(ModBlocks.STRIPPED_END_WOOD.get())
+                .add(ModBlocks.ELVEN_ASHWOOD_LOG.get())
+                .add(ModBlocks.STRIPPED_ELVEN_ASHWOOD_LOG.get())
+                .add(ModBlocks.ELVEN_ASHWOOD_WOOD.get())
+                .add(ModBlocks.STRIPPED_ELVEN_ASHWOOD_WOOD.get());
 
 
 
@@ -119,7 +123,11 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
         this.tag(BlockTags.NEEDS_STONE_TOOL);
 
         this.tag(Tags.Blocks.NEEDS_NETHERITE_TOOL)
-                .add(ModBlocks.AMORITE_ORE.get());
+                .add(ModBlocks.AMORITE_ORE.get())
+                .add(ModBlocks.ELVEN_ASHWOOD_LOG.get())
+                .add(ModBlocks.ELVEN_ASHWOOD_WOOD.get())
+                .add(ModBlocks.STRIPPED_ELVEN_ASHWOOD_LOG.get())
+                .add(ModBlocks.STRIPPED_ELVEN_ASHWOOD_WOOD.get());
 
 
         this.tag(ModTags.Blocks.NEEDS_AMORITE_TOOL);
@@ -146,11 +154,17 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 .add(ModBlocks.END_OAK_LOG.get())
                 .add(ModBlocks.END_WOOD.get())
                 .add(ModBlocks.STRIPPED_END_OAK_LOG.get())
-                .add(ModBlocks.STRIPPED_END_WOOD.get());
+                .add(ModBlocks.STRIPPED_END_WOOD.get())
+                .add(ModBlocks.ELVEN_ASHWOOD_LOG.get())
+                .add(ModBlocks.ELVEN_ASHWOOD_WOOD.get())
+                .add(ModBlocks.STRIPPED_ELVEN_ASHWOOD_LOG.get())
+                .add(ModBlocks.STRIPPED_ELVEN_ASHWOOD_WOOD.get());
+
 
 
         this.tag(BlockTags.PLANKS)
-                .add(ModBlocks.END_PLANKS.get());
+                .add(ModBlocks.END_PLANKS.get())
+                .add(ModBlocks.ELVEN_ASHWOOD_PLANKS.get());
 
 
 

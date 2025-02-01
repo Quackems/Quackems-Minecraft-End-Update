@@ -23,11 +23,11 @@ import java.util.OptionalLong;
 
 public class ModDimensions {
     public static final ResourceKey<LevelStem> QUACKDIM_KEY = ResourceKey.create(Registries.LEVEL_STEM,
-            new ResourceLocation(Quackems_The_End_Update.MOD_ID, "kaupendim"));
+            new ResourceLocation(Quackems_The_End_Update.MOD_ID, "quackdim"));
     public static final ResourceKey<Level> QAUCKDIM_LEVEL_KEY = ResourceKey.create(Registries.DIMENSION,
-            new ResourceLocation(Quackems_The_End_Update.MOD_ID, "kaupendim"));
+            new ResourceLocation(Quackems_The_End_Update.MOD_ID, "quackdim"));
     public static final ResourceKey<DimensionType> QUACK_DIM_TYPE = ResourceKey.create(Registries.DIMENSION_TYPE,
-            new ResourceLocation(Quackems_The_End_Update.MOD_ID, "kaupendim_type"));
+            new ResourceLocation(Quackems_The_End_Update.MOD_ID, "quackdim_type"));
 
 
     public static void bootstrapType(BootstapContext<DimensionType> context) {

@@ -2,22 +2,18 @@ package net.saifa.quackems_the_end_update_mod.worldgen;
 
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstapContext;
+import net.minecraft.data.worldgen.placement.PlacementUtils;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.server.packs.resources.Resource;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.util.valueproviders.ConstantInt;
-import net.minecraft.world.item.crafting.Recipe;
 import net.minecraft.world.level.block.Blocks;
-
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.feature.Feature;
-import net.minecraft.world.level.levelgen.feature.configurations.FeatureConfiguration;
-import net.minecraft.world.level.levelgen.feature.configurations.OreConfiguration;
-import net.minecraft.world.level.levelgen.feature.configurations.TreeConfiguration;
+import net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider;
+import net.minecraft.world.level.levelgen.feature.configurations.*;
 import net.minecraft.world.level.levelgen.feature.featuresize.TwoLayersFeatureSize;
 import net.minecraft.world.level.levelgen.feature.foliageplacers.BlobFoliagePlacer;
-import net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider;
 import net.minecraft.world.level.levelgen.feature.trunkplacers.StraightTrunkPlacer;
 import net.minecraft.world.level.levelgen.structure.templatesystem.BlockMatchTest;
 import net.minecraft.world.level.levelgen.structure.templatesystem.RuleTest;
@@ -36,6 +32,12 @@ public class ModConfiguredFeatures {
 
 
     public static final ResourceKey<ConfiguredFeature<?, ?>> END_TREE_KEY = registerKey("end_tree");
+
+    public static final ResourceKey<ConfiguredFeature<?, ?>> ELVEN_ASHWOOD_TREE_KEY = registerKey("elven_ashwood_tree");
+
+    public static final ResourceKey<ConfiguredFeature<?, ?>> END_GRASS_KEY = ResourceKey.create(
+            Registries.CONFIGURED_FEATURE, new ResourceLocation(Quackems_The_End_Update.MOD_ID, "end_grass"));
+
 
 
 
@@ -59,12 +61,28 @@ public class ModConfiguredFeatures {
 
         register(context, END_TREE_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
                 BlockStateProvider.simple(ModBlocks.END_OAK_LOG.get()),
-                new StraightTrunkPlacer(4, 3, 2),
+                new StraightTrunkPlacer(5, 6, 3),
 
                 BlockStateProvider.simple(ModBlocks.END_LEAVES.get()),
                 new BlobFoliagePlacer(ConstantInt.of(3), ConstantInt.of(2), 3),
 
                 new TwoLayersFeatureSize(1, 0, 2)).build());
+
+        register(context, ELVEN_ASHWOOD_TREE_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
+                BlockStateProvider.simple(ModBlocks.ELVEN_ASHWOOD_LOG.get()),
+                new StraightTrunkPlacer(5, 6, 3),
+
+                BlockStateProvider.simple(ModBlocks.ELVEN_ASHWOOD_LEAVES.get()),
+                new BlobFoliagePlacer(ConstantInt.of(4), ConstantInt.of(6), 10),
+
+                new TwoLayersFeatureSize(1, 0, 2)).build());
+
+
+        context.register(END_GRASS_KEY, new ConfiguredFeature<>(Feature.RANDOM_PATCH,
+                new RandomPatchConfiguration(32, 10, 2, PlacementUtils.onlyWhenEmpty(
+                        Feature.SIMPLE_BLOCK, new net.minecraft.world.level.levelgen.feature.configurations.SimpleBlockConfiguration(
+                                BlockStateProvider.simple(ModBlocks.END_GRASS.get()))
+                ))));
 
     }
 

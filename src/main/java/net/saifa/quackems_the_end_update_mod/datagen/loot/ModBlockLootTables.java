@@ -45,6 +45,12 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.STRIPPED_END_WOOD.get());
         this.dropSelf(ModBlocks.END_PLANKS.get());
         this.dropSelf(ModBlocks.END_WOOD_SAPLING.get());
+        this.dropSelf(ModBlocks.ELVEN_ASHWOOD_LOG.get());
+        this.dropSelf(ModBlocks.ELVEN_ASHWOOD_WOOD.get());
+        this.dropSelf(ModBlocks.STRIPPED_ELVEN_ASHWOOD_LOG.get());
+        this.dropSelf(ModBlocks.STRIPPED_ELVEN_ASHWOOD_WOOD.get());
+        this.dropSelf(ModBlocks.ELVEN_ASHWOOD_PLANKS.get());
+        this.dropSelf(ModBlocks.ELVEN_ASHWOOD_SAPLING.get());
         this.dropSelf(ModBlocks.END_SLUDGE.get());
         this.dropSelf(ModBlocks.END_SLUDGE_BRICK.get());
         this.dropSelf(ModBlocks.CRACKED_END_STONE_BRICK.get());
@@ -62,6 +68,9 @@ public class ModBlockLootTables extends BlockLootSubProvider {
 
         this.add(ModBlocks.END_LEAVES.get(), block ->
                 createLeavesDrops(block, ModBlocks.END_WOOD_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
+
+        this.add(ModBlocks.ELVEN_ASHWOOD_LEAVES.get(), block ->
+                createLeavesDrops(block, ModBlocks.ELVEN_ASHWOOD_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
 
         this.dropOther(ModBlocks.AMORITE_ORE.get(),
                  ModItems.AMORITE.get());

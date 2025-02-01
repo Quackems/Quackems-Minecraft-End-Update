@@ -23,6 +23,7 @@ import net.saifa.quackems_the_end_update_mod.block.custom.ModFlammableRotatedPil
 import net.saifa.quackems_the_end_update_mod.block.custom.ModPortalBlock;
 import net.saifa.quackems_the_end_update_mod.block.custom.TomatoCropBlock;
 import net.saifa.quackems_the_end_update_mod.item.ModItems;
+import net.saifa.quackems_the_end_update_mod.worldgen.tree.ElvenAshwoodGrower;
 import net.saifa.quackems_the_end_update_mod.worldgen.tree.EndTreeGrower;
 
 import java.util.function.Supplier;
@@ -86,10 +87,28 @@ public class ModBlocks {
                     .requiresCorrectToolForDrops()));
 
     public static final RegistryObject<Block> END_GRASS = registerBlock("end_grass_flower",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.GRASS).noOcclusion().noCollission()));
+            () -> new TallGrassBlock(BlockBehaviour.Properties.copy(Blocks.GRASS).noOcclusion().noCollission()));
 
 
     public static final RegistryObject<Block> END_PLANKS = registerBlock("end_planks",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)) {
+                @Override
+                public boolean isFlammable(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return true;
+                }
+
+                @Override
+                public int getFlammability(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return 20;
+                }
+
+                @Override
+                public int getFireSpreadSpeed(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return 5;
+                }
+            });
+
+    public static final RegistryObject<Block> ELVEN_ASHWOOD_PLANKS = registerBlock("elven_ashwood_planks",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)) {
                 @Override
                 public boolean isFlammable(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
@@ -200,10 +219,44 @@ public class ModBlocks {
             () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_WOOD).requiresCorrectToolForDrops().strength(4.5f)));
 
 
+    public static final RegistryObject<Block> ELVEN_ASHWOOD_LOG = registerBlock("elven_ashwood_log",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG).requiresCorrectToolForDrops().strength(6f)));
+
+    public static final RegistryObject<Block> ELVEN_ASHWOOD_SAPLING = registerBlock("elven_ashwood_sapling",
+            () -> new SaplingBlock(new ElvenAshwoodGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
+
+    public static final RegistryObject<Block> ELVEN_ASHWOOD_WOOD = registerBlock("elven_ashwood_wood",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WOOD).requiresCorrectToolForDrops().strength(6f)));
+
+    public static final RegistryObject<Block> STRIPPED_ELVEN_ASHWOOD_LOG = registerBlock("stripped_elven_ashwood_log",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_LOG).requiresCorrectToolForDrops().strength(6f)));
+
+    public static final RegistryObject<Block> STRIPPED_ELVEN_ASHWOOD_WOOD = registerBlock("stripped_elven_ashwood_wood",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_WOOD).requiresCorrectToolForDrops().strength(6f)));
+
+
 
 
 
     public static final RegistryObject<Block> END_LEAVES = registerBlock("end_leaves",
+            () -> new LeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)){
+                @Override
+                public boolean isFlammable(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return true;
+                }
+
+                @Override
+                public int getFlammability(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return 60;
+                }
+
+                @Override
+                public int getFireSpreadSpeed(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return 30;
+                }
+            });
+
+    public static final RegistryObject<Block> ELVEN_ASHWOOD_LEAVES = registerBlock("elven_ashwood_leaves",
             () -> new LeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)){
                 @Override
                 public boolean isFlammable(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {

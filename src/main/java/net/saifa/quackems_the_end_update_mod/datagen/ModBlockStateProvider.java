@@ -33,6 +33,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.ENDSTONE_STRETCHER);
         blockWithItem(ModBlocks.END_VENEER);
         blockWithItem(ModBlocks.END_PLANKS);
+        blockWithItem(ModBlocks.ELVEN_ASHWOOD_PLANKS);
         blockWithItem(ModBlocks.END_SLUDGE);
         blockWithItem(ModBlocks.CRACKED_END_STONE_BRICK);
         blockWithItem(ModBlocks.BAUXITE);
@@ -78,22 +79,37 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
 
         logBlock(((RotatedPillarBlock) ModBlocks.END_OAK_LOG.get()));
+        logBlock(((RotatedPillarBlock) ModBlocks.ELVEN_ASHWOOD_LOG.get()));
         axisBlock(((RotatedPillarBlock) ModBlocks.END_WOOD.get()), blockTexture(ModBlocks.END_OAK_LOG.get()),
                 blockTexture(ModBlocks.END_OAK_LOG.get()));
+
+        axisBlock(((RotatedPillarBlock) ModBlocks.ELVEN_ASHWOOD_WOOD.get()), blockTexture(ModBlocks.ELVEN_ASHWOOD_LOG.get()),
+                blockTexture(ModBlocks.ELVEN_ASHWOOD_LOG.get()));
 
         axisBlock(((RotatedPillarBlock) ModBlocks.STRIPPED_END_OAK_LOG.get()), blockTexture(ModBlocks.STRIPPED_END_OAK_LOG.get()),
                 new ResourceLocation(Quackems_The_End_Update.MOD_ID, "block/stripped_end_oak_log_top"));
         axisBlock(((RotatedPillarBlock) ModBlocks.STRIPPED_END_WOOD.get()), blockTexture(ModBlocks.STRIPPED_END_OAK_LOG.get()),
                 blockTexture(ModBlocks.STRIPPED_END_OAK_LOG.get()));
 
+        axisBlock(((RotatedPillarBlock) ModBlocks.STRIPPED_ELVEN_ASHWOOD_LOG.get()), blockTexture(ModBlocks.STRIPPED_ELVEN_ASHWOOD_LOG.get()),
+                new ResourceLocation(Quackems_The_End_Update.MOD_ID, "block/stripped_elven_ashwood_log_top"));
+        axisBlock(((RotatedPillarBlock) ModBlocks.STRIPPED_ELVEN_ASHWOOD_WOOD.get()), blockTexture(ModBlocks.STRIPPED_ELVEN_ASHWOOD_LOG.get()),
+                blockTexture(ModBlocks.STRIPPED_ELVEN_ASHWOOD_LOG.get()));
+
         blockItem(ModBlocks.END_OAK_LOG);
         blockItem(ModBlocks.END_WOOD);
         blockItem(ModBlocks.STRIPPED_END_OAK_LOG);
         blockItem(ModBlocks.STRIPPED_END_WOOD);
 
+        blockItem(ModBlocks.ELVEN_ASHWOOD_LOG);
+        blockItem(ModBlocks.ELVEN_ASHWOOD_WOOD);
+        blockItem(ModBlocks.STRIPPED_ELVEN_ASHWOOD_LOG);
+        blockItem(ModBlocks.STRIPPED_ELVEN_ASHWOOD_WOOD);
+
 
 
         leavesBlock(ModBlocks.END_LEAVES);
+        leavesBlock(ModBlocks.ELVEN_ASHWOOD_LEAVES);
 
 
 
@@ -110,6 +126,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
                 new ModelFile.UncheckedModelFile(modLoc("block/purpur_lantern")));
 
         saplingBlock(ModBlocks.END_WOOD_SAPLING);
+        saplingBlock(ModBlocks.ELVEN_ASHWOOD_SAPLING);
 
 
 

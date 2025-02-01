@@ -1,5 +1,9 @@
 {
   "values": [
-    "quackems_the_end_update_mod:amorite_ore"
+    "quackems_the_end_update_mod:amorite_ore",
+    "quackems_the_end_update_mod:elven_ashwood_log",
+    "quackems_the_end_update_mod:elven_ashwood_wood",
+    "quackems_the_end_update_mod:stripped_elven_ashwood_log",
+    "quackems_the_end_update_mod:stripped_elven_ashwood_wood"
   ]
 }

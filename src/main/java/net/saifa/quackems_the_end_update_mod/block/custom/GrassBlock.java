@@ -7,7 +7,7 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.common.IPlantable;
 import net.minecraftforge.common.PlantType;
 
-public class GrassBlock extends net.minecraft.world.level.block.GrassBlock {
+public class GrassBlock extends net.minecraft.world.level.block.GrassBlock{
     public GrassBlock(Properties p_53685_) {
         super(p_53685_);
     }
